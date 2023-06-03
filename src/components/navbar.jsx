@@ -36,15 +36,12 @@ const Navbar = () => {
 
                                                 </li>
                                                 <li className="nav-item">
-                                                    <a
+                                                    <Link
+                                                        to={'/'}
                                                         className="nav-link"
-                                                        href="contact.html"
-                                                        id="navbarDropdown5"
-                                                        role="button"
-                                                        aria-expanded="false"
                                                     >
-                                                        Tentang
-                                                    </a>
+                                                        Beranda
+                                                    </Link>
                                                 </li>
                                                 <li className="nav-item">
                                                     <a
