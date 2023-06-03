@@ -44,6 +44,7 @@ const Navbar = () => {
         Beranda <
         /Link>
 
+<<<<<<< HEAD
         <
         /li> <
         li className = "nav-item" >
@@ -123,6 +124,72 @@ const Navbar = () => {
         /div> <
         /header> <
         />
+=======
+                                                </li>
+                                                <li className="nav-item">
+                                                    <Link
+                                                        to={'/about'}
+                                                        className="nav-link"
+                                                    >
+                                                        Tentang
+                                                    </Link>
+                                                </li>
+                                                <li className="nav-item">
+                                                    <a
+                                                        className="nav-link"
+                                                        href="contact.html"
+                                                        id="navbarDropdown5"
+                                                        role="button"
+                                                        aria-expanded="false"
+                                                    >
+                                                        Jalur Belajar
+                                                    </a>
+                                                </li>
+                                                <li className="nav-item">
+                                                    <a
+                                                        className="nav-link"
+                                                        href="contact.html"
+                                                        id="navbarDropdown5"
+                                                        role="button"
+                                                        aria-expanded="false"
+                                                    >
+                                                        Kontak
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div className="col-xl-3 col-lg-2 col-7">
+                                <div className="right-nav d-flex align-items-center justify-content-end">
+                                    <div className="right-btn mr-25 mr-xs-15">
+                                        <ul className="d-flex align-items-center">
+                                            <li>
+                                                <a href="contact.html" className="theme_btn free_btn">
+                                                    Coba Sekarang
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="sign-in ml-20" href="login.html">
+                                                    <img src="/assets/img/icon/user.svg" alt="" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="hamburger-menu d-md-inline-block d-lg-none text-right">
+                                        <a href="#">
+                                            <i className="far fa-bars" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </>
+>>>>>>> main
     )
 }
 
