@@ -37,10 +37,10 @@ const Navbar = () => {
                                                 </li>
                                                 <li className="nav-item">
                                                     <Link
-                                                        to={'/'}
+                                                        to={'/about'}
                                                         className="nav-link"
                                                     >
-                                                        Beranda
+                                                        Tentang
                                                     </Link>
                                                 </li>
                                                 <li className="nav-item">
