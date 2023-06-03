@@ -32,8 +32,8 @@ const About = () => {
         alt = "about-img" /
         >
         <
-        /div> <
-        /div> <
+        /div> < /
+        div > <
         div className = "col-lg-5" >
         <
         div className = "about-wrapper" >
@@ -49,10 +49,10 @@ const About = () => {
         /p> <
         p >
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di nonumy eirmod tempor invidunt ut labore et dolore magn aliq erat.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di nonumy. <
-        /p> <
-        /div> <
-        /div> <
-        /div> <
+        /p> < /
+        div > <
+        /div> < /
+        div > <
         /div> <
         div className = "row pl-75 pr-75 pr-lg-0 pr-md-0 pr-xs-0 pl-lg-0 pl-md-0 pl-xs-0" >
         <
@@ -62,10 +62,10 @@ const About = () => {
         <
         h2 >
         <
-        span className = "counter" > 100 < /span>+ <
-        /h2> <
-        h5 > Specialist Good Teachers < /h5> <
-        /div> <
+        span className = "counter" > 100 < /span>+ < /
+        h2 > <
+        h5 > Specialist Good Teachers < /h5> < /
+        div > <
         /div> <
         div className = "col-lg-3 col-md-6 col-sm-6" >
         <
@@ -73,10 +73,10 @@ const About = () => {
         <
         h2 >
         <
-        span className = "counter" > 1000 < /span>+ <
-        /h2> <
-        h5 > Online Learning Courses < /h5> <
-        /div> <
+        span className = "counter" > 1000 < /span>+ < /
+        h2 > <
+        h5 > Online Learning Courses < /h5> < /
+        div > <
         /div> <
         div className = "col-lg-3 col-md-6 col-sm-6" >
         <
@@ -84,10 +84,10 @@ const About = () => {
         <
         h2 >
         <
-        span className = "counter" > 13654 < /span>+ <
-        /h2> <
-        h5 > Online & amp; Offline Students < /h5> <
-        /div> <
+        span className = "counter" > 13654 < /span>+ < /
+        h2 > <
+        h5 > Online & amp; Offline Students < /h5> < /
+        div > <
         /div> <
         div className = "col-lg-3 col-md-6 col-sm-6" >
         <
@@ -95,14 +95,14 @@ const About = () => {
         <
         h2 >
         <
-        span className = "counter" > 365 < /span>+ <
-        /h2> <
-        h5 > Special Awards Winning < /h5> <
-        /div> <
-        /div> <
-        /div> <
-        /div> <
-        /section> <
+        span className = "counter" > 365 < /span>+ < /
+        h2 > <
+        h5 > Special Awards Winning < /h5> < /
+        div > <
+        /div> < /
+        div > <
+        /div> < /
+        section > <
         />
     )
 }
