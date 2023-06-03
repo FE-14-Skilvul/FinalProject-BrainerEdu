@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const CourseCard = () => {
     return (
@@ -24,9 +25,9 @@ const CourseCard = () => {
                             </a>
                         </div>
                         <h4 className="sub-title mb-20">
-                            <a href="course-details.html">
+                            <Link to={`/course-detail/${1}`} >
                                 Take Your Career to the Next Level Future
-                            </a>
+                            </Link>
                         </h4>
                         <div className="course__meta d-flex align-items-center justify-content-between mb-15">
                             <span>
