@@ -43,8 +43,6 @@ const ListCourse = () => {
                         <CourseCard />
                         <CourseCard />
                         <CourseCard />
-
-
                     </div>
                     <div className="row">
                         <div

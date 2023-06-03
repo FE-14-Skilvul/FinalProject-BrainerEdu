@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
     return (
@@ -26,15 +27,13 @@ const Navbar = () => {
                                             <ul className="navbar-nav">
 
                                                 <li className="nav-item">
-                                                    <a
+                                                    <Link
+                                                        to={'/'}
                                                         className="nav-link"
-                                                        href="contact.html"
-                                                        id="navbarDropdown5"
-                                                        role="button"
-                                                        aria-expanded="false"
                                                     >
                                                         Beranda
-                                                    </a>
+                                                    </Link>
+
                                                 </li>
                                                 <li className="nav-item">
                                                     <a
@@ -91,7 +90,7 @@ const Navbar = () => {
                                         </ul>
                                     </div>
                                     <div className="hamburger-menu d-md-inline-block d-lg-none text-right">
-                                        <a href="javascript:void(0);">
+                                        <a href="#">
                                             <i className="far fa-bars" />
                                         </a>
                                     </div>
