@@ -7,27 +7,18 @@ import Contact from '../section/contact'
 import Testimoni from '../section/testimoni'
 import Home from '../layout/home'
 import About from '../section/about'
-
 const Landing = () => {
-    return ( <
-        >
-        <
-        Home >
-        <
-        Hero / >
-        <
-        KategoriCourse / >
-        <
-        ListCourse / >
-        <
-        Testimoni / >
-        <
-        Contact / >
-        <
-        About / >
-        <
-        /Home> <
-        />
+    return (
+        <>
+            <Home>
+                <Hero />
+                <KategoriCourse />
+                <ListCourse />
+                <Testimoni />
+                <Contact />
+                <About />
+            </Home>
+        </>
     )
 }
 
