@@ -16,7 +16,6 @@ const Landing = () => {
                 <ListCourse />
                 <Testimoni />
                 <Contact />
-                <About />
             </Home>
         </>
     )
