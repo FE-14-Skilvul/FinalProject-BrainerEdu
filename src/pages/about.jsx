@@ -1,15 +1,19 @@
+import Home from "../layout/home"
 
 const About = () => {
     return (
+
         <>
-            <>
+            <Home>
+
+
                 <section
                     className="page-title-area d-flex align-items-end"
-                    style={{ backgroundImage: "url(assets/img/page-title-bg/01.jpg)" }}
+                // style={{ backgroundImage: "url(assets/img/page-title-bg/01.jpg)" }}
                 >
                     <div className="container">
                         <div className="row align-items-end">
-                            <div className="col-lg-12">
+                            <div className="col-lg-12" style={{ marginTop: '200px' }}>
                                 <div className="page-title-wrapper mb-50">
                                     <h1 className="page-title mb-25">About Us</h1>
                                     <div className="breadcrumb-list">
@@ -27,76 +31,7 @@ const About = () => {
                         </div>
                     </div>
                 </section>
-                {/*page-title-area end*/}
-                {/*great-deal-area start*/}
-                <section className="great-deal-area pt-150 pb-90 pt-md-100 pb-md-40 pt-xs-100 pb-xs-40">
-                    <div className="container">
-                        <div className="row justify-content-lg-center justify-content-start">
-                            <div className="col-xl-3 col-lg-8">
-                                <div className="deal-box mb-30 text-center text-xl-start">
-                                    <h2 className="mb-20">
-                                        <b>Great</b> Deals For You
-                                    </h2>
-                                    <p>
-                                        There are many variations of passa of Lorem Ipsum available, but
-                                        the majority have suffered.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="col-xl-8">
-                                <div className="deal-active owl-carousel mb-30">
-                                    <div className="single-item">
-                                        <div className="single-box mb-30">
-                                            <div className="single-box__icon mb-25">
-                                                <img src="assets/img/icon/puzzle.svg" alt="" />
-                                            </div>
-                                            <h4 className="sub-title mb-20">Learn New Skills</h4>
-                                            <p>There are many variations of pas of Lorm Ipsum available.</p>
-                                        </div>
-                                    </div>
-                                    <div className="single-item">
-                                        <div className="single-box s-box2 mb-30">
-                                            <div className="single-box__icon mb-25">
-                                                <img src="assets/img/icon/manager.svg" alt="" />
-                                            </div>
-                                            <h4 className="sub-title mb-20">Expert Trainers</h4>
-                                            <p>There are many variations of pas of Lorm Ipsum available.</p>
-                                        </div>
-                                    </div>
-                                    <div className="single-item">
-                                        <div className="single-box s-box3 mb-30">
-                                            <div className="single-box__icon mb-25">
-                                                <img src="assets/img/icon/notepad.svg" alt="" />
-                                            </div>
-                                            <h4 className="sub-title mb-20">Free Trial Lesson</h4>
-                                            <p>There are many variations of pas of Lorm Ipsum available.</p>
-                                        </div>
-                                    </div>
-                                    <div className="single-item">
-                                        <div className="single-box mb-30">
-                                            <div className="single-box__icon mb-25">
-                                                <img src="assets/img/icon/puzzle.svg" alt="" />
-                                            </div>
-                                            <h4 className="sub-title mb-20">Learn New Skills</h4>
-                                            <p>There are many variations of pas of Lorm Ipsum available.</p>
-                                        </div>
-                                    </div>
-                                    <div className="single-item">
-                                        <div className="single-box s-box2 mb-30">
-                                            <div className="single-box__icon mb-25">
-                                                <img src="assets/img/icon/manager.svg" alt="" />
-                                            </div>
-                                            <h4 className="sub-title mb-20">Expert Trainers</h4>
-                                            <p>There are many variations of pas of Lorm Ipsum available.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                {/*great-deal-area end*/}
-                {/*about-us-area start*/}
+
                 <section className="about-us-area pt-150 pb-120 pt-md-100 pb-md-70 pt-xs-100 pb-xs-70">
                     <div className="container">
                         <div className="row align-items-center mb-120">
@@ -434,8 +369,9 @@ const About = () => {
                         </div>
                     </div>
                 </section>
-            </>
+            </Home>
         </>
+
     )
 }
 
