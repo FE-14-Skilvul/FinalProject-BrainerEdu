@@ -5171,7 +5171,8 @@ input.main-search-input:-ms-input-placeholder {
   }
 }
 
-.learn-list li a {
+.learn-list li a,
+.learn-list li div {
   color: #505050;
   font-size: 16px;
   line-height: 1;

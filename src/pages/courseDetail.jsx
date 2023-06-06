@@ -1,11 +1,136 @@
 import { useNavigate, useParams } from "react-router-dom";
 import Home from "../layout/home";
+import { useRef } from "react";
 
 const CourseDetail = () => {
     const { id } = useParams();
 
+    const videoData = [{
+        'id': 'a1',
+        'title': 'Pengenalan UI/UX Design',
+        'name': 'nkJnteauOAY',
+        'duration': '4:29',
+    },
+    {
+        'id': 'a2',
+        'title': 'build gauge with css',
+        'name': 'nkJnteauOAY',
+        'duration': '2:45',
+    },
+    {
+        'id': 'a3',
+        'title': '3D popup card',
+        'name': 'CbFnC9pk7oQ',
+        'duration': '24:49',
+    },
+
+    {
+        'id': 'a4',
+        'title': 'customize HTML5 form elements',
+        'name': 'CbFnC9pk7oQ',
+        'duration': '3:59',
+    },
+    {
+        'id': 'a5',
+        'title': 'custom select box',
+        'name': '_uDQvyON0pY',
+        'duration': '4:25',
+    },
+    {
+        'id': 'a6',
+        'title': 'embed google map to contact form',
+        'name': '_uDQvyON0pY',
+        'duration': '5:33',
+    },
+    {
+        'id': 'a7',
+        'title': 'password strength checker javascript web app',
+        'name': 'rJkcZRIqAzs',
+        'duration': '0:29',
+    },
+
+    {
+        'id': 'a8',
+        'title': 'custom range slider',
+        'name': 'rJkcZRIqAzs',
+        'duration': '1:12',
+    },
+    {
+        'id': 'a9',
+        'title': 'animated shopping cart',
+        'name': 'lkBQcxfpDNE',
+        'duration': '3:38',
+    },
+    {
+        'id': 'a8',
+        'title': 'custom range slider',
+        'name': 'lkBQcxfpDNE',
+        'duration': '1:12',
+    },
+    {
+        'id': 'a9',
+        'title': 'animated shopping cart',
+        'name': 'lkBQcxfpDNE',
+        'duration': '3:38',
+    },
+    {
+        'id': 'a8',
+        'title': 'custom range slider',
+        'name': 'lkBQcxfpDNE',
+        'duration': '1:12',
+    },
+    {
+        'id': 'a9',
+        'title': 'animated shopping cart',
+        'name': 'lkBQcxfpDNE',
+        'duration': '3:38',
+    },
+    {
+        'id': 'a8',
+        'title': 'custom range slider',
+        'name': 'lkBQcxfpDNE',
+        'duration': '1:12',
+    },
+    {
+        'id': 'a9',
+        'title': 'animated shopping cart',
+        'name': 'lkBQcxfpDNE',
+        'duration': '3:38',
+    },
+    {
+        'id': 'a8',
+        'title': 'custom range slider',
+        'name': 'lkBQcxfpDNE',
+        'duration': '1:12',
+    },
+    {
+        'id': 'a9',
+        'title': 'animated shopping cart',
+        'name': 'lkBQcxfpDNE',
+        'duration': '3:38',
+    },
+    {
+        'id': 'a8',
+        'title': 'custom range slider',
+        'name': 'lkBQcxfpDNE',
+        'duration': '1:12',
+    },
+    {
+        'id': 'a9',
+        'title': 'animated shopping cart',
+        'name': 'lkBQcxfpDNE',
+        'duration': '3:38',
+    },
+
+    ];
     const myStyle = {
         marginTop: '200px'
+    }
+    const videoRef = useRef(null);
+
+    const changeVideo = (val) => {
+        videoRef.current.src = '';
+        videoRef.current.src = `https://www.youtube.com/embed/${val}`;
     }
     return (
         <>
@@ -34,7 +159,7 @@ const CourseDetail = () => {
                         </div>
                     </div>
                 </section>
-                <section className="course-details-area pt-150 pb-120 pt-md-100 pb-md-70 pt-xs-100 pb-xs-70">
+                <section className="course-details-area pt-150 pb-120 pt-md-100 pb-md-70 pt-xs-100 pb-xs-70" id="learn-bok">
                     <div className="container">
                         <div className="row">
                             <div className="col-xxl-8 col-xl-7">
@@ -43,19 +168,14 @@ const CourseDetail = () => {
                                         Fundamentals Of Dslr Photography
                                     </h2>
                                     <h5>Photography Specialist By Jason Momoa</h5>
-                                    <div
+                                    <iframe
+                                        ref={videoRef}
                                         className="course-details-img mb-30"
-                                        style={{ backgroundImage: "url(/assets/img/course/details/01.jpg)" }}
+                                        // style={{ backgroundImage: "url(/assets/img/course/details/01.jpg)" }}
+                                        src="https://www.youtube.com/embed/lkBQcxfpDNE"
                                     >
-                                        <div className="video-wrapper">
-                                            <a
-                                                href="https://www.youtube.com/watch?v=7omGYwdcS04"
-                                                className="popup-video"
-                                            >
-                                                <i className="fas fa-play" />
-                                            </a>
-                                        </div>
-                                    </div>
+                                    </iframe>
+
                                     <div className="courses-tag-btn">
                                         <a href="#">Add to wishlist</a>
                                         <a href="#">Share</a>
@@ -80,136 +200,45 @@ const CourseDetail = () => {
                                                 </a>
                                             </div>
                                         </li>
-                                        <li>
-                                            <div className="video-wrapper courses-cart-video">
-                                                <a
-                                                    href="https://www.youtube.com/watch?v=7omGYwdcS04"
-                                                    className="popup-video"
-                                                >
-                                                    <i className="fas fa-play" />
-                                                </a>
-                                            </div>
-                                        </li>
+
                                     </ul>
                                     <div className="learn-box">
                                         <h5>25 Lessons ( 3h 36m )</h5>
                                         <ul className="learn-list">
-                                            <li>
-                                                <a href="https://www.youtube.com/watch?v=7omGYwdcS04">
+                                            {videoData.map(({ id, name, title, duration }, index) => {
+
+                                                return <li key={index} onClick={() => changeVideo(name)} >
+                                                    <a href="#learn-bok" style={{ display: "flex", alignItems: "top", justifyContent: 'space-between' }}>
+                                                        <span className="play-video" style={{ display: 'flex' }}>
+                                                            <i className="fal fa-lock-alt" style={{ paddingRight: '10px' }} />
+                                                            <p> {index + 1 + '. ' + title}</p>
+                                                        </span>
+
+                                                        <span className="time float-end">{duration}</span>
+                                                    </a>
+                                                </li>
+                                            })}
+                                            {/* <li>
+                                                <a href="#learn-bok">
                                                     <span className="play-video">
                                                         <img
                                                             src="/assets/img/icon/video-player.svg"
                                                             alt="course-list"
                                                         />
-                                                    </span>{" "}
+                                                    </span>
                                                     01. Intro Video <span className="time float-end">4:02</span>
                                                 </a>
                                             </li>
-                                            <li>
-                                                <a href="https://www.youtube.com/watch?v=7omGYwdcS04">
+                                            <li  >
+                                                <a href="#learn-bok">
                                                     <span className="play-video">
                                                         <i className="fal fa-lock-alt" />
-                                                    </span>{" "}
-                                                    02. How to Open Camera{" "}
+                                                    </span>
+                                                    02. How to Open Camera
                                                     <span className="time float-end">2:03</span>
                                                 </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.youtube.com/watch?v=7omGYwdcS04">
-                                                    <span className="play-video">
-                                                        <i className="fal fa-lock-alt" />
-                                                    </span>{" "}
-                                                    03. Balancing the Exposure{" "}
-                                                    <span className="time float-end">5:03</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.youtube.com/watch?v=7omGYwdcS04">
-                                                    <span className="play-video">
-                                                        <i className="fal fa-lock-alt" />
-                                                    </span>{" "}
-                                                    04. Preparing to Shoot{" "}
-                                                    <span className="time float-end">5:12</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.youtube.com/watch?v=7omGYwdcS04">
-                                                    <span className="play-video">
-                                                        <i className="fal fa-lock-alt" />
-                                                    </span>{" "}
-                                                    05. Studio Demonstration{" "}
-                                                    <span className="time float-end">6:12</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.youtube.com/watch?v=7omGYwdcS04">
-                                                    <span className="play-video">
-                                                        <i className="fal fa-lock-alt" />
-                                                    </span>{" "}
-                                                    06. Shutter Speed <span className="time float-end">7:00</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.youtube.com/watch?v=7omGYwdcS04">
-                                                    <span className="play-video">
-                                                        <i className="fal fa-lock-alt" />
-                                                    </span>{" "}
-                                                    07. Aperture <span className="time float-end">6:05</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.youtube.com/watch?v=7omGYwdcS04">
-                                                    <span className="play-video">
-                                                        <i className="fal fa-lock-alt" />
-                                                    </span>{" "}
-                                                    08. ISO <span className="time float-end">30:00</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.youtube.com/watch?v=7omGYwdcS04">
-                                                    <span className="play-video">
-                                                        <i className="fal fa-lock-alt" />
-                                                    </span>{" "}
-                                                    09. Editing Tips &amp; Tricks{" "}
-                                                    <span className="time float-end">20:03</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.youtube.com/watch?v=7omGYwdcS04">
-                                                    <span className="play-video">
-                                                        <i className="fal fa-lock-alt" />
-                                                    </span>{" "}
-                                                    10. Advance Photography{" "}
-                                                    <span className="time float-end">40:36</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.youtube.com/watch?v=7omGYwdcS04">
-                                                    <span className="play-video">
-                                                        <i className="fal fa-lock-alt" />
-                                                    </span>{" "}
-                                                    10. Advance Photography-2{" "}
-                                                    <span className="time float-end">40:36</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.youtube.com/watch?v=7omGYwdcS04">
-                                                    <span className="play-video">
-                                                        <i className="fal fa-lock-alt" />
-                                                    </span>{" "}
-                                                    10. Advance Photography-3{" "}
-                                                    <span className="time float-end">40:36</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="https://www.youtube.com/watch?v=7omGYwdcS04">
-                                                    <span className="play-video">
-                                                        <i className="fal fa-lock-alt" />
-                                                    </span>{" "}
-                                                    10. Advance Photography-4{" "}
-                                                    <span className="time float-end">40:36</span>
-                                                </a>
-                                            </li>
+                                            </li> */}
+
                                         </ul>
                                     </div>
                                 </div>
@@ -298,18 +327,7 @@ const CourseDetail = () => {
                                         nonumy.
                                     </p>
                                 </div>
-                                <div className="skill-area">
-                                    <h2 className="courses-title mb-35">Related Skills</h2>
-                                    <div className="courses-tag-btn">
-                                        <a href="#">Photography</a>
-                                        <a href="#">Outdoor</a>
-                                        <a href="#">Indoor Photography</a>
-                                        <a href="#">DSLR</a>
-                                        <a href="#">Creative</a>
-                                        <a href="#">Camera</a>
-                                        <a href="#">Professional</a>
-                                    </div>
-                                </div>
+
                             </div>
                             <div className="col-xl-6 col-lg-5">
                                 <div className="courses-ingredients">
@@ -339,7 +357,7 @@ const CourseDetail = () => {
                                             and TV or any devices
                                         </li>
                                         <li>
-                                            <img src="/assets/img/icon/certificate-line.svg" alt="" />{" "}
+                                            <img src="/assets/img/icon/certificate-line.svg" alt="" />
                                             Certificate of completion
                                         </li>
                                     </ul>
