@@ -34,7 +34,7 @@ const Register = () => {
             }, { withCredentials: true });
             console.log({ nama, username, email, password, response });
 
-            // navigate("/");
+            navigate("/");
         } catch (error) {
             console.log(error);
         }
