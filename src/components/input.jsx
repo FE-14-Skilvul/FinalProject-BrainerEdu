@@ -1,4 +1,4 @@
-import React, { Children, forwardRef } from 'react'
+import React, { Children, forwardRef } from "react";
 
 // const InputForm = forwardRef(({ type, ...props }, ref) => {
 //     // const { type, placeholder, className } = props
@@ -11,13 +11,11 @@ import React, { Children, forwardRef } from 'react'
 // })
 
 const Input = forwardRef(({ type, placeholder }, ref) => {
-    return (
+  return (
+    <div className="col-lg-12 mb-30">
+      <input ref={ref} type={type} placeholder={placeholder} />{" "}
+    </div>
+  );
+});
 
-        <div className="col-lg-12 mb-30">
-            <input ref={ref} type={type} placeholder={placeholder} />
-        </div>
-
-    )
-})
-
-export default Input
+export default Input;
