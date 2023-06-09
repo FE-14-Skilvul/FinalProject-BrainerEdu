@@ -2,7 +2,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Home from '../layout/home';
 import { useRef } from 'react';
 
-const CourseDetail = () => {
+const courseDetail = () => {
   const { id } = useParams();
 
   const videoData = [
@@ -137,7 +137,7 @@ const CourseDetail = () => {
       <Home>
         <section
           className="page-title-area d-flex align-items-end"
-          // style={{ backgroundImage: "url(/assets/img/page-title-bg/01.jpg)" }}
+        // style={{ backgroundImage: "url(/assets/img/page-title-bg/01.jpg)" }}
         >
           <div className="container ">
             <div className="row align-items-end ">
@@ -175,7 +175,7 @@ const CourseDetail = () => {
                     ref={videoRef}
                     className="course-details-img mb-30"
                     // style={{ backgroundImage: "url(/assets/img/course/details/01.jpg)" }}
-                    src="https://www.youtube.com/embed/lkBQcxfpDNE"
+                    src="https://www.youtube.com/embed/0PmHpgFhy8E"
                   ></iframe>
 
                   <div className="courses-tag-btn">
@@ -391,4 +391,4 @@ const CourseDetail = () => {
   );
 };
 
-export default CourseDetail;
+export default courseDetail;
