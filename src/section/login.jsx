@@ -23,13 +23,9 @@ const Login = () => {
             return;
         }
         try {
-            const headers = {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Accept': 'application/json'
-            };
 
-            const response = await axios.post(API + '/login', formdata, { withCredentials: true, headers: headers });
+
+            const response = await axios.post(API + '/login', formdata, { withCredentials: true });
 
             console.log(response);
             // navigate("/");
