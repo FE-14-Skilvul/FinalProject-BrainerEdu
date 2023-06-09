@@ -50,11 +50,14 @@ const Navbar = () => {
                                                 <Link to={'/register'}
                                                     className="theme_btn free_btn">
                                                     Daftar Sekarang </Link>
-                                            </li> <li>
-                                                <a className="sign-in ml-20"
-                                                    href="login.html">
+                                            </li>
+                                            <li>
+                                                <Link to={'/login'} className="sign-in ml-20">
                                                     <img src="/assets/img/icon/user.svg" alt="" />
-                                                </a> </li> </ul> </div> <div className="hamburger-menu d-md-inline-block d-lg-none text-right">
+                                                </Link>
+
+                                            </li>
+                                        </ul> </div> <div className="hamburger-menu d-md-inline-block d-lg-none text-right">
                                         <a href="#">
                                             <i className="far fa-bars" />
                                         </a>
