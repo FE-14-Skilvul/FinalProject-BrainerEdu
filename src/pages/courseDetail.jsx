@@ -1,137 +1,137 @@
-import { useNavigate, useParams } from "react-router-dom";
-import Home from "../layout/home";
-import { useRef } from "react";
+import { useNavigate, useParams } from 'react-router-dom';
+import Home from '../layout/home';
+import { useRef } from 'react';
 
 const courseDetail = () => {
   const { id } = useParams();
 
-  const videoData = [{
-    'id': 'a1',
-    'title': 'Pengenalan UI/UX Design',
-    'name': 'nkJnteauOAY',
-    'duration': '4:29',
-  },
-  {
-    'id': 'a2',
-    'title': 'build gauge with css',
-    'name': 'nkJnteauOAY',
-    'duration': '2:45',
-  },
-  {
-    'id': 'a3',
-    'title': '3D popup card',
-    'name': 'CbFnC9pk7oQ',
-    'duration': '24:49',
-  },
+  const videoData = [
+    {
+      id: 'a1',
+      title: 'Pengenalan UI/UX Design',
+      name: 'nkJnteauOAY',
+      duration: '4:29',
+    },
+    {
+      id: 'a2',
+      title: 'build gauge with css',
+      name: 'nkJnteauOAY',
+      duration: '2:45',
+    },
+    {
+      id: 'a3',
+      title: '3D popup card',
+      name: 'CbFnC9pk7oQ',
+      duration: '24:49',
+    },
 
-  {
-    'id': 'a4',
-    'title': 'customize HTML5 form elements',
-    'name': 'CbFnC9pk7oQ',
-    'duration': '3:59',
-  },
-  {
-    'id': 'a5',
-    'title': 'custom select box',
-    'name': '_uDQvyON0pY',
-    'duration': '4:25',
-  },
-  {
-    'id': 'a6',
-    'title': 'embed google map to contact form',
-    'name': '_uDQvyON0pY',
-    'duration': '5:33',
-  },
-  {
-    'id': 'a7',
-    'title': 'password strength checker javascript web app',
-    'name': 'rJkcZRIqAzs',
-    'duration': '0:29',
-  },
+    {
+      id: 'a4',
+      title: 'customize HTML5 form elements',
+      name: 'CbFnC9pk7oQ',
+      duration: '3:59',
+    },
+    {
+      id: 'a5',
+      title: 'custom select box',
+      name: '_uDQvyON0pY',
+      duration: '4:25',
+    },
+    {
+      id: 'a6',
+      title: 'embed google map to contact form',
+      name: '_uDQvyON0pY',
+      duration: '5:33',
+    },
+    {
+      id: 'a7',
+      title: 'password strength checker javascript web app',
+      name: 'rJkcZRIqAzs',
+      duration: '0:29',
+    },
 
-  {
-    'id': 'a8',
-    'title': 'custom range slider',
-    'name': 'rJkcZRIqAzs',
-    'duration': '1:12',
-  },
-  {
-    'id': 'a9',
-    'title': 'animated shopping cart',
-    'name': 'lkBQcxfpDNE',
-    'duration': '3:38',
-  },
-  {
-    'id': 'a8',
-    'title': 'custom range slider',
-    'name': 'lkBQcxfpDNE',
-    'duration': '1:12',
-  },
-  {
-    'id': 'a9',
-    'title': 'animated shopping cart',
-    'name': 'lkBQcxfpDNE',
-    'duration': '3:38',
-  },
-  {
-    'id': 'a8',
-    'title': 'custom range slider',
-    'name': 'lkBQcxfpDNE',
-    'duration': '1:12',
-  },
-  {
-    'id': 'a9',
-    'title': 'animated shopping cart',
-    'name': 'lkBQcxfpDNE',
-    'duration': '3:38',
-  },
-  {
-    'id': 'a8',
-    'title': 'custom range slider',
-    'name': 'lkBQcxfpDNE',
-    'duration': '1:12',
-  },
-  {
-    'id': 'a9',
-    'title': 'animated shopping cart',
-    'name': 'lkBQcxfpDNE',
-    'duration': '3:38',
-  },
-  {
-    'id': 'a8',
-    'title': 'custom range slider',
-    'name': 'lkBQcxfpDNE',
-    'duration': '1:12',
-  },
-  {
-    'id': 'a9',
-    'title': 'animated shopping cart',
-    'name': 'lkBQcxfpDNE',
-    'duration': '3:38',
-  },
-  {
-    'id': 'a8',
-    'title': 'custom range slider',
-    'name': 'lkBQcxfpDNE',
-    'duration': '1:12',
-  },
-  {
-    'id': 'a9',
-    'title': 'animated shopping cart',
-    'name': 'lkBQcxfpDNE',
-    'duration': '3:38',
-  },
-
+    {
+      id: 'a8',
+      title: 'custom range slider',
+      name: 'rJkcZRIqAzs',
+      duration: '1:12',
+    },
+    {
+      id: 'a9',
+      title: 'animated shopping cart',
+      name: 'lkBQcxfpDNE',
+      duration: '3:38',
+    },
+    {
+      id: 'a8',
+      title: 'custom range slider',
+      name: 'lkBQcxfpDNE',
+      duration: '1:12',
+    },
+    {
+      id: 'a9',
+      title: 'animated shopping cart',
+      name: 'lkBQcxfpDNE',
+      duration: '3:38',
+    },
+    {
+      id: 'a8',
+      title: 'custom range slider',
+      name: 'lkBQcxfpDNE',
+      duration: '1:12',
+    },
+    {
+      id: 'a9',
+      title: 'animated shopping cart',
+      name: 'lkBQcxfpDNE',
+      duration: '3:38',
+    },
+    {
+      id: 'a8',
+      title: 'custom range slider',
+      name: 'lkBQcxfpDNE',
+      duration: '1:12',
+    },
+    {
+      id: 'a9',
+      title: 'animated shopping cart',
+      name: 'lkBQcxfpDNE',
+      duration: '3:38',
+    },
+    {
+      id: 'a8',
+      title: 'custom range slider',
+      name: 'lkBQcxfpDNE',
+      duration: '1:12',
+    },
+    {
+      id: 'a9',
+      title: 'animated shopping cart',
+      name: 'lkBQcxfpDNE',
+      duration: '3:38',
+    },
+    {
+      id: 'a8',
+      title: 'custom range slider',
+      name: 'lkBQcxfpDNE',
+      duration: '1:12',
+    },
+    {
+      id: 'a9',
+      title: 'animated shopping cart',
+      name: 'lkBQcxfpDNE',
+      duration: '3:38',
+    },
   ];
   const myStyle = {
-    marginTop: '200px'
-  }
+    marginTop: '200px',
+  };
   const videoRef = useRef(null);
 
   const changeVideo = (val) => {
     videoRef.current.src = '';
     videoRef.current.src = `https://www.youtube.com/embed/${val}`;
-  }
+  };
   return (
     <>
       <Home>
@@ -238,12 +238,11 @@ const courseDetail = () => {
                                                     <span className="time float-end">2:03</span>
                                                 </a>
                                             </li> */}
-
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+                    </ul >
+                  </div >
+                </div >
+              </div >
+            </div >
             <div className="row">
               <div className="col-xl-6 col-lg-7">
                 <div className="project-details mb-65">
@@ -286,7 +285,7 @@ const courseDetail = () => {
                   </ul>
                   <h5 className="mb-25">
                     <span>Created by</span> Jason Momoa &amp; Uxaction Photography team
-                  </h5>
+                  </h5 >
                   <div className="date-lang">
                     <span>
                       <b>Date :</b> 31/05/2020
@@ -295,7 +294,7 @@ const courseDetail = () => {
                       <b>Language :</b> English
                     </span>
                   </div>
-                </div>
+                </div >
                 <div className="meet-our-teacher mb-65">
                   <h2 className="courses-title mb-30">Meet Your Teacher</h2>
                   <div className="teachers-content mb-25">
@@ -328,7 +327,7 @@ const courseDetail = () => {
                   </p>
                 </div>
 
-              </div>
+              </div >
               <div className="col-xl-6 col-lg-5">
                 <div className="courses-ingredients">
                   <h2 className="corses-title mb-30">Course Includes</h2>
@@ -360,13 +359,13 @@ const courseDetail = () => {
                       <img src="/assets/img/icon/certificate-line.svg" alt="" />
                       Certificate of completion
                     </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </Home>
+                  </ul >
+                </div >
+              </div >
+            </div >
+          </div >
+        </section >
+      </Home >
     </>
   )
 }
