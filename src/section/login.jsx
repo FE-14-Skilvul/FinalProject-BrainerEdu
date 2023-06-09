@@ -22,18 +22,34 @@ const Login = () => {
             setFormErrors(errors)
             return;
         }
-        try {
+        // try {
 
 
-            const response = await axios.post(API + '/login', formdata, { withCredentials: true });
+        // const response = await axios.post(API + '/login', formdata, { withCredentials: true });
 
-            console.log(response);
-            // navigate("/");
+        // console.log(response);
+        // const headers = {
+        //     'Content-Type': 'application/json',
+        //     'Authorization': 'JWT fefege...'
+        // }
 
-        } catch (error) {
+        axios.post(API + '/login', formdata, {
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+        }).then((response) => {
+            console.log(response.data[0]);
+        }).catch((error) => {
             console.log(error);
-            // setFormErrors({ email: error.response.data.msg })
-        }
+        })
+        // navigate("/");
+
+        // } catch (error) {
+        // console.log(error);
+        // setFormErrors({ email: error.response.data.msg })
+        // }
 
     };
     return (
