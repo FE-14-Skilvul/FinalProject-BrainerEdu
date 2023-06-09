@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Landing from './pages/landing'
 import CourseDetail from './pages/courseDetail'
 import About from './pages/about'
-import Register from './components/register'
+import Login from './section/login'
+import Register from './section/register'
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                     <Route path="/course-detail/:id" element={< CourseDetail />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/register" element={<Register />} />
+                    <Route path="/login" element={<Login />} />
                 </Routes>
             </BrowserRouter>
         </>

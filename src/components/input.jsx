@@ -10,14 +10,18 @@ import React, { Children, forwardRef } from 'react'
 //     )
 // })
 
-const Input = forwardRef(({ type, placeholder }, ref) => {
+const Input = ({ ...props }) => {
     return (
 
         <div className="col-lg-12 mb-30">
-            <input ref={ref} type={type} placeholder={placeholder} />
+            <input {...props} />
+            <p className="d-flex justify-content-start text-danger">
+                {props.message}
+            </p>
+
         </div>
 
     )
-})
+}
 
 export default Input
