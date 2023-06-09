@@ -23,10 +23,17 @@ const Login = () => {
             return;
         }
         try {
-            const response = await axios.post(API + '/login', formdata, { withCredentials: true });
+            const headers = {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Accept': 'application/json',
+            };
+
+            const response = await axios.post(API + '/login', formdata, { withCredentials: true, headers: headers });
 
             console.log(response);
             // navigate("/");
+
         } catch (error) {
             console.log(error);
             // setFormErrors({ email: error.response.data.msg })
