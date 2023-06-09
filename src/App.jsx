@@ -3,9 +3,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Landing from './pages/landing';
 import CourseDetail from './pages/courseDetail';
 import About from './pages/about';
-import Register from './components/register';
+import Register from './section/register'
 import ContactUs from './pages/contactus';
 import Skillpath from './pages/skillpath';
+import Login from './section/login'
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/skillpath" element={<Skillpath />} />
+          <Route path="/login" element={<Login />} />
+
         </Routes>
       </BrowserRouter>
     </>
