@@ -36,7 +36,7 @@ const Login = () => {
             // const response = await axios.post(API + '/register', formdata, { withCredentials: true });
             const response = await axios.post(API + '/login', { email: formdata.email, password: formdata.password }, {
                 withCredentials: true, headers: {
-                    Accept: "Origin, X-Requested-With, Content-Type, Accept",
+                    // Accept: "Origin, X-Requested-With, Content-Type, Accept",
                     'Access-Control-Allow-Origin': API,
                     'Access-Control-Allow-Headers': "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
                 }
