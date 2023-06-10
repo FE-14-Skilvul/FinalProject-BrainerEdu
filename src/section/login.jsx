@@ -26,7 +26,7 @@ const Login = () => {
 
         const data = new FormData(e.target)
         const formdata = Object.fromEntries(data.entries())
-        const { errors, isValid } = validateForm(formdata, users)
+        const { errors, isValid } = validateForm(formdata)
 
         if (!isValid) {
             setFormErrors(errors)
@@ -56,7 +56,7 @@ const Login = () => {
     )
 }
 
-const validateForm = (formData, users) => {
+const validateForm = (formData) => {
     const { email, password } = formData;
     let isValid = true;
     const errors = {};
