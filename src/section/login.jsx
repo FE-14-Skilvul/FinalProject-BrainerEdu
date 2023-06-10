@@ -38,7 +38,7 @@ const Login = () => {
                 withCredentials: true, headers: {
                     // Accept: "Origin, X-Requested-With, Content-Type, Accept",
                     'Access-Control-Allow-Origin': API,
-                    'Access-Control-Allow-Headers': "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+                    'Access-Control-Request-Headers': "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
                 }
             });
             console.log(response);
