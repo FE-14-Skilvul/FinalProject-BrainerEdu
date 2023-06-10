@@ -16,7 +16,7 @@ const Login = () => {
 
     useEffect(() => {
         const getDataUser = async () => {
-            const response = await axios.get(`${API}/user`);
+            const response = await axios.get(`${API}/users`);
             setUsers(response.data);
         };
         getDataUser();
