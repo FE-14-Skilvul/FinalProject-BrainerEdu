@@ -30,10 +30,12 @@ const Register = () => {
             setFormErrors(errors)
             return;
         }
+        const { nama, username, email, password } = formdata
 
         try {
-            const response = await axios.post(API + '/register', formdata, { withCredentials: true });
-
+            // const response = await axios.post(API + '/register', formdata, { withCredentials: true });
+            const response = await axios.post(API + '/user', { nama, username, email, password, role: 3 });
+            console.log(response);
             navigate("/login");
         } catch (error) {
             console.log(error);
@@ -42,7 +44,9 @@ const Register = () => {
     };
     return (
         <>
+
             <Auth onsubmit={saveAccount} title={'Register'} >
+
                 <Input message={formErrors.nama} name={'nama'} type="text" placeholder="Nama Lengkap" />
                 <Input message={formErrors.username} name={'username'} type="text" placeholder="Username" />
                 <Input message={formErrors.email} name={'email'} type="text" placeholder="Email" />

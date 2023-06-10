@@ -51,7 +51,7 @@ const Hero = () => {
                                     <img
                                         className="chose_05 wow fadeInRight animated"
                                         data-delay="1.5s"
-                                        src="/assets/img/slider/slide2.png"
+                                        src="/assets/img/slider/jerome2.png"
                                         alt="Chose-img"
                                     />
                                     <img
