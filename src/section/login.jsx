@@ -34,7 +34,7 @@ const Login = () => {
         }
         try {
             // const response = await axios.post(API + '/register', formdata, { withCredentials: true });
-            const response = await axios.post(API + '/login', { email: formdata.email, password: formdata.password });
+            const response = await axios.post(API + '/login', { email: formdata.email, password: formdata.password }, { withCredentials: true });
             console.log(response);
             // navigate("/login");
         } catch (error) {
