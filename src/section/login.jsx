@@ -37,7 +37,7 @@ const Login = () => {
             const response = await axios.post(API + '/login', { email: formdata.email, password: formdata.password }, {
                 withCredentials: true, headers: {
                     Accept: 'application/json',
-                    'Access-Control-Allow-Origin': '*'
+                    'Access-Control-Allow-Origin': API
                 }
             });
             console.log(response);
