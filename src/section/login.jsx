@@ -34,7 +34,7 @@ const Login = () => {
         }
         try {
             // const response = await axios.post(API + '/register', formdata, { withCredentials: true });
-            const response = await axios.post(API + '/login', { email, password });
+            const response = await axios.post(API + '/login', { email: formdata.email, password: formdata.password });
             console.log(response);
             // navigate("/login");
         } catch (error) {
@@ -42,7 +42,7 @@ const Login = () => {
         }
         // const datauser = users.find(user => user.email === formdata.email);
         // setCookie("userLogin", datauser);
-        navigate('/')
+        // navigate('/')
     };
     return (
         <>
