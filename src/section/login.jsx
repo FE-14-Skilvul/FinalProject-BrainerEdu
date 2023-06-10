@@ -12,15 +12,15 @@ const Login = () => {
         email: '',
         password: '',
     });
-    const [users, setUsers] = useState([]);
+    // const [users, setUsers] = useState([]);
 
-    useEffect(() => {
-        const getDataUser = async () => {
-            const response = await axios.get(`${API}/users`);
-            setUsers(response.data);
-        };
-        getDataUser();
-    }, []);
+    // useEffect(() => {
+    //     const getDataUser = async () => {
+    //         const response = await axios.get(`${API}/users`);
+    //         setUsers(response.data);
+    //     };
+    //     getDataUser();
+    // }, []);
     const saveAccount = async (e) => {
         e.preventDefault();
 
@@ -32,8 +32,16 @@ const Login = () => {
             setFormErrors(errors)
             return;
         }
-        const datauser = users.find(user => user.email === formdata.email);
-        setCookie("userLogin", datauser);
+        try {
+            // const response = await axios.post(API + '/register', formdata, { withCredentials: true });
+            const response = await axios.post(API + '/login', { email, password });
+            console.log(response);
+            // navigate("/login");
+        } catch (error) {
+            console.log(error);
+        }
+        // const datauser = users.find(user => user.email === formdata.email);
+        // setCookie("userLogin", datauser);
         navigate('/')
     };
     return (
@@ -52,8 +60,8 @@ const validateForm = (formData, users) => {
     const { email, password } = formData;
     let isValid = true;
     const errors = {};
-    const validateemail = users.some(user => user.email === email)
-    const validatepassword = users.some(user => user.password === password)
+    // const validateemail = users.some(user => user.email === email)
+    // const validatepassword = users.some(user => user.password === password)
     if (!email) {
         errors.email = 'Email Tidak Boleh Kosong';
         isValid = false;
@@ -67,18 +75,18 @@ const validateForm = (formData, users) => {
         isValid = false;
     }
 
-    if (!validateemail || !validatepassword) {
-        errors.email = 'Email atau password Tidak Terdaftar';
-        isValid = false;
-    }
-    return { errors, isValid, validateemail, validatepassword };
+    // if (!validateemail || !validatepassword) {
+    //     errors.email = 'Email atau password Tidak Terdaftar';
+    //     isValid = false;
+    // }
+    return { errors, isValid };
 };
-function setCookie(name, value) {
-    const date = new Date();
-    date.setTime(date.getTime() + (24 * 60 * 60 * 1000)); // set the expiration time to 1 day
-    const expires = "expires=" + date.toUTCString();
-    const myObjStr = JSON.stringify(value);
-    document.cookie = name + "=" + myObjStr + ";" + expires + ";path=/";
-}
+// function setCookie(name, value) {
+//     const date = new Date();
+//     date.setTime(date.getTime() + (24 * 60 * 60 * 1000)); // set the expiration time to 1 day
+//     const expires = "expires=" + date.toUTCString();
+//     const myObjStr = JSON.stringify(value);
+//     document.cookie = name + "=" + myObjStr + ";" + expires + ";path=/";
+// }
 
 export default Login
