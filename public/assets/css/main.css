@@ -2933,9 +2933,33 @@ input.main-search-input:-ms-input-placeholder {
   transition: all 0.4s ease-in-out;
 }
 
+.theme_btn-light {
+  overflow: hidden;
+  color: #2878eb;
+  background: rgba(40, 120, 235, 0.1);
+  font-size: 16px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  padding: 18px 35px;
+  display: inline-block;
+  border-radius: 40px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
 .theme_btn:hover {
   color: #ffffff;
   background: #0056ce;
+}
+
+.theme_btn-light:hover {
+  color: #2878eb;
+  background: rgba(40, 120, 235, 0.1);
 }
 
 .border_btn {
