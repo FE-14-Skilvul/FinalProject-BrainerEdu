@@ -7,6 +7,7 @@ import Register from './section/register'
 import ContactUs from './pages/contactus';
 import Skillpath from './pages/skillpath';
 import Login from './section/login'
+import Logout from './components/logout';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/logout" element={<Logout />} />
           <Route path="/course-detail/:id" element={<CourseDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/register" element={<Register />} />
