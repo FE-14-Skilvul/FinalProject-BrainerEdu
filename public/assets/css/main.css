@@ -2800,7 +2800,7 @@ input.main-search-input:-ms-input-placeholder {
 
 .theme_btn:hover {
   color: #ffffff;
-  background: #0056ce;
+  background: #2878eb;
 }
 
 .theme_btn-light:hover {
@@ -2820,16 +2820,16 @@ input.main-search-input:-ms-input-placeholder {
 .border_btn:hover,
 .border_btn.active {
   color: #ffffff;
-  -webkit-box-shadow: 5px 15px 60px #0079ff;
-  box-shadow: 5px 15px 60px #0079ff;
-  border-color: #0056ce;
+  /* -webkit-box-shadow: 5px 15px 60px #0079ff;
+  box-shadow: 5px 15px 60px #0079ff; */
+  border-color: #2878eb;
 }
 
 .border_btn.active {
   border-color: #2878eb;
   background-color: #2878eb;
-  -webkit-box-shadow: 2px 15px 60px #0079ff;
-  box-shadow: 2px 15px 60px #0079ff;
+  /* -webkit-box-shadow: 2px 15px 60px #0079ff;
+  box-shadow: 2px 15px 60px #0079ff; */
 }
 
 .border_btn.active:hover {
