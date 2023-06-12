@@ -45,7 +45,7 @@ const Footer = () => {
           <div className="row pb-15">
             <div
               className="col-xl-3 col-lg-4 col-md-6  wow fadeInUp2 animated"
-              dataWowDelay=".1s"
+              datawowdelay=".1s"
             >
               <div className="footer__widget footer__widget__two mb-30">
                 <h4 className="sub-title mb-35"> Tentang Kami </h4>
@@ -60,7 +60,7 @@ const Footer = () => {
             </div>
             <div
               className="col-xl-3 col-lg-4 col-md-6 wow fadeInUp2 animated"
-              dataWowDelay=".3s"
+              datawowdelay=".3s"
             >
               <div className="footer__widget mb-30 pl-40 pl-md-0 pl-xs-0">
                 <h6 className="widget-title mb-35"> Kontak </h6>
@@ -82,7 +82,7 @@ const Footer = () => {
             </div>
             <div
               className="col-xl-3 col-lg-4 col-md-6  wow fadeInUp2 animated"
-              dataWowDelay=".5s"
+              datawowdelay=".5s"
             >
               <div className="footer__widget mb-25 pl-65 pl-md-0 pl-xs-0">
                 <h6 className="widget-title mb-35"> Features </h6>
@@ -104,7 +104,7 @@ const Footer = () => {
             </div>
             <div
               className="col-xl-3 col-lg-6 col-md-6  wow fadeInUp2 animated"
-              dataWowDelay=".7s"
+              datawowdelay=".7s"
             >
               <div className="footer__widget footer__widget__two mb-30">
                 <h6 className="widget-title mb-35"> Subscribe Now </h6>

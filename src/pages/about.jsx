@@ -147,7 +147,7 @@ const About = () => {
                   <div className="chose-wrapper pl-25 pl-lg-0 pl-md-0 pl-xs-0">
                     <div
                       className="section-title mb-30 wow fadeInUp2 animated"
-                      dataWowDelay=".1s"
+                      datawowdelay=".1s"
                     >
                       <h2 className="mb-25">
                         {' '}
@@ -165,7 +165,7 @@ const About = () => {
                     </div>{' '}
                     <ul
                       className="text-list mb-40 wow fadeInUp2 animated"
-                      dataWowDelay=".2s"
+                      datawowdelay=".2s"
                     >
                       <li> Video Belajar yang Berkualitas </li>{' '}
                       <li> Kelas Gratis dan Berbayar </li>{' '}
