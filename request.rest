@@ -1,0 +1,39 @@
+
+###
+POST https://6483eb0aee799e3216262887.mockapi.io/kelas
+Content-Type: application/json
+
+{
+    "nama_kelas":"Basic React Js",
+    "kategori_kelas":["1","2"],
+    "harga":"1200000",
+    "bahasa":"Indonesia",
+    "rating":"5",
+    "thumnail":"5",
+    "mentor":{
+            "nama":"Introduction to react js",
+            "pekerjaan":"Akuntan",
+            "avatar":"3M4dFZL5NRs&list=PLp6BJq2fT_g91yCNCWi_bIe-ng7S7rt6V&index=1&t=2s"
+    },
+    "video": [
+       {
+            "thumnail":"https://i.ytimg.com/vi/3M4dFZL5NRs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDOYqwYplrZORBEkf7d3MykCz75TQ",
+            "judul":"Introduction to react js",
+            "durasi":"13:59",
+            "Link":"3M4dFZL5NRs&list=PLp6BJq2fT_g91yCNCWi_bIe-ng7S7rt6V&index=1&t=2s"
+        },
+        {
+            "thumnail":"https://i.ytimg.com/vi/3M4dFZL5NRs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDOYqwYplrZORBEkf7d3MykCz75TQ",
+            "judul":"Introduction to react js",
+            "durasi":"13:59",
+            "Link":"3M4dFZL5NRs&list=PLp6BJq2fT_g91yCNCWi_bIe-ng7S7rt6V&index=1&t=2s"
+        }
+    ],
+    "fasilitas":[ "Konsultasi", "zoom Meeting" ]
+}
+
+
+###
+DELETE https://6483eb0aee799e3216262887.mockapi.io/kelas/1
+###
+GET https://6483eb0aee799e3216262887.mockapi.io/kelas/
