@@ -24,7 +24,7 @@ const Developer = () => {
                     <a href="#">
                       <i className="fab fa-twitter" />
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com/arya_wardhanaa/">
                       <i className="fab fa-instagram" />
                     </a>
                     <a href="#">

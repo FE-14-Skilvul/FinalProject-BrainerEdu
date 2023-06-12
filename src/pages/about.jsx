@@ -20,9 +20,9 @@ const About = () => {
                 <div className="about__img__box mb-60">
                   <img
                     className="about-main-thumb pl-110"
-                    src="assets/img/slider/about.png"
-                    width={651}
-                    height={721}
+                    src="assets/img/slider/maudy.png"
+                    width={621}
+                    height={701}
                     alt="about-img"
                   />
                   <img
