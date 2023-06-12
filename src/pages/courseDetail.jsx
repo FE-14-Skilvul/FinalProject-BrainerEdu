@@ -1,8 +1,9 @@
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import Home from '../layout/home';
 import { useRef } from 'react';
+import Button from '../components/button';
 
-const courseDetail = () => {
+const CourseDetail = () => {
   const { id } = useParams();
 
   const videoData = [
@@ -185,40 +186,35 @@ const courseDetail = () => {
               </div>
               <div className="col-xxl-4 col-xl-5">
                 <div className="learn-area mb-30">
-                  <ul className="cart-list-tag d-sm-inline-flex align-items-center mb-50">
+                  <ul className="cart-list-tag align-items-center mb-45 d-flex justify-content-end">
                     <li>
                       <div className="price-list">
-                        <h5>
-                          <span>$123.65</span> <b className="sub-title">$93.65</b>
+                        <h5 >
+                          <b className="sub-title">Rp. 500.000</b>
                         </h5>
                       </div>
                     </li>
-                    <li>
-                      <div className="cart-btn">
-                        <a className="theme_btn" href="#">
-                          Add To Cart
-                        </a>
-                      </div>
-                    </li>
+
 
                   </ul>
-                  <div className="learn-box">
-                    <h5>25 Lessons ( 3h 36m )</h5>
-                    <ul className="learn-list">
-                      {videoData.map(({ id, name, title, duration }, index) => {
+                  <div className="courses-ingredients w-100" style={{ marginLeft: "0" }}>
+                    <div className="learn-box">
+                      <h5>25 Lessons ( 3h 36m )</h5>
+                      <ul className="learn-list " style={{ marginRight: "0", height: "360px" }}>
+                        {videoData.map(({ id, name, title, duration }, index) => {
 
-                        return <li key={index} onClick={() => changeVideo(name)} >
-                          <a href="#learn-bok" style={{ display: "flex", alignItems: "top", justifyContent: 'space-between' }}>
-                            <span className="play-video" style={{ display: 'flex' }}>
-                              <i className="fal fa-lock-alt" style={{ paddingRight: '10px' }} />
-                              <p> {index + 1 + '. ' + title}</p>
-                            </span>
+                          return <li key={index} onClick={() => changeVideo(name)} >
+                            <a className="d-flex align-items-top justify-content-between" href="#learn-bok">
+                              <span className="play-video d-flex">
+                                <i className="fal fa-lock-alt" style={{ paddingRight: '10px' }} />
+                                <p> {index + 1 + '. ' + title}</p>
+                              </span>
 
-                            <span className="time float-end">{duration}</span>
-                          </a>
-                        </li>
-                      })}
-                      {/* <li>
+                              <span className="time float-end">{duration}</span>
+                            </a>
+                          </li>
+                        })}
+                        {/* <li>
                                                 <a href="#learn-bok">
                                                     <span className="play-video">
                                                         <img
@@ -238,8 +234,13 @@ const courseDetail = () => {
                                                     <span className="time float-end">2:03</span>
                                                 </a>
                                             </li> */}
-                    </ul >
-                  </div >
+                      </ul >
+                      {/* <Button text={""} /> */}
+                      <Link to={'/register'} className="theme_btn free_btn w-100 d-flex justify-content-center my-3"  >
+                        Gabung Kelas
+                      </Link>
+                    </div >
+                  </div>
                 </div >
               </div >
             </div >
@@ -370,4 +371,4 @@ const courseDetail = () => {
   )
 }
 
-export default courseDetail
+export default CourseDetail

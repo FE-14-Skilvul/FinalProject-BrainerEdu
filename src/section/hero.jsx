@@ -1,14 +1,16 @@
 import React from 'react'
+import IconImg from '../components/iconImg'
 
 const Hero = () => {
     return (
         <><section className="slider-area slider-gradient-bg pt-180 pb-100 pb-xs-50">
-            <img className="sl-shape shape_01" src="/assets/img/icon/01.svg" alt="" />
-            <img className="sl-shape shape_02" src="/assets/img/icon/02.svg" alt="" />
-            <img className="sl-shape shape_03" src="/assets/img/icon/03.svg" alt="" />
-            <img className="sl-shape shape_04" src="/assets/img/icon/04.svg" alt="" />
-            <img className="sl-shape shape_05" src="/assets/img/icon/05.svg" alt="" />
-            <img className="sl-shape shape_06" src="/assets/img/icon/06.svg" alt="" />
+            <IconImg src={'01'} />
+            <IconImg src={'02'} />
+            <IconImg src={'03'} />
+            <IconImg src={'04'} />
+            <IconImg src={'05'} />
+            <IconImg src={'06'} />
+
             <div className="main-slider">
                 <div className="container">
                     <div className="row">
@@ -37,8 +39,8 @@ const Hero = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="col-xl-6 col-lg-6">
-                            <div className="slider-img-box-two">
+                        <div className="col-xl-5 col-lg-5 offset-1">
+                            <div className="slider-img-box-two" >
                                 <div className="chose-img-wrapper mb-50 pos-rel">
                                     <img
                                         className="shape-avatar-bg"
