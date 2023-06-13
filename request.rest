@@ -4,36 +4,775 @@ POST https://6483eb0aee799e3216262887.mockapi.io/kelas
 Content-Type: application/json
 
 {
-    "nama_kelas":"Basic React Js",
-    "kategori_kelas":["1","2"],
-    "harga":"1200000",
-    "bahasa":"Indonesia",
-    "rating":"5",
-    "thumnail":"5",
-    "mentor":{
-            "nama":"Introduction to react js",
-            "pekerjaan":"Akuntan",
-            "avatar":"3M4dFZL5NRs&list=PLp6BJq2fT_g91yCNCWi_bIe-ng7S7rt6V&index=1&t=2s"
-    },
-    "video": [
-       {
-            "thumnail":"https://i.ytimg.com/vi/3M4dFZL5NRs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDOYqwYplrZORBEkf7d3MykCz75TQ",
-            "judul":"Introduction to react js",
-            "durasi":"13:59",
-            "Link":"3M4dFZL5NRs&list=PLp6BJq2fT_g91yCNCWi_bIe-ng7S7rt6V&index=1&t=2s"
-        },
-        {
-            "thumnail":"https://i.ytimg.com/vi/3M4dFZL5NRs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDOYqwYplrZORBEkf7d3MykCz75TQ",
-            "judul":"Introduction to react js",
-            "durasi":"13:59",
-            "Link":"3M4dFZL5NRs&list=PLp6BJq2fT_g91yCNCWi_bIe-ng7S7rt6V&index=1&t=2s"
-        }
+    "createdAt": 69,
+    "nama_kelas": "Belajar HTML5",
+    "kategori_kelas": [
+      "1"
     ],
-    "fasilitas":[ "Konsultasi", "zoom Meeting" ]
-}
-
-
+    "thumnail": "https://i.ytimg.com/vi/Q2VqCG13ejA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDuu8l2DOQGijSjHVTJdDHH0Su-qg",
+    "harga": "200000",
+    "deskripsi": "",
+    "bahasa": "Indonesia",
+    "rating": "5",
+    "nama_mentor": "nama_mentor 13",
+    "video": [
+      {
+        "thumnail": "https://i.ytimg.com/vi/Q2VqCG13ejA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDuu8l2DOQGijSjHVTJdDHH0Su-qg",
+        "judul": "Apa itu HTML5?",
+        "durasi": "18:27",
+        "Link": "Q2VqCG13ejA&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/o3m15BWi2HM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDoytjD71YKL1FgFHUsuL5fZMTImQ",
+        "judul": "Semantic HTML5",
+        "durasi": "21:28",
+        "Link": "o3m15BWi2HM&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=2"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/9g1Zz83FXyc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDFsGzwKTGJbvhk3W4bG56h9hen7g",
+        "judul": "Images Elements",
+        "durasi": "27:45",
+        "Link": "9g1Zz83FXyc&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=3"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/SQMruNuafHk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCQu_wk2rKIzpOJjMaGcPVQtklqhQ",
+        "judul": "Audio & Video",
+        "durasi": "30:22",
+        "Link": "SQMruNuafHk&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=4"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/gRrM9TBnRYE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDTnzevHToUIXV3mGTzeUpJGMlJ_g",
+        "judul": "Canvas",
+        "durasi": "31:51",
+        "Link": "gRrM9TBnRYE&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=5"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/qfn67VjdgZE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAVQaRnkpRzz7de8FVb527iADX3Rg",
+        "judul": "SVG",
+        "durasi": "32:47",
+        "Link": "qfn67VjdgZE&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=6"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/ZDxGMTO7O3g/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCa2b3wI-h7v-ehbwIhRxUki31-gQ",
+        "judul": "Form Validation",
+        "durasi": "36:05",
+        "Link": "ZDxGMTO7O3g&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=7"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/T-a7tX0tCuQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDKU9Ell63uJOEVBS91z3aVO3RpZg",
+        "judul": "Web Storage",
+        "durasi": "25:19",
+        "Link": "T-a7tX0tCuQ&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=8"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/ELqsF3rD920/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA5AIWCTPPtz1i7nvV3_mHXN189Nw",
+        "judul": "Accessibility",
+        "durasi": "27:31",
+        "Link": "ELqsF3rD920&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=9"
+      }
+    ],
+    "fasilitas": [
+      "Sertifikat",
+      "Konsultasi",
+      "Video & Materi Berkualitas",
+      "Akses Selamanya"
+    ],
+    "uuid": "cc142eec-ee51-4082-8622-cf7c7ec4c548",
+    "slug": "slug 13",
+    "id": "13",
+    "mentor": {
+      "nama": "Nolan Nokidis",
+      "pekerjaan": "Full-Stack Developer",
+      "avatar": "https://imgur.com/337j214.png"
+    }
+  }
 ###
-DELETE https://6483eb0aee799e3216262887.mockapi.io/kelas/1
+POST https://6483eb0aee799e3216262887.mockapi.io/kelas
+Content-Type: application/json
+
+[
+  {
+    "createdAt": 29,
+    "nama_kelas": "Belajar UI/UX Design",
+    "kategori_kelas": [
+      "1"
+    ],
+    "thumnail": "https://i.ytimg.com/vi/qk3R3mYiuPA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZYQMHd6nep_NvbTssktITzU4CoA",
+    "harga": "200000",
+    "deskripsi": "deskripsi 7",
+    "bahasa": "Indonesia",
+    "rating": "5",
+    "nama_mentor": "nama_mentor 7",
+    "video": [
+      {
+        "thumnail": "https://i.ytimg.com/vi/qk3R3mYiuPA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZYQMHd6nep_NvbTssktITzU4CoA",
+        "judul": "Belajar Menggunakan Figma Untuk Pemula",
+        "durasi": "19:31",
+        "Link": "qk3R3mYiuPA&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/mF-S3EqDWYA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBS8gPmjEOfq6a_DBgyYJAh9rcUvA",
+        "judul": "Cara membuat line icon menggunakan figma",
+        "durasi": "19:39",
+        "Link": "mF-S3EqDWYA&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=2"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/mK3y6CzX6Og/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDW94gvcZaDE0tUmK-3nKZapl3k2A",
+        "judul": "8 Plugin Figma untuk memudahkan membuat UI Design",
+        "durasi": "29:16",
+        "Link": "mK3y6CzX6Og&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=3"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/FscX5Q1rihE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCVuRJkfkhSc85CXa0U0652cZBQRg",
+        "judul": "Belajar Design System Untuk Pemula",
+        "durasi": "19:39",
+        "Link": "FscX5Q1rihE&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=4"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/UYIERNVOGzk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDedNbEgiFCeRQxsSk2K9Ux1rzv3g",
+        "judul": "Belajar Responsive Design dengan Auto Layout di Figma",
+        "durasi": "29:13",
+        "Link": "UYIERNVOGzk&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=5"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/QKLhHF3RyLk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC2TElkxjwVbp-E_Lr9xAOn35vQFQ",
+        "judul": "Tips membuat icon untuk pemula",
+        "durasi": "17:47",
+        "Link": "QKLhHF3RyLk&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=6"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/kgT0iDjf51s/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCH9fqn7Tod-4L1WwrAuRQQS4iD_w",
+        "judul": "Tips Membuat Button Untuk User Interface Design",
+        "durasi": "16:24",
+        "Link": "kgT0iDjf51s&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=7"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/AD0nIsAhmao/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAWe1lp5oGgvOvvb9IU0jSuB59wlA",
+        "judul": "Cara Membuat Variants Di Figma",
+        "durasi": "12:15",
+        "Link": "AD0nIsAhmao&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=8"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/2DjKZ-QtZYY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAoUZKxJND7IjvSPny9_sEh7A_j3w",
+        "judul": "Tips Membuat Text Field Untuk UI Design",
+        "durasi": "12:20",
+        "Link": "2DjKZ-QtZYY&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=9"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/0seNHpFGTS4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBnVSsmu7MUWsSht-AJaoxMmQTFug",
+        "judul": "Cara Membuat Component Di Figma",
+        "durasi": "13:15",
+        "Link": "0seNHpFGTS4&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=10"
+      }
+    ],
+    "fasilitas": [
+      "Sertifikat",
+      "Konsultasi",
+      "Video & Materi Berkualitas",
+      "Akses Selamanya"
+    ],
+    "uuid": "250ec2a6-1aa5-4dd9-aa8c-0256ab468065",
+    "slug": "slug 7",
+    "id": "7",
+    "mentor": {
+      "nama": "Tiana Evelyn",
+      "pekerjaan": "UI/UX Designer",
+      "avatar": "https://imgur.com/Ap6jpnO.png"
+    }
+  },
+  {
+    "createdAt": 84,
+    "nama_kelas": "Belajar UI/UX Design",
+    "kategori_kelas": [
+      "1"
+    ],
+    "thumnail": "https://i.ytimg.com/vi/qk3R3mYiuPA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZYQMHd6nep_NvbTssktITzU4CoA",
+    "harga": "200000",
+    "deskripsi": "UI (User Interface) dan UX (User Experience) adalah dua aspek penting dalam desain produk digital yang berfokus pada interaksi antara pengguna dan produk tersebut. Belajar UI/UX melibatkan pemahaman tentang bagaimana pengguna berinteraksi dengan antarmuka produk, serta menciptakan pengalaman yang memuaskan dan efisien bagi pengguna. Dalam belajar UI/UX, Anda akan mempelajari konsep dasar, prinsip, dan praktik terbaik dalam desain yang efektif. Anda akan belajar tentang desain visual, seperti pemilihan warna, tipografi, tata letak, dan ikon, yang bertujuan untuk menciptakan antarmuka yang menarik dan mudah digunakan. Selain itu, Anda juga akan memahami prinsip-prinsip desain seperti konsistensi, kesederhanaan, dan tata letak yang intuitif, untuk memberikan pengalaman pengguna yang baik.",
+    "bahasa": "Indonesia",
+    "rating": "5",
+    "nama_mentor": "nama_mentor 8",
+    "video": [
+      {
+        "thumnail": "https://i.ytimg.com/vi/qk3R3mYiuPA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZYQMHd6nep_NvbTssktITzU4CoA",
+        "judul": "Belajar Menggunakan Figma Untuk Pemula",
+        "durasi": "19:31",
+        "Link": "qk3R3mYiuPA&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/mF-S3EqDWYA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBS8gPmjEOfq6a_DBgyYJAh9rcUvA",
+        "judul": "Cara membuat line icon menggunakan figma",
+        "durasi": "19:39",
+        "Link": "mF-S3EqDWYA&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=2"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/mK3y6CzX6Og/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDW94gvcZaDE0tUmK-3nKZapl3k2A",
+        "judul": "8 Plugin Figma untuk memudahkan membuat UI Design",
+        "durasi": "29:16",
+        "Link": "mK3y6CzX6Og&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=3"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/FscX5Q1rihE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCVuRJkfkhSc85CXa0U0652cZBQRg",
+        "judul": "Belajar Design System Untuk Pemula",
+        "durasi": "19:39",
+        "Link": "FscX5Q1rihE&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=4"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/UYIERNVOGzk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDedNbEgiFCeRQxsSk2K9Ux1rzv3g",
+        "judul": "Belajar Responsive Design dengan Auto Layout di Figma",
+        "durasi": "29:13",
+        "Link": "UYIERNVOGzk&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=5"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/QKLhHF3RyLk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC2TElkxjwVbp-E_Lr9xAOn35vQFQ",
+        "judul": "Tips membuat icon untuk pemula",
+        "durasi": "17:47",
+        "Link": "QKLhHF3RyLk&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=6"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/kgT0iDjf51s/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCH9fqn7Tod-4L1WwrAuRQQS4iD_w",
+        "judul": "Tips Membuat Button Untuk User Interface Design",
+        "durasi": "16:24",
+        "Link": "kgT0iDjf51s&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=7"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/AD0nIsAhmao/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAWe1lp5oGgvOvvb9IU0jSuB59wlA",
+        "judul": "Cara Membuat Variants Di Figma",
+        "durasi": "12:15",
+        "Link": "AD0nIsAhmao&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=8"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/2DjKZ-QtZYY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAoUZKxJND7IjvSPny9_sEh7A_j3w",
+        "judul": "Tips Membuat Text Field Untuk UI Design",
+        "durasi": "12:20",
+        "Link": "2DjKZ-QtZYY&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=9"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/0seNHpFGTS4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBnVSsmu7MUWsSht-AJaoxMmQTFug",
+        "judul": "Cara Membuat Component Di Figma",
+        "durasi": "13:15",
+        "Link": "0seNHpFGTS4&list=PLCGYmOfiRxUoFP9Swh9OxpNPbRqcFbB0u&index=10"
+      }
+    ],
+    "fasilitas": [
+      "Sertifikat",
+      "Konsultasi",
+      "Video & Materi Berkualitas",
+      "Akses Selamanya"
+    ],
+    "uuid": "ddd9aa85-a45f-4ecd-97bb-377e7d1f359b",
+    "slug": "slug 8",
+    "id": "8",
+    "mentor": {
+      "nama": "Tiana Evelyn",
+      "pekerjaan": "UI/UX Designer",
+      "avatar": "https://imgur.com/Ap6jpnO.png"
+    }
+  },
+  {
+    "createdAt": 50,
+    "nama_kelas": "Akuntansi Manajemen",
+    "kategori_kelas": [
+      "3"
+    ],
+    "thumnail": "https://i.ytimg.com/vi/PgVg7-FWmx4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB6EpKCES0lHARzyGrTM5BF_uIs0A",
+    "harga": "300000",
+    "deskripsi": "Akuntansi Manajemen adalah program pembelajaran yang dirancang untuk memperkenalkan Anda pada konsep dan praktik dalam bidang akuntansi yang berkaitan dengan pengambilan keputusan manajerial. Dalam kelas ini, Anda akan belajar bagaimana menggunakan informasi akuntansi untuk mengoptimalkan keputusan bisnis yang strategis dan efektif.",
+    "bahasa": "Indonesia",
+    "rating": "5",
+    "nama_mentor": "nama_mentor 9",
+    "video": [
+      {
+        "thumnail": "https://i.ytimg.com/vi/PgVg7-FWmx4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB6EpKCES0lHARzyGrTM5BF_uIs0A",
+        "judul": "Products and Services Pricing",
+        "durasi": "10:29",
+        "Link": "PgVg7-FWmx4&list=PL0tS1ou_AQQ0rjupKwdHSjt8faocx7TS_&index=1"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/equjfOWTGHw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBop7h441Inj2AXnGf6yLcx3Jhs5Q",
+        "judul": "Cara melakukan transaksi antar divisi dalam Akuntansi",
+        "durasi": "13:32",
+        "Link": "equjfOWTGHw&list=PL0tS1ou_AQQ0rjupKwdHSjt8faocx7TS_&index=2"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/0yY9vLw-oiM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYX75UBr-qlRkF3fHrLIN2LndXNg",
+        "judul": "Cost Volume Profit Relationship",
+        "durasi": "11:41",
+        "Link": "0yY9vLw-oiM&list=PL0tS1ou_AQQ0rjupKwdHSjt8faocx7TS_&index=3"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/bw_QWtZilXE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPBtVoaFN-e5on_mI03_AU5ejYaA",
+        "judul": "Flexible Budget",
+        "durasi": "12:02",
+        "Link": "bw_QWtZilXE&list=PL0tS1ou_AQQ0rjupKwdHSjt8faocx7TS_&index=4"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/iqmwt04Iwbk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCYRlIdhENVBPVv2WoSU6SydfKgvw",
+        "judul": "Direct Material, Direct Labour, Manufacturing Overhead",
+        "durasi": "8:56",
+        "Link": "iqmwt04Iwbk&list=PL0tS1ou_AQQ0rjupKwdHSjt8faocx7TS_&index=6"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/-3mJuT4VpKE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDag30STwyf0i-lf_GW9f0hKoW9rg",
+        "judul": "Cash Budget (Penjelasan, Contoh Soal, dan Jawaban)",
+        "durasi": "10:15",
+        "Link": "-3mJuT4VpKE&list=PL0tS1ou_AQQ0rjupKwdHSjt8faocx7TS_&index=7"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/Re_jomhOU8g/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCaxR5FstNdHgi5_tfhBuxtkcEJFw",
+        "judul": "Cash Collection (Definisi, Contoh Soal, dan Jawaban)",
+        "durasi": "8:52",
+        "Link": "Re_jomhOU8g&list=PL0tS1ou_AQQ0rjupKwdHSjt8faocx7TS_&index=8"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/kSB6nA366fk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCBZGjvYnfhx2n9ja-2DOksrH_EXA",
+        "judul": "Predetermined Overhead Rate",
+        "durasi": "5:12",
+        "Link": "kSB6nA366fk&list=PL0tS1ou_AQQ0rjupKwdHSjt8faocx7TS_&index=9"
+      }
+    ],
+    "fasilitas": [
+      "Sertifikat",
+      "Konsultasi",
+      "Video & Materi Berkualitas",
+      "Akses Selamanya"
+    ],
+    "uuid": "10944fc8-8be2-4827-a0f1-5f2b7169bed2",
+    "slug": "slug 9",
+    "id": "9",
+    "mentor": {
+      "nama": "Ferdiansyah",
+      "pekerjaan": "Accounting",
+      "avatar": "https://imgur.com/lmrjKOs.png"
+    }
+  },
+  {
+    "createdAt": 5,
+    "nama_kelas": "Belajar React.js",
+    "kategori_kelas": [
+      "1"
+    ],
+    "thumnail": "https://i.ytimg.com/vi/5kHyviqjhCk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDiCbXz-ZAtJTTsjRshqkbF8IYjLQ",
+    "harga": "500000",
+    "deskripsi": "React JS adalah program pembelajaran yang ditujukan untuk memperkenalkan Anda pada pengembangan aplikasi web interaktif menggunakan React JS, sebuah library JavaScript yang populer dan kuat. Dalam kelas ini, Anda akan belajar tentang konsep dasar, teknik, dan praktik terbaik dalam mengembangkan aplikasi web dengan menggunakan React JS.",
+    "bahasa": "Indonesia",
+    "rating": "5",
+    "nama_mentor": "nama_mentor 10",
+    "video": [
+      {
+        "thumnail": "https://i.ytimg.com/vi/5kHyviqjhCk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDiCbXz-ZAtJTTsjRshqkbF8IYjLQ",
+        "judul": "Pengenalan ReactJS",
+        "durasi": "5:04",
+        "Link": "5kHyviqjhCk&list=PLU4DS8KR-LJ03qEsHn9zV4qdhcWtusBqb&index=1"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/EbdwcqZAkN0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBm6bl6S8mQafqovERn-M64O6puYw",
+        "judul": "Simple Component",
+        "durasi": "16:32",
+        "Link": "EbdwcqZAkN0&list=PLU4DS8KR-LJ03qEsHn9zV4qdhcWtusBqb&index=2"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/GBvnzRwoizo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAi7bw-sEfcsNs6s5KwGQzztaHyuQ",
+        "judul": "Add React To existing Project",
+        "durasi": "7:17",
+        "Link": "GBvnzRwoizo&list=PLU4DS8KR-LJ03qEsHn9zV4qdhcWtusBqb&index=3"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/_hopxgcz1AA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDpv1kCY0j94sB2F0tgdXS8t5ZPtg",
+        "judul": "Membuat Project React dengan create react app",
+        "durasi": "9:06",
+        "Link": "_hopxgcz1AA&list=PLU4DS8KR-LJ03qEsHn9zV4qdhcWtusBqb&index=4"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/_EatT18zjmw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLApboJ35y62CEUEOZlkqeIHGo116g",
+        "judul": "StateLess Component & StateFul Component",
+        "durasi": "10:55",
+        "Link": "_EatT18zjmw&list=PLU4DS8KR-LJ03qEsHn9zV4qdhcWtusBqb&index=5"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/CZKcmzNs5Jw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDUorXb4jUdMl6r0oUWUISKEgAHDg",
+        "judul": "Dynamic component menggunakan props",
+        "durasi": "15:17",
+        "Link": "CZKcmzNs5Jw&list=PLU4DS8KR-LJ03qEsHn9zV4qdhcWtusBqb&index=6"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/QkRRH21AYQo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD722rq0FavQZCz7vLY5xi5lLzD-Q",
+        "judul": "Update Parent oleh child component",
+        "durasi": "27:21",
+        "Link": "QkRRH21AYQo&list=PLU4DS8KR-LJ03qEsHn9zV4qdhcWtusBqb&index=7"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/CFtC8sTEySw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLApkHgFFEvJymuoXyDj82_i7K8X7w",
+        "judul": "LifeCycle Component Part1",
+        "durasi": "17:47",
+        "Link": "CFtC8sTEySw&list=PLU4DS8KR-LJ03qEsHn9zV4qdhcWtusBqb&index=8"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/CuRYVuoefFM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDNVbnA4M6VwTkZfdZ6E1PAZmwn8g",
+        "judul": "LifeCycle Component Part2",
+        "durasi": "18:00",
+        "Link": "CuRYVuoefFM&list=PLU4DS8KR-LJ03qEsHn9zV4qdhcWtusBqb&index=9"
+      }
+    ],
+    "fasilitas": [
+      "Sertifikat",
+      "Konsultasi",
+      "Video & Materi Berkualitas",
+      "Akses Selamanya"
+    ],
+    "uuid": "3ffa7acb-d0c2-4ac1-8aa9-a93a1470e1b3",
+    "slug": "slug 10",
+    "id": "10",
+    "mentor": {
+      "nama": "Roger Levin",
+      "pekerjaan": "Front-End Developer",
+      "avatar": "https://imgur.com/Njr2aCc.png"
+    }
+  },
+  {
+    "createdAt": 48,
+    "nama_kelas": "Belajar Bahasa Inggris",
+    "kategori_kelas": [
+      "2"
+    ],
+    "thumnail": "https://i.ytimg.com/vi/75X0aAKXyng/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPOeXxeK4hMwEIwyZgtP7SSIblug",
+    "harga": "100000",
+    "deskripsi": "Bahasa Inggris adalah program pembelajaran yang dirancang untuk membantu Anda menguasai kemampuan berbicara dan menulis dalam bahasa Inggris dengan percaya diri. Dalam kelas ini, Anda akan memperoleh pengetahuan dasar, meningkatkan keterampilan berbahasa, dan mempraktikkan penggunaan bahasa Inggris dalam berbagai situasi komunikatif.",
+    "bahasa": "Indonesia",
+    "rating": "5",
+    "nama_mentor": "nama_mentor 11",
+    "video": [
+      {
+        "thumnail": "https://i.ytimg.com/vi/75X0aAKXyng/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDPOeXxeK4hMwEIwyZgtP7SSIblug",
+        "judul": "Part of Speech",
+        "durasi": "3:16",
+        "Link": "75X0aAKXyng&list=PLxR9RNyjhJUUkMiBkybVusBt5HWCBsw50&index=1"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/8O2-oZYdA8M/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAlg0nZpjJJWX2HLVgXAq_ypXoiEQ",
+        "judul": "English Pronouns",
+        "durasi": "3:10",
+        "Link": "8O2-oZYdA8M&list=PLxR9RNyjhJUUkMiBkybVusBt5HWCBsw50&index=2"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/76N8s9R8BG8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB1Og9IA4vvucEk_Jm0MZxyWZS3Xw",
+        "judul": "Singular & Plural Nouns",
+        "durasi": "4:37",
+        "Link": "76N8s9R8BG8&list=PLxR9RNyjhJUUkMiBkybVusBt5HWCBsw50&index=3"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/Jg-ElWCwy9I/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAwWlH9Ycl3QiuRe9OFfKzm1hAJRA",
+        "judul": "Present Simple",
+        "durasi": "7:33",
+        "Link": "Jg-ElWCwy9I&list=PLxR9RNyjhJUUkMiBkybVusBt5HWCBsw50&index=4"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/u99R-OC7yXY/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC3FJvmyDzTG-D_GM1UWzwgD4mCkQ",
+        "judul": "Present Continuous Tense",
+        "durasi": "4:58",
+        "Link": "u99R-OC7yXY&list=PLxR9RNyjhJUUkMiBkybVusBt5HWCBsw50&index=5"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/YG7soW7rmws/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAvjx49Zdd7uZr4pntOB409Jtw9lA",
+        "judul": "Future Simple Tense",
+        "durasi": "5:37",
+        "Link": "YG7soW7rmws&list=PLxR9RNyjhJUUkMiBkybVusBt5HWCBsw50&index=6"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/0VAhCb2UHPM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCk9o-awoRbR3gt0bJxvd-I6WMkDQ",
+        "judul": "Modal Verbs",
+        "durasi": "4:32",
+        "Link": "0VAhCb2UHPM&list=PLxR9RNyjhJUUkMiBkybVusBt5HWCBsw50&index=7"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/HZt2l3UMFh0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCYKiqFTtneM0M1yc1N7G0XiYkKwQ",
+        "judul": "Past Simple",
+        "durasi": "6:06",
+        "Link": "HZt2l3UMFh0&list=PLxR9RNyjhJUUkMiBkybVusBt5HWCBsw50&index=8"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/OTs3b3qi5F0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCfq96QvVQ3p0xqsKpG3kmJL5MAtg",
+        "judul": "Comparative Degree",
+        "durasi": "5:55",
+        "Link": "OTs3b3qi5F0&list=PLxR9RNyjhJUUkMiBkybVusBt5HWCBsw50&index=9"
+      }
+    ],
+    "fasilitas": [
+      "Sertifikat",
+      "Konsultasi",
+      "Video & Materi Berkualitas",
+      "Akses Selamanya"
+    ],
+    "uuid": "1b063e5f-2f0d-45b2-b672-206ebe6ba0e9",
+    "slug": "slug 11",
+    "id": "11",
+    "mentor": {
+      "nama": "Berlian Aura",
+      "pekerjaan": "Bahasa Inggris",
+      "avatar": "https://imgur.com/UoHVQcC.png"
+    }
+  },
+  {
+    "createdAt": 41,
+    "nama_kelas": "Pengantar Akuntansi",
+    "kategori_kelas": [
+      "3"
+    ],
+    "thumnail": "https://i.ytimg.com/vi/ZCmysu572lw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCX9Xr6_xtd9FzMbXpAw1-uQJuLRg",
+    "harga": "250000",
+    "deskripsi": "Pengantar Akuntansi adalah program pembelajaran yang dirancang untuk memberikan pemahaman dasar dalam bidang akuntansi dan keuangan bisnis. Dalam kelas ini, Anda akan mempelajari konsep-konsep utama dalam akuntansi, metode pencatatan keuangan, serta analisis laporan keuangan.",
+    "bahasa": "Indonesia",
+    "rating": "5",
+    "nama_mentor": "nama_mentor 12",
+    "video": [
+      {
+        "thumnail": "https://i.ytimg.com/vi/p5pRItnBhUI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAUwwwErT6R5EEiPeL6-i-9GNijjQ",
+        "judul": "Mendalami Konsep HPP (COGS)",
+        "durasi": "9:39",
+        "Link": "p5pRItnBhUI&list=PL0tS1ou_AQQ2sSQpGIsq9Z9si_vXIvCIx"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/HTNRU1m5N-w/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCOq1mMGf4xk3WMopK54W_UjzERYw",
+        "judul": "Jurnal Perusahaan Dagang",
+        "durasi": "11:15",
+        "Link": "HTNRU1m5N-w&list=PL0tS1ou_AQQ2sSQpGIsq9Z9si_vXIvCIx&index=2"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/5bhIWpsaetU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCnF8g7K5PwJGcyMKJlzWRv9eSPBQ",
+        "judul": "Jurnal Penyesuaian",
+        "durasi": "10:42",
+        "Link": "5bhIWpsaetU&list=PL0tS1ou_AQQ2sSQpGIsq9Z9si_vXIvCIx&index=3"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/lpcEvq9bb9g/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA26KZjcCyRLGlvvtLzkKr_dOvRAA",
+        "judul": "Jurnal Umum",
+        "durasi": "13:53",
+        "Link": "lpcEvq9bb9g&list=PL0tS1ou_AQQ2sSQpGIsq9Z9si_vXIvCIx&index=4"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/OUtn7FdLAE0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC6WPWnlg-ID1gAz1QNaHPJrEaXUg",
+        "judul": "Penyusutan Aset Tetap",
+        "durasi": "11:36",
+        "Link": "OUtn7FdLAE0&list=PL0tS1ou_AQQ2sSQpGIsq9Z9si_vXIvCIx&index=5"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/ZCmysu572lw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCX9Xr6_xtd9FzMbXpAw1-uQJuLRg",
+        "judul": "Akuntansi Dasar",
+        "durasi": "15:31",
+        "Link": "ZCmysu572lw&list=PL0tS1ou_AQQ2sSQpGIsq9Z9si_vXIvCIx&index=6"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/iTc7xVSIKJI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCj-9BjJeoLCyS0suevlLDAXvWlow",
+        "judul": "Jurnal Penutup",
+        "durasi": "8:42",
+        "Link": "iTc7xVSIKJI&list=PL0tS1ou_AQQ2sSQpGIsq9Z9si_vXIvCIx&index=7"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/tRnV4csdO38/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA45rLz5wXOEPCJjIV7FljKT0kI8w",
+        "judul": "FIFO Periodic & Perpetual",
+        "durasi": "15:36",
+        "Link": "tRnV4csdO38&list=PL0tS1ou_AQQ2sSQpGIsq9Z9si_vXIvCIx&index=8"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/WyaQ1UI2YEk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAOqFCjp-x2C6ORfu985uPn-FXyCQ",
+        "judul": "Cara biar bisnis bisa autopilot pake konsep Fraud and Internal Control",
+        "durasi": "19:28",
+        "Link": "WyaQ1UI2YEk&list=PL0tS1ou_AQQ2sSQpGIsq9Z9si_vXIvCIx&index=9"
+      }
+    ],
+    "fasilitas": [
+      "Sertifikat",
+      "Konsultasi",
+      "Video & Materi Berkualitas",
+      "Akses Selamanya"
+    ],
+    "uuid": "11f7e83c-11dd-4fba-91c9-c219c0a05d82",
+    "slug": "slug 12",
+    "id": "12",
+    "mentor": {
+      "nama": "Kianna Milen",
+      "pekerjaan": "Accounting",
+      "avatar": "https://imgur.com/tcAuNpE.png"
+    }
+  },
+  {
+    "createdAt": 69,
+    "nama_kelas": "Belajar HTML5",
+    "kategori_kelas": [
+      "1"
+    ],
+    "thumnail": "https://i.ytimg.com/vi/Q2VqCG13ejA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDuu8l2DOQGijSjHVTJdDHH0Su-qg",
+    "harga": "200000",
+    "deskripsi": "",
+    "bahasa": "Indonesia",
+    "rating": "5",
+    "nama_mentor": "nama_mentor 13",
+    "video": [
+      {
+        "thumnail": "https://i.ytimg.com/vi/Q2VqCG13ejA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDuu8l2DOQGijSjHVTJdDHH0Su-qg",
+        "judul": "Apa itu HTML5?",
+        "durasi": "18:27",
+        "Link": "Q2VqCG13ejA&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/o3m15BWi2HM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDoytjD71YKL1FgFHUsuL5fZMTImQ",
+        "judul": "Semantic HTML5",
+        "durasi": "21:28",
+        "Link": "o3m15BWi2HM&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=2"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/9g1Zz83FXyc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDFsGzwKTGJbvhk3W4bG56h9hen7g",
+        "judul": "Images Elements",
+        "durasi": "27:45",
+        "Link": "9g1Zz83FXyc&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=3"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/SQMruNuafHk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCQu_wk2rKIzpOJjMaGcPVQtklqhQ",
+        "judul": "Audio & Video",
+        "durasi": "30:22",
+        "Link": "SQMruNuafHk&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=4"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/gRrM9TBnRYE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDTnzevHToUIXV3mGTzeUpJGMlJ_g",
+        "judul": "Canvas",
+        "durasi": "31:51",
+        "Link": "gRrM9TBnRYE&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=5"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/qfn67VjdgZE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAVQaRnkpRzz7de8FVb527iADX3Rg",
+        "judul": "SVG",
+        "durasi": "32:47",
+        "Link": "qfn67VjdgZE&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=6"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/ZDxGMTO7O3g/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCa2b3wI-h7v-ehbwIhRxUki31-gQ",
+        "judul": "Form Validation",
+        "durasi": "36:05",
+        "Link": "ZDxGMTO7O3g&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=7"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/T-a7tX0tCuQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDKU9Ell63uJOEVBS91z3aVO3RpZg",
+        "judul": "Web Storage",
+        "durasi": "25:19",
+        "Link": "T-a7tX0tCuQ&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=8"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/ELqsF3rD920/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA5AIWCTPPtz1i7nvV3_mHXN189Nw",
+        "judul": "Accessibility",
+        "durasi": "27:31",
+        "Link": "ELqsF3rD920&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=9"
+      }
+    ],
+    "fasilitas": [
+      "Sertifikat",
+      "Konsultasi",
+      "Video & Materi Berkualitas",
+      "Akses Selamanya"
+    ],
+    "uuid": "cc142eec-ee51-4082-8622-cf7c7ec4c548",
+    "slug": "slug 13",
+    "id": "13",
+    "mentor": {
+      "nama": "Nolan Nokidis",
+      "pekerjaan": "Full-Stack Developer",
+      "avatar": "https://imgur.com/337j214.png"
+    }
+  },
+  {
+    "createdAt": 41,
+    "nama_kelas": "Belajar HTML5",
+    "kategori_kelas": [
+      "1"
+    ],
+    "thumnail": "https://i.ytimg.com/vi/Q2VqCG13ejA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDuu8l2DOQGijSjHVTJdDHH0Su-qg",
+    "harga": "200000",
+    "deskripsi": "HTML5 adalah versi terbaru dari bahasa markup utama yang digunakan untuk membangun dan merancang halaman web. Dalam kelas HTML5, peserta akan belajar tentang berbagai elemen dan fitur baru yang diperkenalkan dalam HTML5, serta cara menggunakannya untuk membuat konten web yang kaya dan interaktif.",
+    "bahasa": "Indonesia",
+    "rating": "5",
+    "nama_mentor": "nama_mentor 14",
+    "video": [
+      {
+        "thumnail": "https://i.ytimg.com/vi/Q2VqCG13ejA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDuu8l2DOQGijSjHVTJdDHH0Su-qg",
+        "judul": "Apa itu HTML5?",
+        "durasi": "18:27",
+        "Link": "Q2VqCG13ejA&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/o3m15BWi2HM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDoytjD71YKL1FgFHUsuL5fZMTImQ",
+        "judul": "Semantic HTML5",
+        "durasi": "21:28",
+        "Link": "o3m15BWi2HM&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=2"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/9g1Zz83FXyc/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDFsGzwKTGJbvhk3W4bG56h9hen7g",
+        "judul": "Images Elements",
+        "durasi": "27:45",
+        "Link": "9g1Zz83FXyc&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=3"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/SQMruNuafHk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCQu_wk2rKIzpOJjMaGcPVQtklqhQ",
+        "judul": "Audio & Video",
+        "durasi": "30:22",
+        "Link": "SQMruNuafHk&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=4"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/gRrM9TBnRYE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDTnzevHToUIXV3mGTzeUpJGMlJ_g",
+        "judul": "Canvas",
+        "durasi": "31:51",
+        "Link": "gRrM9TBnRYE&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=5"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/qfn67VjdgZE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAVQaRnkpRzz7de8FVb527iADX3Rg",
+        "judul": "SVG",
+        "durasi": "32:47",
+        "Link": "qfn67VjdgZE&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=6"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/ZDxGMTO7O3g/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCa2b3wI-h7v-ehbwIhRxUki31-gQ",
+        "judul": "Form Validation",
+        "durasi": "36:05",
+        "Link": "ZDxGMTO7O3g&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=7"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/T-a7tX0tCuQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDKU9Ell63uJOEVBS91z3aVO3RpZg",
+        "judul": "Web Storage",
+        "durasi": "25:19",
+        "Link": "T-a7tX0tCuQ&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=8"
+      },
+      {
+        "thumnail": "https://i.ytimg.com/vi/ELqsF3rD920/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA5AIWCTPPtz1i7nvV3_mHXN189Nw",
+        "judul": "Accessibility",
+        "durasi": "27:31",
+        "Link": "ELqsF3rD920&list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&index=9"
+      }
+    ],
+    "fasilitas": [
+      "Sertifikat",
+      "Konsultasi",
+      "Video & Materi Berkualitas",
+      "Akses Selamanya"
+    ],
+    "uuid": "4664673e-b9c8-4c6d-937c-f2c6c0ccc6fd",
+    "slug": "slug 14",
+    "id": "14",
+    "mentor": {
+      "nama": "Nolan Nokidis",
+      "pekerjaan": "Full-Stack Developer",
+      "avatar": "https://imgur.com/337j214.png"
+    }
+  }
+]
+  
+ 
+###
+DELETE https://6483eb0aee799e3216262887.mockapi.io/kelas/14
+
 ###
 GET https://6483eb0aee799e3216262887.mockapi.io/kelas/
+###
+PUT  https://6483eb0aee799e3216262887.mockapi.io/kelas/6
+Content-Type: application/json
+
+{
+    
+}

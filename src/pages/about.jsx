@@ -6,6 +6,7 @@ import Mentor from '../components/mentor';
 import Partner from '../components/partner';
 import Choseus from '../section/choseus';
 import Help from '../section/help';
+import TopAbout from '../layout/topAbout';
 
 const About = () => {
   return (
@@ -107,7 +108,7 @@ const About = () => {
         <Choseus />
         <Mentor />
         <Help />
-      </Home>{' '}
+      </Home>
     </>
   );
 };

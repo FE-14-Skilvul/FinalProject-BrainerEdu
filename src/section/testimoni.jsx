@@ -21,52 +21,41 @@ const Testimoni = () => {
 
                     <div className="row pl-75 pr-75 pr-lg-0 pr-md-0 pr-xs-0 pl-lg-0 pl-md-0 pl-xs-0">
                         <div className="col-lg-3 col-md-6 col-sm-6">
-                            <div
-                                className="counters text-center mb-30 wow fadeInUp2 animated"
-                                data-wow-delay=".1s"
-                            >
+                            <div className="counters text-center mb-30">
                                 <h2>
-                                    <span className="counter">100</span>+
+                                    <span className="counter"> 50 </span>+
                                 </h2>
-                                <h5>Specialist Good Teachers</h5>
+                                <h5> Mentor Terbaik </h5>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-sm-6">
-                            <div
-                                className="counters count-1 text-center mb-30 wow fadeInUp2 animated"
-                                data-wow-delay=".2s"
-                            >
+                            <div className="counters count-1 text-center mb-30">
                                 <h2>
-                                    <span className="counter">1000</span>+
+                                    <span className="counter"> 100 </span>+
                                 </h2>
-                                <h5>Online Learning Courses</h5>
+                                <h5> Materi Pembelajaran </h5>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-sm-6">
-                            <div
-                                className="counters count-2 text-center mb-30 wow fadeInUp2 animated"
-                                data-wow-delay=".3s"
-                            >
+                            <div className="counters count-2 text-center mb-30">
                                 <h2>
-                                    <span className="counter">13654</span>+
+                                    <span className="counter"> 8000 </span>+
                                 </h2>
-                                <h5>Online &amp; Offline Students</h5>
+                                <h5> Peserta </h5>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-sm-6">
-                            <div
-                                className="counters count-3 text-center mb-30 wow fadeInUp2 animated"
-                                data-wow-delay=".4s"
-                            >
+                            <div className="counters count-3 text-center mb-30">
                                 <h2>
-                                    <span className="counter">365</span>+
+                                    <span className="counter"> 100 </span>+
                                 </h2>
-                                <h5>Special Awards Winning</h5>
+                                <h5> Video Pembelajaran </h5>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section></>
+            </section>
+        </>
     )
 }
 

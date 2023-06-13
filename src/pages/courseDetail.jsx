@@ -1,138 +1,49 @@
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import Home from '../layout/home';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Button from '../components/button';
+import axios from 'axios';
 
 const CourseDetail = () => {
   const { id } = useParams();
+  const [kelas, setKelas] = useState([]); // ini
+  const [isLoading, setisLoading] = useState(true)
+  const [videoKelas, setvideoKelas] = useState([]);
+  const API = import.meta.env.VITE_BASE_URL
 
-  const videoData = [
-    {
-      id: 'a1',
-      title: 'Pengenalan UI/UX Design',
-      name: 'nkJnteauOAY',
-      duration: '4:29',
-    },
-    {
-      id: 'a2',
-      title: 'build gauge with css',
-      name: 'nkJnteauOAY',
-      duration: '2:45',
-    },
-    {
-      id: 'a3',
-      title: '3D popup card',
-      name: 'CbFnC9pk7oQ',
-      duration: '24:49',
-    },
+  useEffect(() => {
+    const getDataKelas = async () => {
+      const response = await axios.get(`${API}/kelas/${id}`);
+      setKelas(response.data);
+      setvideoKelas(response.data.video);
+      setisLoading(false)
+    };
+    getDataKelas();
+  }, []);
 
-    {
-      id: 'a4',
-      title: 'customize HTML5 form elements',
-      name: 'CbFnC9pk7oQ',
-      duration: '3:59',
-    },
-    {
-      id: 'a5',
-      title: 'custom select box',
-      name: '_uDQvyON0pY',
-      duration: '4:25',
-    },
-    {
-      id: 'a6',
-      title: 'embed google map to contact form',
-      name: '_uDQvyON0pY',
-      duration: '5:33',
-    },
-    {
-      id: 'a7',
-      title: 'password strength checker javascript web app',
-      name: 'rJkcZRIqAzs',
-      duration: '0:29',
-    },
-
-    {
-      id: 'a8',
-      title: 'custom range slider',
-      name: 'rJkcZRIqAzs',
-      duration: '1:12',
-    },
-    {
-      id: 'a9',
-      title: 'animated shopping cart',
-      name: 'lkBQcxfpDNE',
-      duration: '3:38',
-    },
-    {
-      id: 'a8',
-      title: 'custom range slider',
-      name: 'lkBQcxfpDNE',
-      duration: '1:12',
-    },
-    {
-      id: 'a9',
-      title: 'animated shopping cart',
-      name: 'lkBQcxfpDNE',
-      duration: '3:38',
-    },
-    {
-      id: 'a8',
-      title: 'custom range slider',
-      name: 'lkBQcxfpDNE',
-      duration: '1:12',
-    },
-    {
-      id: 'a9',
-      title: 'animated shopping cart',
-      name: 'lkBQcxfpDNE',
-      duration: '3:38',
-    },
-    {
-      id: 'a8',
-      title: 'custom range slider',
-      name: 'lkBQcxfpDNE',
-      duration: '1:12',
-    },
-    {
-      id: 'a9',
-      title: 'animated shopping cart',
-      name: 'lkBQcxfpDNE',
-      duration: '3:38',
-    },
-    {
-      id: 'a8',
-      title: 'custom range slider',
-      name: 'lkBQcxfpDNE',
-      duration: '1:12',
-    },
-    {
-      id: 'a9',
-      title: 'animated shopping cart',
-      name: 'lkBQcxfpDNE',
-      duration: '3:38',
-    },
-    {
-      id: 'a8',
-      title: 'custom range slider',
-      name: 'lkBQcxfpDNE',
-      duration: '1:12',
-    },
-    {
-      id: 'a9',
-      title: 'animated shopping cart',
-      name: 'lkBQcxfpDNE',
-      duration: '3:38',
-    },
-  ];
   const myStyle = {
     marginTop: '200px',
   };
   const videoRef = useRef(null);
 
   const changeVideo = (val) => {
+    console.log(val);
     videoRef.current.src = '';
     videoRef.current.src = `https://www.youtube.com/embed/${val}`;
   };
+
+  if (isLoading) return <p>Loading...</p>
+  // console.log(videoKelas[0].Link);
+  let kalimat = videoKelas[0].Link;
+  let startIndex = kalimat.indexOf("&list=");
+  let newKalimat = kalimat.substring(0, startIndex);
+
+  console.log(newKalimat);
+  // let newKalimat = kalimat.substring(0, startIndex);
+
+  // console.log(newKalimat);
+
+
   return (
     <>
       <Home>
@@ -166,14 +77,16 @@ const CourseDetail = () => {
               <div className="col-xxl-8 col-xl-7">
                 <div className="courses-details-wrapper mb-30">
                   <h2 className="courses-title mb-30">
-                    Fundamentals Of Dslr Photography
+                    {videoKelas[0].judul}
                   </h2>
-                  <h5>Photography Specialist By Jason Momoa</h5>
+                  <h5>{kelas.nama_kelas} Oleh {kelas.mentor.nama}</h5>
                   <iframe
                     ref={videoRef}
                     className="course-details-img mb-30"
                     // style={{ backgroundImage: "url(/assets/img/course/details/01.jpg)" }}
-                    src="https://www.youtube.com/embed/lkBQcxfpDNE"
+                    // src={`https://www.youtube.com/embed/${'tgbNymZ7vqY'}`}
+                    // src={`https://www.youtube.com/embed/${videoKelas[0].Link.replace(/&index=1/g, "")}`}
+                    src={`https://www.youtube.com/embed/${newKalimat}`}
                   >
                   </iframe>
 
@@ -190,27 +103,27 @@ const CourseDetail = () => {
                     <li>
                       <div className="price-list">
                         <h5 >
-                          <b className="sub-title">Rp. 500.000</b>
+                          <b className="sub-title">Rp. {parseInt(kelas.harga).toLocaleString("id-ID")}</b>
                         </h5>
                       </div>
                     </li>
-
-
                   </ul>
                   <div className="courses-ingredients w-100" style={{ marginLeft: "0" }}>
                     <div className="learn-box">
-                      <h5>25 Lessons ( 3h 36m )</h5>
+                      <h5>{videoKelas.length} Sesi ( 3h 36m )</h5>
                       <ul className="learn-list " style={{ marginRight: "0", height: "360px" }}>
-                        {videoData.map(({ id, name, title, duration }, index) => {
+                        {videoKelas.map((video, index) => {
+                          let startIndexloop = video.Link.indexOf("&list=");
+                          let newKalimatloop = video.Link.substring(0, startIndexloop);
 
-                          return <li key={index} onClick={() => changeVideo(name)} >
+                          return <li key={index} kata={newKalimatloop} onClick={() => changeVideo(newKalimatloop)} >
                             <a className="d-flex align-items-top justify-content-between" href="#learn-bok">
                               <span className="play-video d-flex">
                                 <i className="fal fa-lock-alt" style={{ paddingRight: '10px' }} />
-                                <p> {index + 1 + '. ' + title}</p>
+                                <p> {index + 1 + '. ' + video.judul}</p>
                               </span>
 
-                              <span className="time float-end">{duration}</span>
+                              <span className="time float-end">{video.durasi}</span>
                             </a>
                           </li>
                         })}
