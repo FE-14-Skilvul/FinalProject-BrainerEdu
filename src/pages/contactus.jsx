@@ -5,7 +5,8 @@ import Home from '../layout/home';
 const ContactUs = () => {
   return (
     <>
-      <Home>{/contact-us-area start/}
+      <Home><>
+  {/*contact-us-area start*/}
   <section className="contact-us-area pt-150 pb-120 pt-md-100 pt-xs-100 pb-md-70 pb-xs-70">
     <div className="container">
       <div className="row align-items-center">
@@ -53,8 +54,8 @@ const ContactUs = () => {
       </div>
     </div>
   </section>
-  {/contact-us-area end/}
-  {/contact-form-area start/}
+  {/*contact-us-area end*/}
+  {/*contact-form-area start*/}
   <section className="contact-form-area pt-150 pb-120 pt-md-100 pt-xs-100 pb-md-70 pb-xs-70">
     <div className="container">
       <div className="row align-items-center">
@@ -101,7 +102,7 @@ const ContactUs = () => {
       </div>
     </div>
   </section>
-  {/contact-form-area end/}
+  {/*contact-form-area end*/}
   {/* subscribe-area start */}
   <section className="subscribe-area footer-bg border-bot pt-145 pb-50 pt-md-90 pt-xs-90">
     <div className="container">
@@ -123,9 +124,11 @@ const ContactUs = () => {
     </div>
   </section>
   {/* subscribe-area end */}
-  </Home>
+</>
+</Home>
     </>
   );
 };
+
 
 export default ContactUs;
