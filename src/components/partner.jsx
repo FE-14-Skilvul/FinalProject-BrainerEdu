@@ -10,7 +10,7 @@ const Partner = () => {
               <div className="section-title section-title-3 text-center mb-60">
                 <h5 className="mb-25">Challenge Partner</h5>
                 <h2 className="mb-20">
-                  Skilvul Product Innovation{' '}
+                  Skilvul Product Innovation
                   <span className="bottom-line">Pendidikan</span>
                 </h2>
                 <p>

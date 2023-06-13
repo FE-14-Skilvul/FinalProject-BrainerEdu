@@ -7,6 +7,9 @@ import Contact from '../section/contact'
 import Testimoni from '../section/testimoni'
 import Home from '../layout/home'
 import About from '../section/about'
+import Developer from '../components/developer'
+import Partner from '../components/partner'
+
 const Landing = () => {
     return (
         <>
@@ -15,6 +18,8 @@ const Landing = () => {
                 <KategoriCourse />
                 <ListCourse />
                 <Testimoni />
+                <Partner />
+                <Developer />
                 <Contact />
             </Home>
         </>

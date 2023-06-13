@@ -1,32 +1,37 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const CourseCard = () => {
+const CourseCard = ({ data, index }) => {
     return (
         <>
-            <div className="col-lg-4 col-md-6 grid-item cat2 cat3">
+            <div className="col-lg-4 col-md-6 grid-item cat2 cat3" key={index}>
                 <div className="z-gallery z-gallery-two mb-30">
                     <div className="z-gallery__thumb mb-20">
                         <a href="course-details.html">
                             <img
                                 className="img-fluid"
-                                src="/assets/img/course/07.png"
+                                src={data.thumnail}
                                 alt=""
                             />
                         </a>
 
                     </div>
                     <div className="z-gallery__content pos-rel">
-                        <div className="course__tag course__tag__two mb-15">
-                            <span>Science</span>
-                            <span>Lab</span>
-                            <a className="price-tag" href="instructor-details.html">
+                        <div className="course__tag course__tag__two mb-15 d-flex align-items-center justify-content-between">
+                            <div>
+                                <span>Science</span>
+                                <span>Lab</span>
+                            </div>
+
+                            <p>Rp. {parseInt(data.harga).toLocaleString("id-ID")} </p>
+                            {/* <a className="price-tag" href="instructor-details.html">
                                 139$
-                            </a>
+                            </a> */}
                         </div>
                         <h4 className="sub-title mb-20">
-                            <Link to={`/course-detail/${1}`} >
-                                Take Your Career to the Next Level Future
+                            {/* <Link to={`/course-detail/${data.nama_kelas.toLowerCase().replace(/\s+/g, "-").replace(/\//g, "-")}`} > */}
+                            <Link to={`/course-detail/${data.id}`} >
+                                {data.nama_kelas}
                             </Link>
                         </h4>
                         <div className="course__meta d-flex align-items-center justify-content-between mb-15">
@@ -36,7 +41,7 @@ const CourseCard = () => {
                                     src="/assets/img/icon/time.svg"
                                     alt="course-meta"
                                 />
-                                12 Periods
+                                12 Pertemuan
                             </span>
                             <span>
                                 <img
@@ -44,28 +49,28 @@ const CourseCard = () => {
                                     src="/assets/img/icon/bar-chart.svg"
                                     alt="course-meta"
                                 />
-                                Intermediate
+                                Lanjutan
                             </span>
                         </div>
-                        <p className="mb-20">
-                            There are many variations of passages of with Lorem Ipsum
-                            available.
+                        <p className="mb-20" style={{ overflowY: "auto", height: "100px" }}>
+                            {data.deskripsi}
                         </p>
                         <div className="course__authors  d-xl-flex align-items-center justify-content-between">
                             <div className="course__authors-box d-flex align-items-center">
-                                <img src="/assets/img/course/in7.png" alt="" />
+                                <img src={data.mentor.avatar} width={45} height={45} alt="" style={{ borderRadius: "50%" }} />
                                 <div className="course__authors-box-text ml-10">
-                                    <h5>Mark Herry</h5>
-                                    <span>Career Developer</span>
+                                    <h5>{data.mentor.nama}</h5>
+                                    <span>{data.mentor.pekerjaan}</span>
                                 </div>
                             </div>
+
                             <p>
                                 <span>6593+</span> Students
                             </p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     )
 }
