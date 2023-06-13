@@ -27,14 +27,14 @@ const About = () => {
                   />
                   <img
                     className="about-img about_01"
-                    src="assets/img/about/men.png"
+                    src="assets/img/slider/about3.png"
                     width={250}
                     height={250}
                     alt="about-img"
                   />
                   <img
                     className="about-img about_02"
-                    src="assets/img/about/women.png"
+                    src="assets/img/slider/about4.png"
                     width={250}
                     height={250}
                     alt="about-img"
