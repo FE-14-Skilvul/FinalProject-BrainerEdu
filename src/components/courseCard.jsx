@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const CourseCard = () => {
+const CourseCard = ({ title, price }) => {
     return (
         <>
             <div className="col-lg-4 col-md-6 grid-item cat2 cat3">
@@ -21,12 +21,13 @@ const CourseCard = () => {
                             <span>Science</span>
                             <span>Lab</span>
                             <a className="price-tag" href="instructor-details.html">
-                                139$
+                                {price}$
                             </a>
                         </div>
                         <h4 className="sub-title mb-20">
                             <Link to={`/course-detail/${1}`} >
-                                Take Your Career to the Next Level Future
+                                {title}
+                                {/* Take Your Career to the Next Level Future */}
                             </Link>
                         </h4>
                         <div className="course__meta d-flex align-items-center justify-content-between mb-15">

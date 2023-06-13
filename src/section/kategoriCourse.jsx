@@ -8,12 +8,7 @@ const KategoriCourse = () => {
                     <div className="col-xl-6 col-lg-8">
                         <div className="section-title section-title-2 text-center mb-50">
 
-                            <h2 className="mb-20">Explore our Online Subjects</h2>
-                            <p>
-                                There are many variations of passages of Lorem Ipsum available,
-                                but the majority have suffered alteration in some form, by
-                                injected humour.
-                            </p>
+                            <h2 className="mb-20">Menu Pilihan Belajar</h2>
                         </div>
                     </div>
                 </div>
@@ -34,7 +29,7 @@ const KategoriCourse = () => {
                                             alt=""
                                         />
                                     </span>
-                                    Science
+                                    Sains
                                     <span className="arrow-box">
                                         <img
                                             className="arrows-icon"
@@ -63,7 +58,7 @@ const KategoriCourse = () => {
                                             alt=""
                                         />
                                     </span>
-                                    Business
+                                    Bisnis
                                     <span className="arrow-box">
                                         <img
                                             className="arrows-icon"
@@ -92,36 +87,7 @@ const KategoriCourse = () => {
                                             alt=""
                                         />
                                     </span>
-                                    Development
-                                    <span className="arrow-box">
-                                        <img
-                                            className="arrows-icon"
-                                            src="/assets/img/icon/arrow-right.svg"
-                                            alt="arrow-right"
-                                        />
-                                        <img
-                                            className="arrows-icon-white"
-                                            src="/assets/img/icon/arrow-right-white.svg"
-                                            alt="arrow-right"
-                                        />
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="courses.html">
-                                    <span>
-                                        <img
-                                            className="icon-01"
-                                            src="/assets/img/icon/cube.svg"
-                                            alt=""
-                                        />
-                                        <img
-                                            className="icon-02"
-                                            src="/assets/img/icon/cube-02.svg"
-                                            alt=""
-                                        />
-                                    </span>
-                                    Career
+                                    Pemrogramman
                                     <span className="arrow-box">
                                         <img
                                             className="arrows-icon"
@@ -150,7 +116,7 @@ const KategoriCourse = () => {
                                             alt=""
                                         />
                                     </span>
-                                    Arts &amp; Design
+                                    UI/UX Design
                                     <span className="arrow-box">
                                         <img
                                             className="arrows-icon"
@@ -179,36 +145,7 @@ const KategoriCourse = () => {
                                             alt=""
                                         />
                                     </span>
-                                    Law
-                                    <span className="arrow-box">
-                                        <img
-                                            className="arrows-icon"
-                                            src="/assets/img/icon/arrow-right.svg"
-                                            alt="arrow-right"
-                                        />
-                                        <img
-                                            className="arrows-icon-white"
-                                            src="/assets/img/icon/arrow-right-white.svg"
-                                            alt="arrow-right"
-                                        />
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="courses.html">
-                                    <span>
-                                        <img
-                                            className="icon-01"
-                                            src="/assets/img/icon/ambulance.svg"
-                                            alt=""
-                                        />
-                                        <img
-                                            className="icon-02"
-                                            src="/assets/img/icon/ambulance-02.svg"
-                                            alt=""
-                                        />
-                                    </span>
-                                    MBBS
+                                    Hukum
                                     <span className="arrow-box">
                                         <img
                                             className="arrows-icon"
@@ -237,7 +174,7 @@ const KategoriCourse = () => {
                                             alt=""
                                         />
                                     </span>
-                                    Technological
+                                    Matematika
                                     <span className="arrow-box">
                                         <img
                                             className="arrows-icon"

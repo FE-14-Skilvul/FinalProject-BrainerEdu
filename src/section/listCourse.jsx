@@ -10,12 +10,7 @@ const ListCourse = () => {
                         <div className="col-xl-6 col-lg-12">
                             <div className="section-title section-title-2 text-center text-xl-start mb-50">
 
-                                <h2 className="mb-20">Explore our Popular Courses</h2>
-                                <p>
-                                    There are many variations of passages of Lorem Ipsum available,
-                                    but the majority have suffered alteration in some form, by
-                                    injected humour.
-                                </p>
+                                <h2 className="mb-20">Jalur Belajar</h2>
                             </div>
                         </div>
                         <div className="col-xl-6 col-lg-12 text-center text-xl-end">
@@ -36,8 +31,8 @@ const ListCourse = () => {
                         </div>
                     </div>
                     <div className="grid row">
-                        <CourseCard />
-                        <CourseCard />
+                        <CourseCard title="Ini judul" />
+                        <CourseCard title="Ini juga judul" price={140} />
                         <CourseCard />
                         <CourseCard />
                         <CourseCard />
