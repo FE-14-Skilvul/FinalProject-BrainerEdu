@@ -137,7 +137,7 @@ const Mentor = () => {
                   <h4 className="sub-title mb-10">
                     <a href="#">Kianna Milen</a>
                   </h4>
-                  <p>Acounting</p>
+                  <p>Accounting</p>
                 </div>
               </div>
             </div>
@@ -170,7 +170,7 @@ const Mentor = () => {
                   <h4 className="sub-title mb-10">
                     <a href="#">Nolan Nokidis</a>
                   </h4>
-                  <p>Back-end Developer</p>
+                  <p>Full-Stack Developer</p>
                 </div>
               </div>
             </div>
