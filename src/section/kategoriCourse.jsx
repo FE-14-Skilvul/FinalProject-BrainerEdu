@@ -31,11 +31,7 @@ const KategoriCourse = () => {
                                     </span>
                                     Sains
                                     <span className="arrow-box">
-                                        <img
-                                            className="arrows-icon"
-                                            src="/assets/img/icon/arrow-right.svg"
-                                            alt="arrow-right"
-                                        />
+
                                         <img
                                             className="arrows-icon-white"
                                             src="/assets/img/icon/arrow-right-white.svg"
