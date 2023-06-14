@@ -8,16 +8,16 @@ import Loading from '../components/loading';
 const CourseDetail = () => {
   const { id } = useParams();
   const [kelas, setKelas] = useState([]); // ini
-  const [isLoading, setisLoading] = useState(true)
+  const [isLoading, setisLoading] = useState(true);
   const [videoKelas, setvideoKelas] = useState([]);
-  const API = import.meta.env.VITE_BASE_URL
+  const API = import.meta.env.VITE_BASE_URL;
 
   useEffect(() => {
     const getDataKelas = async () => {
       const response = await axios.get(`${API}/kelas/${id}`);
       setKelas(response.data);
       setvideoKelas(response.data.video);
-      setisLoading(false)
+      setisLoading(false);
     };
     getDataKelas();
   }, []);
@@ -37,14 +37,13 @@ const CourseDetail = () => {
   if (isLoading) return <Loading />
   // console.log(videoKelas[0].Link);
   let kalimat = videoKelas[0].Link;
-  let startIndex = kalimat.indexOf("&list=");
+  let startIndex = kalimat.indexOf('&list=');
   let newKalimat = kalimat.substring(0, startIndex);
 
   console.log(newKalimat);
   // let newKalimat = kalimat.substring(0, startIndex);
 
   // console.log(newKalimat);
-
 
   return (
     <>
@@ -55,10 +54,10 @@ const CourseDetail = () => {
             <div className="row">
               <div className="col-xxl-8 col-xl-7">
                 <div className="courses-details-wrapper mb-30">
-                  <h2 className="courses-title mb-30">
-                    {videoKelas[0].judul}
-                  </h2>
-                  <h5>{kelas.nama_kelas} Oleh {kelas.mentor.nama}</h5>
+                  <h2 className="courses-title mb-30">{videoKelas[0].judul}</h2>
+                  <h5>
+                    {kelas.nama_kelas} Oleh {kelas.mentor.nama}
+                  </h5>
                   <iframe
                     ref={videoRef}
                     className="course-details-img mb-30"
@@ -66,8 +65,7 @@ const CourseDetail = () => {
                     // src={`https://www.youtube.com/embed/${'tgbNymZ7vqY'}`}
                     // src={`https://www.youtube.com/embed/${videoKelas[0].Link.replace(/&index=1/g, "")}`}
                     src={`https://www.youtube.com/embed/${newKalimat}`}
-                  >
-                  </iframe>
+                  ></iframe>
 
                   <div className="courses-tag-btn">
                     <a href="#">Add to wishlist</a>
@@ -81,30 +79,55 @@ const CourseDetail = () => {
                   <ul className="cart-list-tag align-items-center mb-45 d-flex justify-content-end">
                     <li>
                       <div className="price-list">
-                        <h5 >
-                          <b className="sub-title">Rp. {parseInt(kelas.harga).toLocaleString("id-ID")}</b>
+                        <h5>
+                          <b className="sub-title">
+                            Rp. {parseInt(kelas.harga).toLocaleString('id-ID')}
+                          </b>
                         </h5>
                       </div>
                     </li>
                   </ul>
-                  <div className="courses-ingredients w-100" style={{ marginLeft: "0" }}>
+                  <div
+                    className="courses-ingredients w-100"
+                    style={{ marginLeft: '0' }}
+                  >
                     <div className="learn-box">
                       <h5>{videoKelas.length} Sesi ( 3h 36m )</h5>
-                      <ul className="learn-list " style={{ marginRight: "0", height: "360px" }}>
+                      <ul
+                        className="learn-list "
+                        style={{ marginRight: '0', height: '360px' }}
+                      >
                         {videoKelas.map((video, index) => {
-                          let startIndexloop = video.Link.indexOf("&list=");
-                          let newKalimatloop = video.Link.substring(0, startIndexloop);
+                          let startIndexloop = video.Link.indexOf('&list=');
+                          let newKalimatloop = video.Link.substring(
+                            0,
+                            startIndexloop,
+                          );
 
-                          return <li key={index} kata={newKalimatloop} onClick={() => changeVideo(newKalimatloop)} >
-                            <a className="d-flex align-items-top justify-content-between" href="#learn-bok">
-                              <span className="play-video d-flex">
-                                <i className="fal fa-lock-alt" style={{ paddingRight: '10px' }} />
-                                <p> {index + 1 + '. ' + video.judul}</p>
-                              </span>
+                          return (
+                            <li
+                              key={index}
+                              kata={newKalimatloop}
+                              onClick={() => changeVideo(newKalimatloop)}
+                            >
+                              <a
+                                className="d-flex align-items-top justify-content-between"
+                                href="#learn-bok"
+                              >
+                                <span className="play-video d-flex">
+                                  <i
+                                    className="fal fa-lock-alt"
+                                    style={{ paddingRight: '10px' }}
+                                  />
+                                  <p> {index + 1 + '. ' + video.judul}</p>
+                                </span>
 
-                              <span className="time float-end">{video.durasi}</span>
-                            </a>
-                          </li>
+                                <span className="time float-end">
+                                  {video.durasi}
+                                </span>
+                              </a>
+                            </li>
+                          );
                         })}
                         {/* <li>
                                                 <a href="#learn-bok">
@@ -126,16 +149,19 @@ const CourseDetail = () => {
                                                     <span className="time float-end">2:03</span>
                                                 </a>
                                             </li> */}
-                      </ul >
+                      </ul>
                       {/* <Button text={""} /> */}
-                      <Link to={'/register'} className="theme_btn free_btn w-100 d-flex justify-content-center my-3"  >
+                      <Link
+                        to={'/checkout'}
+                        className="theme_btn free_btn w-100 d-flex justify-content-center my-3"
+                      >
                         Gabung Kelas
                       </Link>
-                    </div >
+                    </div>
                   </div>
-                </div >
-              </div >
-            </div >
+                </div>
+              </div>
+            </div>
             <div className="row">
               <div className="col-xl-6 col-lg-7">
                 <div className="project-details mb-65">
@@ -193,21 +219,22 @@ const CourseDetail = () => {
                     </div>
                   </div>
                   <p className="mb-20">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di
-                    nonumy eirmod tempor invidunt ut labore et dolore magn aliq
-                    erat.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di
-                    nonumy eirmod tempor invidunt ut labore et dolore magn aliq erat.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    di nonumy eirmod tempor invidunt ut labore et dolore magn
+                    aliq erat.Lorem ipsum dolor sit amet, consetetur sadipscing
+                    elitr, sed di nonumy eirmod tempor invidunt ut labore et
+                    dolore magn aliq erat.
                   </p>
                   <p className="mb-20">
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di
-                    nonumy eirmod tempor invidunt ut labore et dolore magn aliq
-                    erat.Lorem ipsum dolor.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    di nonumy eirmod tempor invidunt ut labore et dolore magn
+                    aliq erat.Lorem ipsum dolor.
                   </p>
                   <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di
-                    nonumy eirmod tempor invidunt ut labore et dolore magn aliq
-                    erat.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di
-                    nonumy.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    di nonumy eirmod tempor invidunt ut labore et dolore magn
+                    aliq erat.Lorem ipsum dolor sit amet, consetetur sadipscing
+                    elitr, sed di nonumy.
                   </p>
                 </div> */}
 
@@ -216,42 +243,43 @@ const CourseDetail = () => {
                 <div className="courses-ingredients">
                   <h2 className="corses-title mb-30">Fitur Kelas</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di
-                    nonumy eirmod tempor invidunt ut labore et dolore.
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                    di nonumy eirmod tempor invidunt ut labore et dolore.
                   </p>
                   <ul className="courses-item mt-25">
                     <li>
-                      <img src="/assets/img/icon/video.svg" alt="" /> 4 hours on-demand
-                      video
+                      <img src="/assets/img/icon/video.svg" alt="" /> 4 hours
+                      on-demand video
                     </li>
                     <li>
-                      <img src="/assets/img/icon/newspaper.svg" alt="" /> 73 articles
+                      <img src="/assets/img/icon/newspaper.svg" alt="" /> 73
+                      articles
                     </li>
                     <li>
                       <img src="/assets/img/icon/download.svg" alt="" /> 650+
                       downloadable resources
                     </li>
                     <li>
-                      <img src="/assets/img/icon/infinity.svg" alt="" /> Full Lifetime
-                      Access
+                      <img src="/assets/img/icon/infinity.svg" alt="" /> Full
+                      Lifetime Access
                     </li>
                     <li>
-                      <img src="/assets/img/icon/mobile.svg" alt="" /> Access on mobile
-                      and TV or any devices
+                      <img src="/assets/img/icon/mobile.svg" alt="" /> Access on
+                      mobile and TV or any devices
                     </li>
                     <li>
                       <img src="/assets/img/icon/certificate-line.svg" alt="" />
                       Certificate of completion
                     </li>
-                  </ul >
-                </div >
-              </div >
+                  </ul>
+                </div>
+              </div>
             </div >
           </div >
         </section >
       </Home >
     </>
-  )
-}
+  );
+};
 
-export default CourseDetail
+export default CourseDetail;
