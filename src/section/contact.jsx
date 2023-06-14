@@ -48,7 +48,7 @@ const Contact = () => {
               <div className="contact-img contact-img-02 mb-30">
                 <img
                   className="img-fluid"
-                  src="assets/img/contact/05.png"
+                  src="assets/img/contact/kontak.png"
                   alt=""
                 />
               </div>
