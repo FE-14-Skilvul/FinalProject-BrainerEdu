@@ -7,13 +7,13 @@ const CourseCard = ({ data, index }) => {
             <div className="col-lg-4 col-md-6 grid-item cat2 cat3" key={index}>
                 <div className="z-gallery z-gallery-two mb-30">
                     <div className="z-gallery__thumb mb-20">
-                        <a href="course-details.html">
+                        <Link to={`/course-detail/${data.id}`} >
                             <img
                                 className="img-fluid"
                                 src={data.thumnail}
                                 alt=""
                             />
-                        </a>
+                        </Link>
 
                     </div>
                     <div className="z-gallery__content pos-rel">

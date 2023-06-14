@@ -4,10 +4,18 @@ import Input from "../components/input"
 import Auth from "../layout/auth"
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Loading from "../components/loading";
+import Cookies from 'js-cookie';
+import swal from "sweetalert";
 
 const Login = () => {
-    const API = import.meta.env.VITE_BASE_URL
     const navigate = useNavigate();
+
+    Cookies.get('userLogin') && navigate('/')
+
+    const API = import.meta.env.VITE_BASE_URL
+    const [isLoading, setisLoading] = useState(true)
+
     const [formErrors, setFormErrors] = useState({
         email: '',
         password: '',
@@ -19,8 +27,13 @@ const Login = () => {
             const response = await axios.get(`${API}/user`);
             setUsers(response.data);
         };
+        setisLoading(false)
         getDataUser();
     }, []);
+
+    console.log(users);
+    if (isLoading) return <Loading />
+
     const saveAccount = async (e) => {
         e.preventDefault();
 
@@ -52,6 +65,7 @@ const Login = () => {
         // }
         const datauser = users.find(user => user.email === formdata.email);
         setCookie("userLogin", datauser);
+        swal("Berhasil Login !")
         navigate('/')
     };
     return (
