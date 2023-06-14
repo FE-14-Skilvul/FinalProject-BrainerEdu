@@ -9,6 +9,7 @@ import Skillpath from './pages/skillpath';
 import Login from './section/login';
 import Logout from './components/logout';
 import Profile from './components/profile';
+import Checkout from './pages/checkout';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/skillpath" element={<Skillpath />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </BrowserRouter>
     </>
