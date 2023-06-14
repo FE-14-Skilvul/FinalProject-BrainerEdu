@@ -176,7 +176,7 @@ const CourseDetail = () => {
                       </ul>
                       {/* <Button text={""} /> */}
                       <Link
-                        to={'/register'}
+                        to={'/checkout'}
                         className="theme_btn free_btn w-100 d-flex justify-content-center my-3"
                       >
                         Gabung Kelas
