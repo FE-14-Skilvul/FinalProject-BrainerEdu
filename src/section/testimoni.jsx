@@ -9,12 +9,7 @@ const Testimoni = () => {
                         <div className="col-xl-7">
                             <div className="section-title section-title-2 text-center mb-65">
 
-                                <h2 className="mb-20">Explore our Best Tutorials</h2>
-                                <p>
-                                    There are many variations of passages of Lorem Ipsum available,
-                                    but the majority have suffered alteration in some form, by
-                                    injected humour.
-                                </p>
+                                <h2 className="mb-20">Tutorial Terbaik Kami</h2>
                             </div>
                         </div>
                     </div>

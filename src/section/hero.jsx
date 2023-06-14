@@ -21,22 +21,16 @@ const Hero = () => {
                     className="main-title mb-40 wow fadeInUp2 animated"
                     data-wow-delay=".2s"
                   >
-                    Learn online from the leaders in Business Education
+                    Getting Quality Education Is Now Eraser
                   </h1>
                   <h5
                     className="mb-35 wow fadeInUp2 animated"
                     data-wow-delay=".3s"
                   >
-                    There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some
-                    form, by injected humour, or randomised words which don't
-                    look .
+                    Apakah Anda mencari sumber daya pendidikan yang informatif, menarik, dan terpercaya? Anda telah sampai ke tempat yang tepat. Situs Pendidikan Terbaik adalah destinasi online yang didedikasikan untuk memberikan informasi yang relevan dan bermanfaat tentang dunia pendidikan.
                   </h5>
 
-                  <p className="highlight-text">
-                    <span>#1</span> Worldwide Online Learning &amp; Skills
-                    Development Platform
-                  </p>
+                 
                 </div>
               </div>
               <div className="col-xl-5 col-lg-5 offset-1">

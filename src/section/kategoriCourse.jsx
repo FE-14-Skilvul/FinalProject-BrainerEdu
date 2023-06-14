@@ -8,12 +8,7 @@ const KategoriCourse = () => {
                     <div className="col-xl-6 col-lg-8">
                         <div className="section-title section-title-2 text-center mb-50">
 
-                            <h2 className="mb-20">Explore our Online Subjects</h2>
-                            <p>
-                                There are many variations of passages of Lorem Ipsum available,
-                                but the majority have suffered alteration in some form, by
-                                injected humour.
-                            </p>
+                            <h2 className="mb-20">Menu Pilihan Belajar</h2>
                         </div>
                     </div>
                 </div>
@@ -34,7 +29,7 @@ const KategoriCourse = () => {
                                             alt=""
                                         />
                                     </span>
-                                    Science
+                                    Bahasa
                                     <span className="arrow-box">
 
                                         <img
@@ -59,7 +54,7 @@ const KategoriCourse = () => {
                                             alt=""
                                         />
                                     </span>
-                                    Business
+                                    Bisnis
                                     <span className="arrow-box">
                                         <img
                                             className="arrows-icon"
@@ -88,7 +83,7 @@ const KategoriCourse = () => {
                                             alt=""
                                         />
                                     </span>
-                                    Development
+                                    Pemrogramman
                                     <span className="arrow-box">
                                         <img
                                             className="arrows-icon"
@@ -117,7 +112,7 @@ const KategoriCourse = () => {
                                             alt=""
                                         />
                                     </span>
-                                    Career
+                                    Karir
                                     <span className="arrow-box">
                                         <img
                                             className="arrows-icon"
@@ -146,7 +141,7 @@ const KategoriCourse = () => {
                                             alt=""
                                         />
                                     </span>
-                                    Arts &amp; Design
+                                    UI UX Design 
                                     <span className="arrow-box">
                                         <img
                                             className="arrows-icon"
@@ -175,7 +170,7 @@ const KategoriCourse = () => {
                                             alt=""
                                         />
                                     </span>
-                                    Law
+                                    Hukum
                                     <span className="arrow-box">
                                         <img
                                             className="arrows-icon"
@@ -204,7 +199,7 @@ const KategoriCourse = () => {
                                             alt=""
                                         />
                                     </span>
-                                    MBBS
+                                    Kesehatan
                                     <span className="arrow-box">
                                         <img
                                             className="arrows-icon"
@@ -233,7 +228,7 @@ const KategoriCourse = () => {
                                             alt=""
                                         />
                                     </span>
-                                    Technological
+                                    Sains
                                     <span className="arrow-box">
                                         <img
                                             className="arrows-icon"

@@ -24,27 +24,19 @@ const ListCourse = () => {
                         <div className="col-xl-6 col-lg-12">
                             <div className="section-title section-title-2 text-center text-xl-start mb-50">
 
-                                <h2 className="mb-20">Explore our Popular Courses</h2>
-                                <p>
-                                    There are many variations of passages of Lorem Ipsum available,
-                                    but the majority have suffered alteration in some form, by
-                                    injected humour.
-                                </p>
+                                <h2 className="mb-20">Kursus Populer Kami</h2>
                             </div>
                         </div>
                         <div className="col-xl-6 col-lg-12 text-center text-xl-end">
                             <div className="portfolio-menu portfolio-menu-two mb-30">
                                 <button className="gf_btn active" data-filter="*">
-                                    All
+                                    Semua
                                 </button>
                                 <button className="gf_btn" data-filter=".cat1">
-                                    Career
+                                    UI UX Design
                                 </button>
                                 <button className="gf_btn" data-filter=".cat2">
-                                    Development
-                                </button>
-                                <button className="gf_btn" data-filter=".cat3">
-                                    Business
+                                    Pemrograman
                                 </button>
                             </div>
                         </div>
