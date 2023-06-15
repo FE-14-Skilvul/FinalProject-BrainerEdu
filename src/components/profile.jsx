@@ -4,13 +4,14 @@ import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import swal from 'sweetalert';
+import Toast from './toast';
 
 const Profile = () => {
   const API = import.meta.env.VITE_BASE_URL
 
   const navigate = useNavigate();
   const cookies = JSON.parse(Cookies.get('userLogin'))
-
+  const [toast, setToast] = useState(false);
   const alamatRef = useRef(null)
   // alamatRef.target.innerHtml = 'dasdasads'
   const saveAccount = async (e) => {
@@ -33,8 +34,8 @@ const Profile = () => {
       const response = await axios.put(`${API}/user/${cookies.id}`, { nama, username, alamat });
       Cookies.remove('userLogin');
       setCookie("userLogin", response.data);
-
-      if (response.request.status === 200) return swal("Data Berhasil Tersimpan!");
+      if (response.request.status === 200) setToast(true);
+      // if (response.request.status == 200) return <Toast text={'Data Berhasil disimpan'} />;
 
     } catch (error) {
       console.log(error);
@@ -46,6 +47,7 @@ const Profile = () => {
       <Home>
         <section className="pt-150 pb-120 pt-md-100 pt-xs-100 pb-md-70 pb-xs-70">
           <div className="container-xl px-4 mt-5">
+            {toast && <Toast text={'Data Berhasil disimpan'} />}
             <div className="row">
               <div className="col-xl-4">
                 <div className="card mb-4 mb-xl-0">

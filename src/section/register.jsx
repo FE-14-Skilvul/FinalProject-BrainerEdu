@@ -6,13 +6,13 @@ import axios from 'axios';
 import Auth from '../layout/auth';
 import Button from '../components/button';
 import swal from 'sweetalert';
+import Toast from '../components/toast';
 
 
 const Register = () => {
 
     const API = import.meta.env.VITE_BASE_URL
 
-    const navigate = useNavigate();
     const [formErrors, setFormErrors] = useState({
         nama: '',
         username: '',
@@ -20,9 +20,11 @@ const Register = () => {
         password: '',
         repassword: ''
     });
+    const [toast, setToast] = useState(false);
 
     const saveAccount = async (e) => {
         e.preventDefault();
+        const navigate = useNavigate();
 
         const data = new FormData(e.target)
         const formdata = Object.fromEntries(data.entries())
@@ -34,8 +36,9 @@ const Register = () => {
         const { nama, username, email, password } = formdata
 
         try {
-            const response = await axios.post(API + '/user', { nama, username, email, password, role: 3 });
-            if (response.status === 201) swal("Data Berhasil di daftarkan !")
+            const response = await axios.post(API + '/user', { nama, username, email, password, role: 3, saldo: "1000000" });
+            // if (response.status === 201) swal("Data Berhasil di daftarkan !")
+            if (response.status === 201) setToast(true);
             navigate("/login");
         } catch (error) {
             console.log(error);
@@ -44,6 +47,8 @@ const Register = () => {
     };
     return (
         <>
+            {toast && <Toast text={'Register Berhasil'} />}
+
 
             <Auth onsubmit={saveAccount} title={'Register'} >
 
