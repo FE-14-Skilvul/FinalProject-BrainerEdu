@@ -1,7 +1,46 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import Home from '../layout/home';
+import Cookies from 'js-cookie';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import swal from 'sweetalert';
 
 const Profile = () => {
+  const API = import.meta.env.VITE_BASE_URL
+
+  const navigate = useNavigate();
+  const cookies = JSON.parse(Cookies.get('userLogin'))
+
+  const alamatRef = useRef(null)
+  // alamatRef.target.innerHtml = 'dasdasads'
+  const saveAccount = async (e) => {
+    e.preventDefault();
+
+    const data = new FormData(e.target)
+    const formdata = Object.fromEntries(data.entries())
+
+    let { nama, username, alamat } = formdata
+    if (!nama) {
+      nama = cookies.nama
+    }
+    if (!username) {
+      username = cookies.username
+    }
+    if (!alamat) {
+      alamat = cookies.alamat
+    }
+    try {
+      const response = await axios.put(`${API}/user/${cookies.id}`, { nama, username, alamat });
+      Cookies.remove('userLogin');
+      setCookie("userLogin", response.data);
+
+      if (response.request.status === 200) return swal("Data Berhasil Tersimpan!");
+
+    } catch (error) {
+      console.log(error);
+    }
+
+  };
   return (
     <>
       <Home>
@@ -42,7 +81,7 @@ const Profile = () => {
                 <div className="card mb-4">
                   <div className="card-header">Pengaturan</div>
                   <div className="card-body">
-                    <form>
+                    <form onSubmit={saveAccount}>
                       <div className="mb-3">
                         <label className="small mb-1" htmlFor="inputUsername">
                           Username
@@ -51,9 +90,11 @@ const Profile = () => {
                           className="form-control"
                           id="inputUsername"
                           type="text"
-                          placeholder="username"
+                          // value={cookies.username}
+                          placeholder={cookies.username}
                         />
                       </div>
+
                       <div className="mb-3">
                         <label className="small mb-1" htmlFor="inputUsername">
                           Nama
@@ -62,7 +103,8 @@ const Profile = () => {
                           className="form-control"
                           id="inputFirstName"
                           type="text"
-                          placeholder="nama"
+                          name="nama"
+                          placeholder={cookies.nama}
                         />
                       </div>
                       <div className="mb-3">
@@ -75,23 +117,15 @@ const Profile = () => {
                         <input
                           className="form-control"
                           id="inputEmailAddress"
+                          placeholder={cookies.email}
                           type="email"
-                          placeholder="email"
+                          name="email"
+                          disabled
                         />
                       </div>
                       <div className="row gx-3 mb-3">
-                        <div className="col-md-6">
-                          <label className="small mb-1" htmlFor="inputPhone">
-                            Nomor Telepon
-                          </label>
-                          <input
-                            className="form-control"
-                            id="inputPhone"
-                            type="tel"
-                            placeholder="+62"
-                          />
-                        </div>
-                        <div className="col-md-6">
+
+                        <div className="col-md-12">
                           <label className="small mb-1" htmlFor="inputBirthday">
                             Alamat
                           </label>
@@ -99,14 +133,18 @@ const Profile = () => {
                             className="form-control"
                             id="inputBirthday"
                             type="text"
-                            name="birthday"
-                            placeholder="alamat anda"
+                            name="alamat"
+                            ref={alamatRef}
+
+                            placeholder={cookies.alamat}
                           />
                         </div>
                       </div>
-                      <button className="btn btn-primary" type="button">
-                        Simpan
-                      </button>
+                      <div className="d-flex justify-content-end">
+                        <button className="btn btn-primary" type="submit">
+                          Simpan
+                        </button>
+                      </div>
                     </form>
                   </div>
                 </div>
@@ -118,5 +156,12 @@ const Profile = () => {
     </>
   );
 };
+function setCookie(name, value) {
+  const date = new Date();
+  date.setTime(date.getTime() + (24 * 60 * 60 * 1000)); // set the expiration time to 1 day
+  const expires = "expires=" + date.toUTCString();
+  const myObjStr = JSON.stringify(value);
+  document.cookie = name + "=" + myObjStr + ";" + expires + ";path=/";
+}
 
 export default Profile;

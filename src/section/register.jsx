@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Auth from '../layout/auth';
 import Button from '../components/button';
+import swal from 'sweetalert';
 
 
 const Register = () => {
@@ -33,9 +34,8 @@ const Register = () => {
         const { nama, username, email, password } = formdata
 
         try {
-            // const response = await axios.post(API + '/register', formdata, { withCredentials: true });
             const response = await axios.post(API + '/user', { nama, username, email, password, role: 3 });
-            console.log(response);
+            if (response.status === 201) swal("Data Berhasil di daftarkan !")
             navigate("/login");
         } catch (error) {
             console.log(error);
