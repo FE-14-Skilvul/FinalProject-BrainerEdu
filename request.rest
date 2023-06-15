@@ -766,7 +766,97 @@ Content-Type: application/json
  
 ###
 DELETE https://6483eb0aee799e3216262887.mockapi.io/kelas/14
+###
+# DELETE https://6483eb0aee799e3216262887.mockapi.io/user/3
+# DELETE https://6483eb0aee799e3216262887.mockapi.io/user/5
+# DELETE https://6483eb0aee799e3216262887.mockapi.io/user/6
+# DELETE https://6483eb0aee799e3216262887.mockapi.io/user/7
+# DELETE https://6483eb0aee799e3216262887.mockapi.io/user/8
+# DELETE https://6483eb0aee799e3216262887.mockapi.io/user/9
+# DELETE https://6483eb0aee799e3216262887.mockapi.io/user/10
+# DELETE https://6483eb0aee799e3216262887.mockapi.io/user/11
+# DELETE https://6483eb0aee799e3216262887.mockapi.io/user/12
+# DELETE https://6483eb0aee799e3216262887.mockapi.io/user/13
 
+###
+GET https://6483eb0aee799e3216262887.mockapi.io/user/
+###
+POST https://6483eb0aee799e3216262887.mockapi.io/user/
+Content-Type: application/json
+
+{
+    "createdAt": "2023-06-11T16:29:08.364Z",
+    "username": "nasyaquela",
+    "avatar": "avatar 5",
+    "nama": "nasya quela",
+    "email": "nzwslsa@gmail.com",
+    "alamat": "jalan sukamaju",
+    "pekerjaan": "pekerjaan 5",
+    "role": 3,
+    "uuid": "8082c176-3c45-4645-ae36-17d0d5c57afb",
+    "id": "5",
+    "saldo": "1000000",
+    "password": "Z12345"
+}
+###
+POST https://6483eb0aee799e3216262887.mockapi.io/user/
+Content-Type: application/json
+
+  
+  {
+    "createdAt": "2023-06-12T22:48:07.457Z",
+    "username": "dimasprm",
+    "avatar": "avatar 8",
+    "nama": "dimas",
+    "email": "muktivip2002@gmail.com",
+    "alamat": "alamat 8",
+    "pekerjaan": "pekerjaan 8",
+    "role": 3,
+    "uuid": "311f23e5-3ea7-40ea-8235-6cb14e2eae89",
+    "id": "8",
+    "saldo": "1000000",
+    "password": "abc12345"
+  }
+###
+POST https://6483eb0aee799e3216262887.mockapi.io/user/
+Content-Type: application/json
+
+  
+  {
+    "createdAt": "2023-06-12T15:12:53.423Z",
+    "username": "admin",
+    "avatar": "avatar 9",
+    "saldo": "1000000",
+    "nama": "admin",
+    "email": "admin@gmail.com",
+    "alamat": "alamat 9",
+    "pekerjaan": "pekerjaan 9",
+    "role": 3,
+    "uuid": "eacc2691-4ce5-4ad6-974c-98d2b39e4488",
+    "id": "9",
+    "password": "123456"
+  }
+###
+POST https://6483eb0aee799e3216262887.mockapi.io/user/
+Content-Type: application/json
+
+  
+  {
+    "createdAt": "2023-06-13T20:59:38.578Z",
+    "username": "arya",
+    "avatar": "avatar 11",
+    "nama": "M ARYA WARDHANA",
+    "email": "aryawawardhana72831@gmail.com",
+    "alamat": "alamat 11",
+    "pekerjaan": "pekerjaan 11",
+    "role": 3,
+    "saldo": "1000000",
+    "uuid": "9711020b-e90e-4d3d-9d3e-a5a098e911c7",
+    "id": "11",
+    "password": "arya7831"
+  }
+   
+   
 ###
 GET https://6483eb0aee799e3216262887.mockapi.io/kelas/
 ###

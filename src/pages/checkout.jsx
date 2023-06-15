@@ -18,8 +18,8 @@ const Checkout = () => {
                   Bergabunglah dengan langganan premium kami dan mulailah
                   mengeksplorasi pembelajaran praktis dan menarik bersama kami.
                 </p>
-              </div>{' '}
-            </div>{' '}
+              </div>
+            </div>
             <div className="row">
               <div className="col-sm-4 mb-3 mb-sm-0">
                 <div className="card">
@@ -193,8 +193,8 @@ const Checkout = () => {
                 </div>
               </div>
             </div>
-          </div>{' '}
-        </section>{' '}
+          </div>
+        </section>
       </Home>
     </>
   );

@@ -7,11 +7,10 @@ import axios from "axios";
 import Loading from "../components/loading";
 import Cookies from 'js-cookie';
 import swal from "sweetalert";
+import Toast from "../components/toast";
 
 const Login = () => {
-    const navigate = useNavigate();
 
-    Cookies.get('userLogin') && navigate('/')
 
     const API = import.meta.env.VITE_BASE_URL
     const [isLoading, setisLoading] = useState(true)
@@ -21,7 +20,10 @@ const Login = () => {
         password: '',
     });
     const [users, setUsers] = useState([]);
+    const [toast, setToast] = useState(false);
 
+    const navigate = useNavigate();
+    Cookies.get('userLogin') && navigate('/')
     useEffect(() => {
         const getDataUser = async () => {
             const response = await axios.get(`${API}/user`);
@@ -66,12 +68,15 @@ const Login = () => {
         const datauser = users.find(user => user.email === formdata.email);
         setCookie("userLogin", datauser);
         swal("Berhasil Login !")
+        // setToast(true);
         navigate('/')
     };
     return (
         <>
+            {/* {toast && <Toast text={'Berhasil Login'} />} */}
             <Auth onsubmit={saveAccount} title={'Login'} >
                 {/* <Alert /> */}
+
                 <Input message={formErrors.email} name={'email'} type="text" placeholder="Email" />
                 <Input message={formErrors.password} name={'password'} type="password" placeholder="Password" />
                 <Button text={'Simpan'} />

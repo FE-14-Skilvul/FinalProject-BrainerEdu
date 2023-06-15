@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Rating from './rating'
 
 const CourseCard = ({ data, index }) => {
     return (
@@ -41,16 +42,16 @@ const CourseCard = ({ data, index }) => {
                                     src="/assets/img/icon/time.svg"
                                     alt="course-meta"
                                 />
-                                12 Pertemuan
+                                {data.video.length} Pertemuan
                             </span>
-                            <span>
+                            {/* <span>
                                 <img
                                     className="icon"
                                     src="/assets/img/icon/bar-chart.svg"
                                     alt="course-meta"
                                 />
                                 Lanjutan
-                            </span>
+                            </span> */}
                         </div>
                         <p className="mb-20" style={{ overflowY: "auto", height: "100px" }}>
                             {data.deskripsi}
@@ -64,9 +65,12 @@ const CourseCard = ({ data, index }) => {
                                 </div>
                             </div>
 
-                            <p>
-                                <span>6593+</span> Students
-                            </p>
+                            <Rating />
+                            {/* <p>
+                                <span>
+
+                                </span>
+                            </p> */}
                         </div>
                     </div>
                 </div>

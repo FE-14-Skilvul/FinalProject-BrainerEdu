@@ -25,7 +25,7 @@ function App() {
           <Route path="/skillpath" element={<Skillpath />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout/:id" element={<Checkout />} />
         </Routes>
       </BrowserRouter>
     </>

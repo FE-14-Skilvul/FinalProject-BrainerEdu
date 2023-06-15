@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Button from '../components/button';
 import axios from 'axios';
 import Loading from '../components/loading';
+import Rating from '../components/rating';
 
 const CourseDetail = () => {
   const { id } = useParams();
@@ -39,8 +40,41 @@ const CourseDetail = () => {
   let kalimat = videoKelas[0].Link;
   let startIndex = kalimat.indexOf('&list=');
   let newKalimat = kalimat.substring(0, startIndex);
+  // const= hitunvideoKelas);
+  // const totalwaktu = hitungTotalWaktu(videoKelas);
+  let jamarr = []
+  let totalDetik = 0;
+  videoKelas.forEach(objek => {
+    // const [jam, menit, detik] = objek.durasi.split(':');
+    // jamarr = [...objek.durasi]
+    const arrvideo = objek.durasi.split(':')
+    console.log(arrvideo.length);
+    const panjangarr = arrvideo.length
+    const hasil = panjangarr === 3 ? 'Jam' : panjangarr === 2 ? 'Menit' : 'Detik';
+    if (hasil == 'Jam') {
+      // console.log('asda1');
+      totalDetik += parseInt(arrvideo[0]) * 3600 + parseInt(arrvideo[1]) * 60 + parseInt(arrvideo[2]);
+    }
+    if (hasil == 'Menit') {
+      // console.log(arrvideo[0]);
+      // console.log(arrvideo[1]);
+      // return;
+      totalDetik += parseInt(arrvideo[0]) * 60 + parseInt(arrvideo[1]);
+    }
+    if (hasil == 'Menit') {
+      // console.log('asda3');
+      totalDetik += parseInt(arrvideo[0]);
+    }
+    // Mengonversi total waktu ke format "jam jam menit menit detik detik"
 
-  console.log(newKalimat);
+  });
+  const jamTotal = Math.floor(totalDetik / 3600);
+  const sisaDetik = totalDetik % 3600;
+  const menitTotal = Math.floor(sisaDetik / 60);
+  const detikTotal = sisaDetik % 60;
+  const totalWaktuFormat = jamTotal == 0 ? `${menitTotal} menit` : `${jamTotal} jam ${menitTotal} menit `;
+  // console.log({ totalWaktuFormat });
+  // return;
   // let newKalimat = kalimat.substring(0, startIndex);
 
   // console.log(newKalimat);
@@ -92,7 +126,7 @@ const CourseDetail = () => {
                     style={{ marginLeft: '0' }}
                   >
                     <div className="learn-box">
-                      <h5>{videoKelas.length} Sesi ( 3h 36m )</h5>
+                      <h5>{videoKelas.length} Sesi ( {totalWaktuFormat} )</h5>
                       <ul
                         className="learn-list "
                         style={{ marginRight: '0', height: '360px' }}
@@ -152,7 +186,7 @@ const CourseDetail = () => {
                       </ul>
                       {/* <Button text={""} /> */}
                       <Link
-                        to={'/checkout'}
+                        to={`/checkout/${kelas.id}`}
                         className="theme_btn free_btn w-100 d-flex justify-content-center my-3"
                       >
                         Gabung Kelas
@@ -169,32 +203,8 @@ const CourseDetail = () => {
                   <p>
                     {kelas.deskripsi}
                   </p>
-                  <ul className="seller-rating d-md-inline-flex align-items-center mt-20 mb-10 d-flex justify-content-between">
 
-                    <li>
-                      <div className="star-icon mb-10">
-                        <a href="#">
-                          <i className="fas fa-star" />
-                        </a>
-                        <a href="#">
-                          <i className="fas fa-star" />
-                        </a>
-                        <a href="#">
-                          <i className="fas fa-star" />
-                        </a>
-                        <a href="#">
-                          <i className="fas fa-star" />
-                        </a>
-                        <a href="#">
-                          <i className="fas fa-star" />
-                        </a>
-                        <a href="#">4.8  </a>
-                      </div>
-                    </li>
-                    <li>
-                      <h5 className="mb-10"> </h5>
-                    </li>
-                  </ul>
+                  <Rating />
                   <h5 className="mb-25">
                     <span>Oleh :</span> {kelas.mentor.nama}
                   </h5 >
@@ -242,34 +252,30 @@ const CourseDetail = () => {
               <div className="col-xl-6 col-lg-5">
                 <div className="courses-ingredients">
                   <h2 className="corses-title mb-30">Fitur Kelas</h2>
-                  <p>
+                  {/* <p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     di nonumy eirmod tempor invidunt ut labore et dolore.
-                  </p>
+                  </p> */}
                   <ul className="courses-item mt-25">
                     <li>
-                      <img src="/assets/img/icon/video.svg" alt="" /> 4 hours
-                      on-demand video
+                      <img src="/assets/img/icon/video.svg" alt="" /> Video sesuai permintaan
                     </li>
                     <li>
-                      <img src="/assets/img/icon/newspaper.svg" alt="" /> 73
-                      articles
+                      <img src="/assets/img/icon/newspaper.svg" alt="" />
+                      Artikel
                     </li>
                     <li>
-                      <img src="/assets/img/icon/download.svg" alt="" /> 650+
-                      downloadable resources
+                      <img src="/assets/img/icon/download.svg" alt="" /> Konsultasi Dengan Mentor berpengalaman
                     </li>
                     <li>
-                      <img src="/assets/img/icon/infinity.svg" alt="" /> Full
-                      Lifetime Access
+                      <img src="/assets/img/icon/infinity.svg" alt="" /> Akses Penuh Seumur Hidup
                     </li>
                     <li>
-                      <img src="/assets/img/icon/mobile.svg" alt="" /> Access on
-                      mobile and TV or any devices
+                      <img src="/assets/img/icon/mobile.svg" alt="" /> Akses di ponsel dan TV atau perangkat apa pun
                     </li>
                     <li>
                       <img src="/assets/img/icon/certificate-line.svg" alt="" />
-                      Certificate of completion
+                      Sertifikat kelulusan
                     </li>
                   </ul>
                 </div>
@@ -281,5 +287,8 @@ const CourseDetail = () => {
     </>
   );
 };
+
+
+
 
 export default CourseDetail;
