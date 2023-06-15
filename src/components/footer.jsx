@@ -9,7 +9,7 @@ const Footer = () => {
               <div className="col-lg-6 col-md-6">
                 <div className="footer__widget">
                   <div className="footer-log mb-30">
-                    <a href="index.html" className="logo">
+                    <a href="#" className="logo">
                       <img
                         src="/assets/img/logo/logobrainerr.png"
                         alt=""
