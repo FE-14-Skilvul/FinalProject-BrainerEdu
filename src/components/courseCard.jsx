@@ -2,18 +2,32 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Rating from './rating'
 
-const CourseCard = ({ data, index }) => {
+const CourseCard = ({ type, data, index }) => {
+
+    let kalimat = data.video[0].Link;
+    let startIndex = kalimat.indexOf('&list=');
+    let newKalimat = kalimat.substring(0, startIndex);
+
     return (
         <>
             <div className="col-lg-4 col-md-6 grid-item cat2 cat3" key={index}>
                 <div className="z-gallery z-gallery-two mb-30">
                     <div className="z-gallery__thumb mb-20">
                         <Link to={`/course-detail/${data.id}`} >
-                            <img
+                            {type == 'img' && <img
                                 className="img-fluid"
                                 src={data.thumnail}
                                 alt=""
-                            />
+                            />}
+                            {type == 'video' && <iframe
+                                ref={videoRef}
+                                className="course-details-img mb-30"
+                                // style={{ backgroundImage: "url(/assets/img/course/details/01.jpg)" }}
+                                // src={`https://www.youtube.com/embed/${'tgbNymZ7vqY'}`}
+                                // src={`https://www.youtube.com/embed/${videoKelas[0].Link.replace(/&index=1/g, "")}`}
+                                src={`https://www.youtube.com/embed/${newKalimat}`}
+                            ></iframe>}
+
                         </Link>
 
                     </div>

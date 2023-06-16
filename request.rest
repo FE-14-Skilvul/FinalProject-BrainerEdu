@@ -860,9 +860,11 @@ Content-Type: application/json
 ###
 GET https://6483eb0aee799e3216262887.mockapi.io/kelas/
 ###
-PUT  https://6483eb0aee799e3216262887.mockapi.io/kelas/6
+GET https://6483eb0aee799e3216262887.mockapi.io/user/5
+###
+PUT  https://6483eb0aee799e3216262887.mockapi.io/user/5
 Content-Type: application/json
 
 {
-    
+      "nama": "dimas saputra"
 }

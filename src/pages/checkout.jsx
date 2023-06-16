@@ -1,8 +1,60 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Home from '../layout/home';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
+import Loading from '../components/loading';
+import Star from '../components/star';
+import Cookies from 'js-cookie';
+import swal from 'sweetalert';
 
 const Checkout = () => {
+  // return;
+  const [isLoading, setisLoading] = useState(true);
+  const navigate = useNavigate();
+  const [kelas, setKelas] = useState([]);
+  const { id } = useParams();
+  const cookie = Cookies.get('userLogin')
+    ? JSON.parse(Cookies.get('userLogin'))
+    : ''; console.log(cookie.saldo);
+  const API = import.meta.env.VITE_BASE_URL;
+
+  useEffect(() => {
+    const getDataKelas = async () => {
+      const response = await axios.get(`${API}/kelas/${id}`);
+      setKelas(response.data);
+      setisLoading(false);
+    };
+    getDataKelas();
+  }, []);
+
+  if (isLoading) return <Loading />
+  console.log({ kelas });
+
+  let kalimat = kelas.video[0].Link;
+  let startIndex = kalimat.indexOf('&list=');
+  let newKalimat = kalimat.substring(0, startIndex);
+  const totalHarga = parseInt(cookie.saldo) - parseInt(kelas.harga)
+
+  const transaksi = () => {
+
+    if (totalHarga > 0) {
+      try {
+        const transaksiBerhasil = async () => {
+          const res = await axios.put(`${API}/user/${cookie.id}`, { saldo: totalHarga.toString(), kelas: [{ id: kelas.id, uidKelas: kelas.uuid, nama: kelas.nama_kelas }] });
+          Cookies.remove('userLogin');
+          setCookie("userLogin", res.data);
+          if (res.request.status === 200) swal('Transaksi Berhasil . Selamat Belajar !')
+          navigate(`/course-detail/${id}`)
+        };
+        transaksiBerhasil()
+        return;
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    swal('Saldo Anda belum mencukupi. Silahkan menghubungi Admin Untuk melakukan Pembayaran !')
+  }
   return (
     <>
       <Home>
@@ -26,32 +78,15 @@ const Checkout = () => {
                   <div className="card-body">
                     <div className="embed-responsive embed-responsive-16by9">
                       <iframe
-                        className="embed-responsive-item"
-                        src="https://www.youtube.com/embed/VIDEO_ID"
+                        className="embed-responsive-item w-100"
+                        src={`https://www.youtube.com/embed/${newKalimat}`}
                         allowFullScreen
                       ></iframe>
                     </div>
-                    <h5 className="card-title">Nama Kelas</h5>
-                    <p className="card-text">Deskripsi kelas</p>
-                    <p className="card-text">Rp. </p>
-                    <div className="star-icon mb-10">
-                      <a href="#">
-                        <i className="fas fa-star" />
-                      </a>
-                      <a href="#">
-                        <i className="fas fa-star" />
-                      </a>
-                      <a href="#">
-                        <i className="fas fa-star" />
-                      </a>
-                      <a href="#">
-                        <i className="fas fa-star" />
-                      </a>
-                      <a href="#">
-                        <i className="fas fa-star" />
-                      </a>
-                      <a href="#">5 (1000+)</a>
-                    </div>
+                    <h5 className="card-title">{kelas.nama_kelas}</h5>
+                    <p className="card-text">{kelas.video[0].deskripsi}</p>
+                    <p className="card-text">Rp. {parseInt(kelas.harga).toLocaleString('id-ID')}</p>
+                    <Star />
                   </div>
                 </div>
               </div>
@@ -164,8 +199,15 @@ const Checkout = () => {
                     <hr className="hr-line" />
                     <div className="item">
                       <div className="flex-container">
+                        <p className="title">Saldo</p>
+                        <p className="value">Rp. {parseInt(cookie.saldo).toLocaleString('id-ID')}</p>
+                      </div>
+                      <div className="clear" />
+                    </div>
+                    <div className="item">
+                      <div className="flex-container">
                         <p className="title">Harga kelas</p>
-                        <p className="value">Rp 550,000</p>
+                        <p className="value">Rp. {parseInt(kelas.harga).toLocaleString('id-ID')}</p>
                       </div>
                       <div className="clear" />
                     </div>
@@ -176,19 +218,19 @@ const Checkout = () => {
                       </div>
                       <div className="clear" />
                     </div>
+                    <hr className="hr-line" />
+
                     <div className="item">
                       <div className="flex-container">
-                        <b className="title">Total Bayar</b>
-                        <p className="value">Rp 550,000</p>
+                        <b className="title">Total Harga</b>
+                        <b className=" title ">Rp. {totalHarga.toLocaleString('id-ID')}</b>
                       </div>
                       <div className="clear" />
                     </div>
-                    <Link
-                      to={'/course-detail/:id'}
-                      className="theme_btn free_btn w-100 d-flex justify-content-center my-3"
-                    >
-                      Bayar
-                    </Link>
+                    {/* <hr className="hr-line" /> */}
+
+                    <button onClick={transaksi} className='theme_btn free_btn w-100 d-flex justify-content-center my-3'>Bayar</button>
+
                   </div>
                 </div>
               </div>
@@ -199,5 +241,11 @@ const Checkout = () => {
     </>
   );
 };
-
+function setCookie(name, value) {
+  const date = new Date();
+  date.setTime(date.getTime() + (24 * 60 * 60 * 1000)); // set the expiration time to 1 day
+  const expires = "expires=" + date.toUTCString();
+  const myObjStr = JSON.stringify(value);
+  document.cookie = name + "=" + myObjStr + ";" + expires + ";path=/";
+}
 export default Checkout;
