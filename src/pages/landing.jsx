@@ -11,8 +11,10 @@ import Partner from '../components/partner';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Loading from '../components/loading';
+import { useDispatch } from 'react-redux';
 
 const Landing = () => {
+  const dispatch = useDispatch()
   const [kelas, setKelas] = useState([]);
   const [isLoading, setisLoading] = useState(true);
 
@@ -22,7 +24,8 @@ const Landing = () => {
       const response = await axios.get(`${API}/kelas`);
       setKelas(response.data);
       setisLoading(false);
-
+      // console.log(response.data, 'response.data')
+      dispatch({ type: 'add', payload: response.data })
     };
     getDataKelas();
   }, []);

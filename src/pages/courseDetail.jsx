@@ -6,15 +6,18 @@ import axios from 'axios';
 import Loading from '../components/loading';
 import Rating from '../components/rating';
 import Cookies from 'js-cookie';
+import { useSelector } from 'react-redux';
 
 const CourseDetail = () => {
   const { id } = useParams();
+  const kelasCache = useSelector((data) => data ? data[id - 1] : undefined)
   const [kelas, setKelas] = useState([]); // ini
   const [isLoading, setisLoading] = useState(true);
   const [videoKelas, setvideoKelas] = useState([]);
   const API = import.meta.env.VITE_BASE_URL;
   const isnotLogin = !Cookies.get('userLogin');
   // console.log(isnotLogin);
+
   useEffect(() => {
     const getDataKelas = async () => {
       const response = await axios.get(`${API}/kelas/${id}`);
@@ -22,7 +25,17 @@ const CourseDetail = () => {
       setvideoKelas(response.data.video);
       setisLoading(false);
     };
-    getDataKelas();
+
+    if (!kelasCache) {
+      getDataKelas()
+    }
+    else {
+      setKelas(kelasCache);
+      setvideoKelas(kelasCache.video);
+      setisLoading(false);
+    }
+
+
   }, []);
 
   const myStyle = {
