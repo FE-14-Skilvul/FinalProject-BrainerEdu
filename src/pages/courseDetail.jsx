@@ -5,6 +5,7 @@ import Button from '../components/button';
 import axios from 'axios';
 import Loading from '../components/loading';
 import Rating from '../components/rating';
+import Cookies from 'js-cookie';
 
 const CourseDetail = () => {
   const { id } = useParams();
@@ -12,7 +13,8 @@ const CourseDetail = () => {
   const [isLoading, setisLoading] = useState(true);
   const [videoKelas, setvideoKelas] = useState([]);
   const API = import.meta.env.VITE_BASE_URL;
-
+  const isnotLogin = !Cookies.get('userLogin');
+  // console.log(isnotLogin);
   useEffect(() => {
     const getDataKelas = async () => {
       const response = await axios.get(`${API}/kelas/${id}`);
@@ -34,51 +36,12 @@ const CourseDetail = () => {
     videoRef.current.src = `https://www.youtube.com/embed/${val}`;
   };
 
-  // if (isLoading) return <p>Loading...</p>
   if (isLoading) return <Loading />
-  // console.log(videoKelas[0].Link);
   let kalimat = videoKelas[0].Link;
   let startIndex = kalimat.indexOf('&list=');
   let newKalimat = kalimat.substring(0, startIndex);
-  // const= hitunvideoKelas);
-  // const totalwaktu = hitungTotalWaktu(videoKelas);
-  let jamarr = []
-  let totalDetik = 0;
-  videoKelas.forEach(objek => {
-    // const [jam, menit, detik] = objek.durasi.split(':');
-    // jamarr = [...objek.durasi]
-    const arrvideo = objek.durasi.split(':')
-    console.log(arrvideo.length);
-    const panjangarr = arrvideo.length
-    const hasil = panjangarr === 3 ? 'Jam' : panjangarr === 2 ? 'Menit' : 'Detik';
-    if (hasil == 'Jam') {
-      // console.log('asda1');
-      totalDetik += parseInt(arrvideo[0]) * 3600 + parseInt(arrvideo[1]) * 60 + parseInt(arrvideo[2]);
-    }
-    if (hasil == 'Menit') {
-      // console.log(arrvideo[0]);
-      // console.log(arrvideo[1]);
-      // return;
-      totalDetik += parseInt(arrvideo[0]) * 60 + parseInt(arrvideo[1]);
-    }
-    if (hasil == 'Menit') {
-      // console.log('asda3');
-      totalDetik += parseInt(arrvideo[0]);
-    }
-    // Mengonversi total waktu ke format "jam jam menit menit detik detik"
 
-  });
-  const jamTotal = Math.floor(totalDetik / 3600);
-  const sisaDetik = totalDetik % 3600;
-  const menitTotal = Math.floor(sisaDetik / 60);
-  const detikTotal = sisaDetik % 60;
-  const totalWaktuFormat = jamTotal == 0 ? `${menitTotal} menit` : `${jamTotal} jam ${menitTotal} menit `;
-  // console.log({ totalWaktuFormat });
-  // return;
-  // let newKalimat = kalimat.substring(0, startIndex);
-
-  // console.log(newKalimat);
-
+  const durasikelas = durasiKelas(videoKelas)
   return (
     <>
       <Home>
@@ -126,7 +89,7 @@ const CourseDetail = () => {
                     style={{ marginLeft: '0' }}
                   >
                     <div className="learn-box">
-                      <h5>{videoKelas.length} Sesi ( {totalWaktuFormat} )</h5>
+                      <h5>{videoKelas.length} Sesi ( {durasikelas} )</h5>
                       <ul
                         className="learn-list "
                         style={{ marginRight: '0', height: '360px' }}
@@ -185,8 +148,9 @@ const CourseDetail = () => {
                                             </li> */}
                       </ul>
                       {/* <Button text={""} /> */}
+
                       <Link
-                        to={`/checkout/${kelas.id}`}
+                        to={isnotLogin ? "/login" : `/checkout/${kelas.id}`}
                         className="theme_btn free_btn w-100 d-flex justify-content-center my-3"
                       >
                         Gabung Kelas
@@ -288,6 +252,32 @@ const CourseDetail = () => {
   );
 };
 
+const durasiKelas = (datavideo) => {
+  let totalDetik = 0;
+  datavideo.forEach(objek => {
+    const arrvideo = objek.durasi.split(':')
+    console.log(arrvideo.length);
+    const panjangarr = arrvideo.length
+    const hasil = panjangarr === 3 ? 'Jam' : panjangarr === 2 ? 'Menit' : 'Detik';
+    if (hasil == 'Jam') {
+      totalDetik += parseInt(arrvideo[0]) * 3600 + parseInt(arrvideo[1]) * 60 + parseInt(arrvideo[2]);
+    }
+    if (hasil == 'Menit') {
+      totalDetik += parseInt(arrvideo[0]) * 60 + parseInt(arrvideo[1]);
+    }
+    if (hasil == 'Detik') {
+      totalDetik += parseInt(arrvideo[0]);
+    }
+
+  });
+  const jamTotal = Math.floor(totalDetik / 3600);
+  const sisaDetik = totalDetik % 3600;
+  const menitTotal = Math.floor(sisaDetik / 60);
+  const detikTotal = sisaDetik % 60;
+  const totalWaktuFormat = jamTotal == 0 ? `${menitTotal} menit` : `${jamTotal} jam ${menitTotal} menit `;
+
+  return totalWaktuFormat
+}
 
 
 

@@ -3,19 +3,8 @@ import CourseCard from '../components/courseCard';
 import axios from 'axios';
 import { addData } from '../action';
 
-const ListCourse = () => {
-  const [kelas, setKelas] = useState([]);
-
-  const API = import.meta.env.VITE_BASE_URL;
-  useEffect(() => {
-    const getDataKelas = async () => {
-      const response = await axios.get(`${API}/kelas`);
-      setKelas(response.data);
-      addData(response.data);
-    };
-    getDataKelas();
-  }, []);
-  console.log(kelas);
+const ListCourse = ({ kelas }) => {
+  // return;
   return (
     <>
       <section className="feature-course gradient-bg pt-150 pb-120 pt-md-95 pb-md-70 pt-xs-95 pb-xs-70">
@@ -42,7 +31,7 @@ const ListCourse = () => {
           </div>
           <div className="grid row">
             {kelas.map((data, index) => {
-              return <CourseCard data={data} key={index} />;
+              return <CourseCard type="img" data={data} key={index} />;
             })}
           </div>
           <div className="row">

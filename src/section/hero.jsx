@@ -30,8 +30,8 @@ const Hero = () => {
                     className="main-title mb-40 wow fadeInUp2 animated"
                     data-wow-delay=".2s"
                   >
-                    Tingkatkan keterampilan Anda melalui seri-seri disini
-                    seperti <span style={{ color: "#2878eb" }}> <Typewriter
+                    Tingkatkan Keterampilan Anda melalui seri-seri disini
+                    seperti  <span style={{ color: "#2878eb", display: "inline-block" }}> <Typewriter
                       options={{
                         strings: ['Pemrograman', 'Ekonomi', 'Bahasa', "Keuangan", "Bisnis", "Hukum"],
                         autoStart: true,
@@ -47,7 +47,7 @@ const Hero = () => {
                     Apakah Anda mencari sumber daya pendidikan yang informatif, menarik, dan terpercaya? Anda telah sampai ke tempat yang tepat. Situs Pendidikan Terbaik adalah destinasi online yang didedikasikan untuk memberikan informasi yang relevan dan bermanfaat tentang dunia pendidikan.
                   </h5>
 
-                 
+
                 </div>
               </div>
               <div className="col-xl-5 col-lg-5">
