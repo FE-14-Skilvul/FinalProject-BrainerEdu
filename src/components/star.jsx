@@ -19,8 +19,10 @@ const Star = () => {
                 <i className="fas fa-star" />
             </a>
             <a href="#">5 (1000+)</a>
-        </div></>
+        </div>
+        </>
     )
 }
 
 export default Star
+

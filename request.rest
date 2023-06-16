@@ -855,16 +855,4 @@ Content-Type: application/json
     "id": "11",
     "password": "arya7831"
   }
-   
-   
-###
-GET https://6483eb0aee799e3216262887.mockapi.io/kelas/
-###
-GET https://6483eb0aee799e3216262887.mockapi.io/user/5
-###
-PUT  https://6483eb0aee799e3216262887.mockapi.io/user/5
-Content-Type: application/json
-
-{
-      "nama": "dimas saputra"
-}
+    
