@@ -40,7 +40,7 @@ const ListCourse = ({ kelas }) => {
               data-wow-delay=".3s"
             >
               <a href="#" className="theme_btn">
-                Explore More
+                Selengkapnya
               </a>
             </div>
           </div>
