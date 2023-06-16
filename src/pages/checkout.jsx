@@ -227,7 +227,6 @@ const Checkout = () => {
                       </div>
                       <div className="clear" />
                     </div>
-                    {/* <hr className="hr-line" /> */}
 
                     <button onClick={transaksi} className='theme_btn free_btn w-100 d-flex justify-content-center my-3'>Bayar</button>
 
