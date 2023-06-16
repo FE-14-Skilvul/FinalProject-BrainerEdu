@@ -765,7 +765,7 @@ Content-Type: application/json
   
  
 ###
-DELETE https://6483eb0aee799e3216262887.mockapi.io/kelas/14
+DELETE https://6483eb0aee799e3216262887.mockapi.io/kelas/1
 ###
 # DELETE https://6483eb0aee799e3216262887.mockapi.io/user/3
 # DELETE https://6483eb0aee799e3216262887.mockapi.io/user/5
@@ -836,11 +836,12 @@ Content-Type: application/json
     "id": "9",
     "password": "123456"
   }
+
+  
 ###
 POST https://6483eb0aee799e3216262887.mockapi.io/user/
 Content-Type: application/json
 
-  
   {
     "createdAt": "2023-06-13T20:59:38.578Z",
     "username": "arya",
