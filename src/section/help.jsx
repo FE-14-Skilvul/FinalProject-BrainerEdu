@@ -30,7 +30,7 @@ const Help = () => {
                     mengubah hidupmu sekarang.Daftar dan temukan peluang baru!
                   </p>{' '}
                   <Link
-                    to={'/course-detail/:id'}
+                    to={'#'}
                     className="theme_btn border_btn active"
                   >
                     Selengkapnya{' '}

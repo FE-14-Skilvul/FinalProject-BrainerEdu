@@ -98,14 +98,14 @@ const Navbar = () => {
                                   Pengaturan
                                 </Link>
                               </li>
-                              <li>
+                              {/* <li>
                                 <Link
                                   to={'/course-detail/:id'}
                                   className="dropdown-item"
                                 >
                                   Kelas Saya
                                 </Link>
-                              </li>
+                              </li> */}
                               <li>
                                 <Link to={'/logout'} className="dropdown-item ">
                                   Logout
