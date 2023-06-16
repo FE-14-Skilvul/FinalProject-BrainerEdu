@@ -22,20 +22,6 @@ const Mentor = () => {
                     height={350}
                     alt=""
                   />
-                  <div className="social-media">
-                    <a href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-youtube" />
-                    </a>
-                  </div>
                 </div>
                 <div className="z-instructors__content">
                   <h4 className="sub-title mb-10">
@@ -54,20 +40,6 @@ const Mentor = () => {
                     height={350}
                     alt=""
                   />
-                  <div className="social-media">
-                    <a href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-youtube" />
-                    </a>
-                  </div>
                 </div>
                 <div className="z-instructors__content">
                   <h4 className="sub-title mb-10">
@@ -86,20 +58,6 @@ const Mentor = () => {
                     height={350}
                     alt=""
                   />
-                  <div className="social-media">
-                    <a href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-youtube" />
-                    </a>
-                  </div>
                 </div>
                 <div className="z-instructors__content">
                   <h4 className="sub-title mb-10">
@@ -118,20 +76,6 @@ const Mentor = () => {
                     height={350}
                     alt=""
                   />
-                  <div className="social-media">
-                    <a href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-youtube" />
-                    </a>
-                  </div>
                 </div>
                 <div className="z-instructors__content">
                   <h4 className="sub-title mb-10">
@@ -151,20 +95,6 @@ const Mentor = () => {
                     height={350}
                     alt=""
                   />
-                  <div className="social-media">
-                    <a href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-youtube" />
-                    </a>
-                  </div>
                 </div>
                 <div className="z-instructors__content">
                   <h4 className="sub-title mb-10">
@@ -183,20 +113,6 @@ const Mentor = () => {
                     height={350}
                     alt=""
                   />
-                  <div className="social-media">
-                    <a href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-youtube" />
-                    </a>
-                  </div>
                 </div>
                 <div className="z-instructors__content">
                   <h4 className="sub-title mb-10">
@@ -215,20 +131,6 @@ const Mentor = () => {
                     height={350}
                     alt=""
                   />
-                  <div className="social-media">
-                    <a href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-youtube" />
-                    </a>
-                  </div>
                 </div>
                 <div className="z-instructors__content">
                   <h4 className="sub-title mb-10">
@@ -242,20 +144,6 @@ const Mentor = () => {
               <div className="z-instructors text-center mb-30">
                 <div className="z-instructors__thumb mb-15">
                   <img src="assets/img/instructor/04.jpg" alt="" />
-                  <div className="social-media">
-                    <a href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
-                    <a href="#">
-                      <i className="fab fa-youtube" />
-                    </a>
-                  </div>
                 </div>
                 <div className="z-instructors__content">
                   <h4 className="sub-title mb-10">

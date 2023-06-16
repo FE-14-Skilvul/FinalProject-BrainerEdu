@@ -14,7 +14,7 @@ import Loading from '../components/loading';
 import { useDispatch } from 'react-redux';
 
 const Landing = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const [kelas, setKelas] = useState([]);
   const [isLoading, setisLoading] = useState(true);
 
@@ -25,19 +25,18 @@ const Landing = () => {
       setKelas(response.data);
       setisLoading(false);
       // console.log(response.data, 'response.data')
-      dispatch({ type: 'add', payload: response.data })
+      dispatch({ type: 'add', payload: response.data });
     };
     getDataKelas();
   }, []);
 
-  if (isLoading) return <Loading />
+  if (isLoading) return <Loading />;
 
   return (
     <>
       <Home>
         <Hero />
         <Testimoni />
-        <KategoriCourse />
         <ListCourse kelas={kelas} />
         <Partner />
         <Contact />

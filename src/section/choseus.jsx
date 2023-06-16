@@ -45,11 +45,6 @@ const Choseus = () => {
                       style={{ marginLeft: '25px' }}
                     />
                   </div>
-                  <img
-                    className="chose chose_06"
-                    src="assets/img/shape/dot-box3.svg"
-                    alt="Chose-img"
-                  />
                 </div>
               </div>
               <div className="col-xl-5 col-lg-5">
@@ -59,7 +54,6 @@ const Choseus = () => {
                     datawowdelay=".1s"
                   >
                     <h2 className="mb-25">
-
                       Mengapa Harus Memilih Brainer Education ?
                     </h2>
                     <p>

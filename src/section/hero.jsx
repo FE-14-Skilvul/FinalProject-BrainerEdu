@@ -9,17 +9,16 @@ const Hero = () => {
   //   backSpeed: 50,
   //   loop: true
 
-
   // })
   return (
     <>
       <section className="slider-area slider-gradient-bg pt-180 pb-100 pb-xs-50">
-        <IconImg src={'01'} />
-        <IconImg src={'02'} />
+        {/* <IconImg src={'01'} /> */}
+        {/* <IconImg src={'02'} /> */}
         <IconImg src={'03'} />
-        <IconImg src={'04'} />
-        <IconImg src={'05'} />
-        <IconImg src={'06'} />
+        {/* <IconImg src={'04'} />
+        <IconImg src={'05'} /> */}
+        {/* <IconImg src={'06'} /> */}
 
         <div className="main-slider">
           <div className="container">
@@ -31,23 +30,35 @@ const Hero = () => {
                     data-wow-delay=".2s"
                   >
                     Tingkatkan Keterampilan Anda melalui seri-seri disini
-                    seperti  <span style={{ color: "#2878eb", display: "inline-block" }}> <Typewriter
-                      options={{
-                        strings: ['Pemrograman', 'Ekonomi', 'Bahasa', "Keuangan", "Bisnis", "Hukum"],
-                        autoStart: true,
-                        loop: true,
-                      }}
-                    />
+                    seperti{' '}
+                    <span style={{ color: '#2878eb', display: 'inline-block' }}>
+                      {' '}
+                      <Typewriter
+                        options={{
+                          strings: [
+                            'Pemrograman',
+                            'Ekonomi',
+                            'Bahasa',
+                            'Keuangan',
+                            'Bisnis',
+                            'Hukum',
+                          ],
+                          autoStart: true,
+                          loop: true,
+                        }}
+                      />
                     </span>
                   </h1>
                   <h5
                     className="mb-35 wow fadeInUp2 animated"
                     data-wow-delay=".3s"
                   >
-                    Apakah Anda mencari sumber daya pendidikan yang informatif, menarik, dan terpercaya? Anda telah sampai ke tempat yang tepat. Situs Pendidikan Terbaik adalah destinasi online yang didedikasikan untuk memberikan informasi yang relevan dan bermanfaat tentang dunia pendidikan.
+                    Apakah Anda mencari sumber daya pendidikan yang informatif,
+                    menarik, dan terpercaya? Anda telah sampai ke tempat yang
+                    tepat. Situs Pendidikan Terbaik adalah destinasi online yang
+                    didedikasikan untuk memberikan informasi yang relevan dan
+                    bermanfaat tentang dunia pendidikan.
                   </h5>
-
-
                 </div>
               </div>
               <div className="col-xl-5 col-lg-5">
@@ -78,7 +89,6 @@ const Hero = () => {
           </div>
         </div>
       </section>
-
     </>
   );
 };
