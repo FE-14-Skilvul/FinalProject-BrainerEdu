@@ -28,7 +28,7 @@ const Checkout = () => {
   }, []);
 
   if (isLoading) return <Loading />
-  console.log({ kelas });
+  console.log(cookie.kelas);
 
   let kalimat = kelas.video[0].Link;
   let startIndex = kalimat.indexOf('&list=');
@@ -40,7 +40,7 @@ const Checkout = () => {
     if (totalHarga > 0) {
       try {
         const transaksiBerhasil = async () => {
-          const res = await axios.put(`${API}/user/${cookie.id}`, { saldo: totalHarga.toString(), kelas: [{ id: kelas.id, uidKelas: kelas.uuid, nama: kelas.nama_kelas }] });
+          const res = await axios.put(`${API}/user/${cookie.id}`, { saldo: totalHarga.toString(), kelas: [...cookie.kelas, { id: kelas.id, uidKelas: kelas.uuid, nama: kelas.nama_kelas }] });
           Cookies.remove('userLogin');
           setCookie("userLogin", res.data);
           if (res.request.status === 200) swal('Transaksi Berhasil . Selamat Belajar !')

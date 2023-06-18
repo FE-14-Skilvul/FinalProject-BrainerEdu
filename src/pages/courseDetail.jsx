@@ -42,7 +42,6 @@ const CourseDetail = () => {
   const videoRef = useRef(null);
 
   const changeVideo = (val) => {
-    console.log(val);
     videoRef.current.src = '';
     videoRef.current.src = ispaid ? `https://www.youtube.com/embed/${val}` : `https://www.youtube.com/embed/${newKalimat}`;
   };
@@ -57,19 +56,9 @@ const CourseDetail = () => {
   if (!isnotLogin) {
     const user = Cookies.get('userLogin') ? JSON.parse(Cookies.get('userLogin')) : undefined;
     ispaid = user.kelas.some((objs) => objs.uidKelas === kelas.uuid)
+    console.log(user.kelas);
   }
-  const icon = (index, ispaid) => {
-    if (index === 0) {
-      return (<img src='/assets/img/icon/video-player.svg' style={{ paddingRight: '10px' }} />)
-    }
-    if (!ispaid) {
-      return <i
-        className="fal fa-lock-alt"
-        style={{ paddingRight: '10px' }}
-      />
-    }
-    // return ''
-  }
+
 
   return (
     <>
