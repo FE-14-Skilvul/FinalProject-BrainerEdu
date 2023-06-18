@@ -58,6 +58,18 @@ const CourseDetail = () => {
     const user = Cookies.get('userLogin') ? JSON.parse(Cookies.get('userLogin')) : undefined;
     ispaid = user.kelas.some((objs) => objs.uidKelas === kelas.uuid)
   }
+  const icon = (index, ispaid) => {
+    if (index === 0) {
+      return (<img src='/assets/img/icon/video-player.svg' style={{ paddingRight: '10px' }} />)
+    }
+    if (!ispaid) {
+      return <i
+        className="fal fa-lock-alt"
+        style={{ paddingRight: '10px' }}
+      />
+    }
+    // return ''
+  }
 
   return (
     <>
@@ -132,12 +144,18 @@ const CourseDetail = () => {
                               >
                                 <span className="play-video d-flex">
                                   {
-                                    !ispaid &&
-                                      index == 0
-                                      ? <img src="/assets/img/icon/video-player.svg" alt="course-list" style={{ paddingRight: '10px' }} /> : <i
-                                        className="fal fa-lock-alt"
-                                        style={{ paddingRight: '10px' }}
-                                      />
+                                    index === 0 ? <img src="/assets/img/icon/video-player.svg" alt="course-list" style={{ paddingRight: '10px' }} /> : ispaid ? <img src="/assets/img/icon/video-player.svg" alt="course-list" style={{ paddingRight: '10px' }} /> : <i
+                                      className="fal fa-lock-alt"
+                                      style={{ paddingRight: '10px' }}
+                                    />
+
+                                    // icon(index, ispaid)
+                                    // !ispaid &&
+                                    //   index == 0
+                                    //   ? <img src="/assets/img/icon/video-player.svg" alt="course-list" style={{ paddingRight: '10px' }} /> : <i
+                                    //     className="fal fa-lock-alt"
+                                    //     style={{ paddingRight: '10px' }}
+                                    //   />
                                   }
 
                                   <p> {index + 1 + '. ' + video.judul}</p>
@@ -254,28 +272,5 @@ const durasiKelas = (datavideo) => {
   return totalWaktuFormat;
 };
 
-const checkingdata = (array, string) => {
-  // Array of objects
-  return { array, string }
-  let jsonArray = [
-    { "key": "value1", "nilai": 123 },
-    { "key": "value2", "nilai": 456 },
-    { "key": "value3", "nilai": 789 }
-  ];
-
-  // Check if value exists in array of objects
-  let searchValue = "value2";
-  let isValueExists = false;
-
-  for (let i = 0; i < jsonArray.length; i++) {
-    if (jsonArray[i].hasOwnProperty('nilai') && jsonArray[i].nilai === searchValue) {
-      isValueExists = true;
-      break;
-    }
-  }
-
-  return isValueExists
-
-}
 
 export default CourseDetail;
