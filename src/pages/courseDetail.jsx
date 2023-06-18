@@ -10,14 +10,15 @@ import { useSelector } from 'react-redux';
 
 const CourseDetail = () => {
   const { id } = useParams();
-  const kelasCache = useSelector((data) => (data ? data[id - 1] : undefined));
+  const kelasCache = useSelector((data) => (data ? data[id - 2] : undefined));
+  // const kelasCache = useSelector((data) => (data ? data.filter((obj) => obj.id === id) : undefined));
   const [kelas, setKelas] = useState([]); // ini
   const [isLoading, setisLoading] = useState(true);
   const [videoKelas, setvideoKelas] = useState([]);
   const API = import.meta.env.VITE_BASE_URL;
   const isnotLogin = !Cookies.get('userLogin');
-  // console.log(isnotLogin);
-
+  // console.log(kelasCache);
+  // return
   useEffect(() => {
     const getDataKelas = async () => {
       const response = await axios.get(`${API}/kelas/${id}`);
@@ -52,6 +53,12 @@ const CourseDetail = () => {
   let newKalimat = kalimat.substring(0, startIndex);
 
   const durasikelas = durasiKelas(videoKelas);
+  if (!isnotLogin) {
+    const user = Cookies.get('userLogin');
+    const check = user.kelas ? checkingdata(JSON.parse(user.kelas), kelas.uuid) : undefined;
+    console.log(check);
+  }
+
   return (
     <>
       <Home>
@@ -126,10 +133,11 @@ const CourseDetail = () => {
                                 href="#learn-bok"
                               >
                                 <span className="play-video d-flex">
-                                  <i
+                                  <img src="/assets/img/icon/video-player.svg" alt="course-list" style={{ paddingRight: '10px' }} />
+                                  {/* <i
                                     className="fal fa-lock-alt"
                                     style={{ paddingRight: '10px' }}
-                                  />
+                                  /> */}
                                   <p> {index + 1 + '. ' + video.judul}</p>
                                 </span>
 
@@ -141,7 +149,6 @@ const CourseDetail = () => {
                           );
                         })}
                       </ul>
-                      {/* <Button text={""} /> */}
 
                       <Link
                         to={isnotLogin ? '/login' : `/checkout/${kelas.id}`}
@@ -185,7 +192,7 @@ const CourseDetail = () => {
                       Artikel
                     </li>
                     <li>
-                      <img src="/assets/img/icon/download.svg" alt="" />{' '}
+                      <img src="/assets/img/icon/download.svg" alt="" />
                       Konsultasi Dengan Mentor berpengalaman
                     </li>
                     <li>
@@ -243,5 +250,29 @@ const durasiKelas = (datavideo) => {
 
   return totalWaktuFormat;
 };
+
+const checkingdata = (array, string) => {
+  // Array of objects
+  return { array, string }
+  let jsonArray = [
+    { "key": "value1", "nilai": 123 },
+    { "key": "value2", "nilai": 456 },
+    { "key": "value3", "nilai": 789 }
+  ];
+
+  // Check if value exists in array of objects
+  let searchValue = "value2";
+  let isValueExists = false;
+
+  for (let i = 0; i < jsonArray.length; i++) {
+    if (jsonArray[i].hasOwnProperty('nilai') && jsonArray[i].nilai === searchValue) {
+      isValueExists = true;
+      break;
+    }
+  }
+
+  return isValueExists
+
+}
 
 export default CourseDetail;

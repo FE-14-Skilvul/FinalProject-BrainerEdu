@@ -3,7 +3,7 @@ import React from 'react';
 const KategoriCourse = () => {
   return (
     <>
-      {' '}
+
       <section className="course-categories pt-150 pb-140 pt-md-95 pb-md-90 pt-xs-95 pb-xs-90">
         <div className="container">
           <div className="row justify-content-center">

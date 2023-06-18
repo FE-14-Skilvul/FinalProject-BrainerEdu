@@ -35,7 +35,7 @@ const CourseCard = ({ type, data, index }) => {
               <p>Rp. {parseInt(data.harga).toLocaleString('id-ID')} </p>
             </div>
             <h4 className="sub-title mb-20">
-              {/* <Link to={`/course-detail/${data.nama_kelas.toLowerCase().replace(/\s+/g, "-").replace(/\//g, "-")}`} > */}
+              {/* <Link to={`/course-detail/${data.nama_kelas.toLowerCase().replace(/\s+/g, "-").replace(/\//g, "-")}`} ></Link> */}
               <Link to={`/course-detail/${data.id}`}>{data.nama_kelas}</Link>
             </h4>
             <div className="course__meta d-flex align-items-center justify-content-between mb-15">

@@ -30,9 +30,9 @@ const Hero = () => {
                     data-wow-delay=".2s"
                   >
                     Tingkatkan Keterampilan Anda melalui seri-seri disini
-                    seperti{' '}
+                    seperti
                     <span style={{ color: '#2878eb', display: 'inline-block' }}>
-                      {' '}
+
                       <Typewriter
                         options={{
                           strings: [
