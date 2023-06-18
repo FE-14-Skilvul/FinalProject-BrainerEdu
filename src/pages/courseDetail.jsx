@@ -53,10 +53,10 @@ const CourseDetail = () => {
   let newKalimat = kalimat.substring(0, startIndex);
 
   const durasikelas = durasiKelas(videoKelas);
+  let ispaid = false
   if (!isnotLogin) {
-    const user = Cookies.get('userLogin');
-    const check = user.kelas ? checkingdata(JSON.parse(user.kelas), kelas.uuid) : undefined;
-    console.log(check);
+    const user = Cookies.get('userLogin') ? JSON.parse(Cookies.get('userLogin')) : undefined;
+    ispaid = user.kelas.some((objs) => objs.uidKelas === kelas.uuid)
   }
 
   return (
@@ -96,9 +96,7 @@ const CourseDetail = () => {
                     <li>
                       <div className="price-list">
                         <h5>
-                          <b className="sub-title">
-                            Rp. {parseInt(kelas.harga).toLocaleString('id-ID')}
-                          </b>
+                          {!ispaid && <b className="sub-title">Rp. {parseInt(kelas.harga).toLocaleString('id-ID')}</b>}
                         </h5>
                       </div>
                     </li>
@@ -133,11 +131,12 @@ const CourseDetail = () => {
                                 href="#learn-bok"
                               >
                                 <span className="play-video d-flex">
-                                  <img src="/assets/img/icon/video-player.svg" alt="course-list" style={{ paddingRight: '10px' }} />
-                                  {/* <i
+                                  {!ispaid ? <i
                                     className="fal fa-lock-alt"
                                     style={{ paddingRight: '10px' }}
-                                  /> */}
+                                  /> : <img src="/assets/img/icon/video-player.svg" alt="course-list" style={{ paddingRight: '10px' }} />
+                                  }
+
                                   <p> {index + 1 + '. ' + video.judul}</p>
                                 </span>
 
@@ -150,12 +149,13 @@ const CourseDetail = () => {
                         })}
                       </ul>
 
-                      <Link
+                      {!ispaid ? <Link
                         to={isnotLogin ? '/login' : `/checkout/${kelas.id}`}
                         className="theme_btn free_btn w-100 d-flex justify-content-center my-3"
                       >
                         Gabung Kelas
-                      </Link>
+                      </Link> : <><br /><br /></>}
+                      {/* <Link></Link> */}
                     </div>
                   </div>
                 </div>
