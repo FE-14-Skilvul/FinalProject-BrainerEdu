@@ -44,7 +44,7 @@ const CourseDetail = () => {
   const changeVideo = (val) => {
     console.log(val);
     videoRef.current.src = '';
-    videoRef.current.src = `https://www.youtube.com/embed/${val}`;
+    videoRef.current.src = ispaid ? `https://www.youtube.com/embed/${val}` : `https://www.youtube.com/embed/${newKalimat}`;
   };
 
   if (isLoading) return <Loading />;
@@ -131,10 +131,13 @@ const CourseDetail = () => {
                                 href="#learn-bok"
                               >
                                 <span className="play-video d-flex">
-                                  {!ispaid ? <i
-                                    className="fal fa-lock-alt"
-                                    style={{ paddingRight: '10px' }}
-                                  /> : <img src="/assets/img/icon/video-player.svg" alt="course-list" style={{ paddingRight: '10px' }} />
+                                  {
+                                    !ispaid &&
+                                      index == 0
+                                      ? <img src="/assets/img/icon/video-player.svg" alt="course-list" style={{ paddingRight: '10px' }} /> : <i
+                                        className="fal fa-lock-alt"
+                                        style={{ paddingRight: '10px' }}
+                                      />
                                   }
 
                                   <p> {index + 1 + '. ' + video.judul}</p>
