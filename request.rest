@@ -779,7 +779,15 @@ DELETE https://6483eb0aee799e3216262887.mockapi.io/kelas/1
 # DELETE https://6483eb0aee799e3216262887.mockapi.io/user/13
 
 ###
-GET https://6483eb0aee799e3216262887.mockapi.io/user/
+GET https://6483eb0aee799e3216262887.mockapi.io/kelas/4
+
+###
+PUT https://6483eb0aee799e3216262887.mockapi.io/kelas/2
+Content-Type: application/json
+
+{
+  "slug": "belajar-uiux-dasar"
+}
 ###
 POST https://6483eb0aee799e3216262887.mockapi.io/user/
 Content-Type: application/json

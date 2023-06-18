@@ -74,7 +74,7 @@ const Navbar = () => {
                         {cookies ? (
                           <li className="nav-item dropdown d-flex align-items-center">
                             <p className="nav-link mx-0">
-                              {' '}
+
                               Halo, {cookies.nama.split(' ')[0]}
                             </p>
                             <a
