@@ -15,7 +15,8 @@ const Checkout = () => {
   const { id } = useParams();
   const cookie = Cookies.get('userLogin')
     ? JSON.parse(Cookies.get('userLogin'))
-    : ''; console.log(cookie.saldo);
+    : '';
+  console.log(cookie.saldo);
   const API = import.meta.env.VITE_BASE_URL;
 
   useEffect(() => {
@@ -27,34 +28,42 @@ const Checkout = () => {
     getDataKelas();
   }, []);
 
-  if (isLoading) return <Loading />
+  if (isLoading) return <Loading />;
   console.log(cookie.kelas);
 
   let kalimat = kelas.video[0].Link;
   let startIndex = kalimat.indexOf('&list=');
   let newKalimat = kalimat.substring(0, startIndex);
-  const totalHarga = parseInt(cookie.saldo) - parseInt(kelas.harga)
+  const totalHarga = parseInt(cookie.saldo) - parseInt(kelas.harga);
 
   const transaksi = () => {
-
     if (totalHarga > 0) {
       try {
         const transaksiBerhasil = async () => {
-          const res = await axios.put(`${API}/user/${cookie.id}`, { saldo: totalHarga.toString(), kelas: [...cookie.kelas, { id: kelas.id, uidKelas: kelas.uuid, nama: kelas.nama_kelas }] });
+          const res = await axios.put(`${API}/user/${cookie.id}`, {
+            saldo: totalHarga.toString(),
+            kelas: [
+              ...cookie.kelas,
+              { id: kelas.id, uidKelas: kelas.uuid, nama: kelas.nama_kelas },
+            ],
+          });
           Cookies.remove('userLogin');
-          setCookie("userLogin", res.data);
-          if (res.request.status === 200) swal('Transaksi Berhasil . Selamat Belajar !')
-          navigate(`/course-detail/${id}`)
+          setCookie('userLogin', res.data);
+          if (res.request.status === 200)
+            swal('Transaksi Berhasil . Selamat Belajar !');
+          navigate(`/course-detail/${id}`);
         };
-        transaksiBerhasil()
+        transaksiBerhasil();
         return;
       } catch (error) {
         console.log(error);
       }
     }
 
-    swal('Saldo Anda belum mencukupi. Silahkan menghubungi Admin Untuk melakukan Pembayaran !')
-  }
+    swal(
+      'Saldo Anda belum mencukupi. Silahkan menghubungi Admin Untuk melakukan Pembayaran !',
+    );
+  };
   return (
     <>
       <Home>
@@ -85,7 +94,9 @@ const Checkout = () => {
                     </div>
                     <h5 className="card-title">{kelas.nama_kelas}</h5>
                     <p className="card-text">{kelas.video[0].deskripsi}</p>
-                    <p className="card-text">Rp. {parseInt(kelas.harga).toLocaleString('id-ID')}</p>
+                    <p className="card-text">
+                      Rp. {parseInt(kelas.harga).toLocaleString('id-ID')}
+                    </p>
                     <Star />
                   </div>
                 </div>
@@ -200,14 +211,18 @@ const Checkout = () => {
                     <div className="item">
                       <div className="flex-container">
                         <p className="title">Saldo</p>
-                        <p className="value">Rp. {parseInt(cookie.saldo).toLocaleString('id-ID')}</p>
+                        <p className="value">
+                          Rp. {parseInt(cookie.saldo).toLocaleString('id-ID')}
+                        </p>
                       </div>
                       <div className="clear" />
                     </div>
                     <div className="item">
                       <div className="flex-container">
                         <p className="title">Harga kelas</p>
-                        <p className="value">Rp. {parseInt(kelas.harga).toLocaleString('id-ID')}</p>
+                        <p className="value">
+                          Rp. {parseInt(kelas.harga).toLocaleString('id-ID')}
+                        </p>
                       </div>
                       <div className="clear" />
                     </div>
@@ -222,14 +237,20 @@ const Checkout = () => {
 
                     <div className="item">
                       <div className="flex-container">
-                        <b className="title">Total Harga</b>
-                        <b className=" title ">Rp. {totalHarga.toLocaleString('id-ID')}</b>
+                        <b className="title">Sisa Saldo</b>
+                        <b className=" title ">
+                          Rp. {totalHarga.toLocaleString('id-ID')}
+                        </b>
                       </div>
                       <div className="clear" />
                     </div>
 
-                    <button onClick={transaksi} className='theme_btn free_btn w-100 d-flex justify-content-center my-3'>Bayar</button>
-
+                    <button
+                      onClick={transaksi}
+                      className="theme_btn free_btn w-100 d-flex justify-content-center my-3"
+                    >
+                      Bayar
+                    </button>
                   </div>
                 </div>
               </div>
@@ -242,9 +263,9 @@ const Checkout = () => {
 };
 function setCookie(name, value) {
   const date = new Date();
-  date.setTime(date.getTime() + (24 * 60 * 60 * 1000)); // set the expiration time to 1 day
-  const expires = "expires=" + date.toUTCString();
+  date.setTime(date.getTime() + 24 * 60 * 60 * 1000); // set the expiration time to 1 day
+  const expires = 'expires=' + date.toUTCString();
   const myObjStr = JSON.stringify(value);
-  document.cookie = name + "=" + myObjStr + ";" + expires + ";path=/";
+  document.cookie = name + '=' + myObjStr + ';' + expires + ';path=/';
 }
 export default Checkout;
