@@ -31,7 +31,7 @@ const Hero = () => {
                   >
                     Tingkatkan Keterampilan Anda melalui seri-seri disini
                     seperti
-                    <span style={{ color: '#2878eb', display: 'inline-block' }}>
+                    <span style={{ color: '#2878eb', display: 'inline-block', marginLeft: "20px" }}>
 
                       <Typewriter
                         options={{
