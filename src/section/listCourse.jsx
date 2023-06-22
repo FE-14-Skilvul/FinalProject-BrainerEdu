@@ -4,33 +4,50 @@ import axios from 'axios';
 import { addData } from '../action';
 
 const ListCourse = ({ kelas }) => {
-  // return;
+
+  const [alldata, setAlldata] = useState(kelas);
+  const filterkelas = (e) => {
+    e.preventDefault()
+
+    const filter = kelas.filter((kelasdata) => {
+      return e.target.dataset.filter == 'Semua' ? kelasdata : kelasdata.kategori.split(",")[0] === e.target.dataset.filter
+    })
+    setAlldata(filter)
+
+  }
   return (
     <>
       <section className="feature-course gradient-bg pt-150 pb-120 pt-md-95 pb-md-70 pt-xs-95 pb-xs-70">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-xl-6 col-lg-12">
+            <div className="col-xl-5 col-lg-12">
               <div className="section-title section-title-2 text-center text-xl-start mb-50">
                 <h2 className="mb-20">Kursus Populer Kami</h2>
               </div>
             </div>
-            <div className="col-xl-6 col-lg-12 text-center text-xl-end">
+            <div className="col-xl-7 col-lg-12 text-center text-xl-end">
               <div className="portfolio-menu portfolio-menu-two mb-30">
-                <button className="gf_btn active" data-filter="*">
+                <button onClick={filterkelas} className="gf_btn active" data-filter="Semua">
                   Semua
                 </button>
-                <button className="gf_btn" data-filter=".cat1">
+                <button onClick={filterkelas} className="gf_btn" data-filter="UI Design">
                   UI UX Design
                 </button>
-                <button className="gf_btn" data-filter=".cat2">
+                <button onClick={filterkelas} className="gf_btn" data-filter="Coding">
                   Pemrograman
+                </button>
+                <button onClick={filterkelas} className="gf_btn" data-filter="Bahasa">
+                  Bahasa
+                </button>
+                <button onClick={filterkelas} className="gf_btn" data-filter="Ekonomi">
+                  Ekonomi
                 </button>
               </div>
             </div>
           </div>
           <div className="grid row">
-            {kelas.map((data, index) => {
+            {alldata.map((data, index) => {
+
               return <CourseCard type="img" data={data} key={index} />;
             })}
           </div>

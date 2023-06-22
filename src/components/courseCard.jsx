@@ -6,7 +6,7 @@ const CourseCard = ({ type, data, index }) => {
   let kalimat = data.video[0].Link;
   let startIndex = kalimat.indexOf('&list=');
   let newKalimat = kalimat.substring(0, startIndex);
-
+  const arrayKata = data.kategori.split(",");
   return (
     <>
       <div className="col-lg-4 col-md-6 grid-item cat2 cat3" key={index}>
@@ -28,8 +28,14 @@ const CourseCard = ({ type, data, index }) => {
           <div className="z-gallery__content pos-rel">
             <div className="course__tag course__tag__two mb-15 d-flex align-items-center justify-content-between">
               <div>
-                <span>Coding</span>
-                <span>UI Design</span>
+                {
+                  arrayKata.map((kategoridata, index) => {
+                    return <span key={index}>{kategoridata}</span>
+
+                  })
+                }
+                {/* <span>{arrayKata[0]}</span>
+                <span>UI Design</span> */}
               </div>
 
               <p>Rp. {parseInt(data.harga).toLocaleString('id-ID')} </p>
