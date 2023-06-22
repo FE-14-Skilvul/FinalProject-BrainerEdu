@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Partner = () => {
   return (
@@ -23,44 +24,48 @@ const Partner = () => {
           </div>
           <div className="row row-cols-1 row-cols-sm-2 online__course__cat">
             <div className="col">
-              <div
-                className="courses_link mb-30 wow fadeInUp2 animated"
-                data-wow-delay=".1s"
-              >
-                <img
-                  className="icon-01 mb-35"
-                  src="assets/img/logo/skilvul.png"
-                  alt=""
-                />
-                <h4 className="sub-title mb-25">Skilvul</h4>
-                <a href="https://skilvul.com">
+              <Link to={'https://skilvul.com'} target="_blank">
+                <div
+                  className="courses_link mb-30 wow fadeInUp2 animated"
+                  data-wow-delay=".1s"
+                >
                   <img
-                    className="arrows-icon"
-                    src="assets/img/icon/arrow-right.svg"
-                    alt="arrow-right"
+                    className="icon-01 mb-35"
+                    src="assets/img/logo/skilvul.png"
+                    alt=""
                   />
-                </a>
-              </div>
+                  <h4 className="sub-title mb-25">Skilvul</h4>
+                  <a href="https://skilvul.com">
+                    <img
+                      className="arrows-icon"
+                      src="assets/img/icon/arrow-right.svg"
+                      alt="arrow-right"
+                    />
+                  </a>
+                </div>
+              </Link>
             </div>
             <div className="col">
-              <div
-                className="courses_link mb-30 wow fadeInUp2 animated"
-                data-wow-delay=".2s"
-              >
-                <img
-                  className="icon-01 mb-35"
-                  src="assets/img/logo/km.png"
-                  alt=""
-                />
-                <h4 className="sub-title mb-25">Kampus Merdeka</h4>
-                <a href="https://kampusmerdeka.kemdikbud.go.id/">
+              <Link to={'https://kampusmerdeka.kemdikbud.go.id/'} target="_blank">
+                <div
+                  className="courses_link mb-30 wow fadeInUp2 animated"
+                  data-wow-delay=".2s"
+                >
                   <img
-                    className="arrows-icon"
-                    src="assets/img/icon/arrow-right.svg"
-                    alt="arrow-right"
+                    className="icon-01 mb-35"
+                    src="/assets/img/logo/km.png"
+                    alt=""
                   />
-                </a>
-              </div>
+                  <h4 className="sub-title mb-25">Kampus Merdeka</h4>
+                  <a href="https://kampusmerdeka.kemdikbud.go.id/">
+                    <img
+                      className="arrows-icon"
+                      src="/assets/img/icon/arrow-right.svg"
+                      alt="arrow-right"
+                    />
+                  </a>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
