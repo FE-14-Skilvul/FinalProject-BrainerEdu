@@ -7,40 +7,42 @@ import swal from 'sweetalert';
 import Toast from './toast';
 
 const Profile = () => {
-  const API = import.meta.env.VITE_BASE_URL
+  const API = import.meta.env.VITE_BASE_URL;
 
   const navigate = useNavigate();
-  const cookies = JSON.parse(Cookies.get('userLogin'))
+  const cookies = JSON.parse(Cookies.get('userLogin'));
   const [toast, setToast] = useState(false);
-  const alamatRef = useRef(null)
+  const alamatRef = useRef(null);
   // alamatRef.target.innerHtml = 'dasdasads'
   const saveAccount = async (e) => {
     e.preventDefault();
 
-    const data = new FormData(e.target)
-    const formdata = Object.fromEntries(data.entries())
+    const data = new FormData(e.target);
+    const formdata = Object.fromEntries(data.entries());
 
-    let { nama, username, alamat } = formdata
+    let { nama, username, alamat } = formdata;
     if (!nama) {
-      nama = cookies.nama
+      nama = cookies.nama;
     }
     if (!username) {
-      username = cookies.username
+      username = cookies.username;
     }
     if (!alamat) {
-      alamat = cookies.alamat
+      alamat = cookies.alamat;
     }
     try {
-      const response = await axios.put(`${API}/user/${cookies.id}`, { nama, username, alamat });
+      const response = await axios.put(`${API}/user/${cookies.id}`, {
+        nama,
+        username,
+        alamat,
+      });
       Cookies.remove('userLogin');
-      setCookie("userLogin", response.data);
+      setCookie('userLogin', response.data);
       if (response.request.status === 200) setToast(true);
       // if (response.request.status == 200) return <Toast text={'Data Berhasil disimpan'} />;
-
     } catch (error) {
       console.log(error);
     }
-
   };
   return (
     <>
@@ -49,13 +51,14 @@ const Profile = () => {
           <div className="container-xl px-4 mt-5">
             {toast && <Toast text={'Data Berhasil disimpan'} />}
             <div className="row">
-
               <div className="d-flex justify-content-end mb-5">
-
-                <h4> Saldo Anda :  Rp. {parseInt(cookies.saldo).toLocaleString('id-ID')}</h4>
+                <h4>
+                  {' '}
+                  Saldo Anda : Rp.{' '}
+                  {parseInt(cookies.saldo).toLocaleString('id-ID')}
+                </h4>
               </div>
               <div className="col-xl-4">
-
                 <div className="card mb-4 mb-xl-0">
                   <div className="card-header">Foto Profile</div>
                   <div className="card-body text-center">
@@ -132,7 +135,6 @@ const Profile = () => {
                         />
                       </div>
                       <div className="row gx-3 mb-3">
-
                         <div className="col-md-12">
                           <label className="small mb-1" htmlFor="inputBirthday">
                             Alamat
@@ -143,7 +145,6 @@ const Profile = () => {
                             type="text"
                             name="alamat"
                             ref={alamatRef}
-
                             placeholder={cookies.alamat}
                           />
                         </div>
@@ -153,6 +154,15 @@ const Profile = () => {
                           Simpan
                         </button>
                       </div>
+                      <button
+                        className="btn btn-outline-primary"
+                        style={{ marginRight: '20px', marginTop: '20px' }}
+                        onClick={() => {
+                          window.location.href = 'https://wa.me/6281263451839';
+                        }}
+                      >
+                        Hubungi Admin
+                      </button>
                     </form>
                   </div>
                 </div>
@@ -166,10 +176,10 @@ const Profile = () => {
 };
 function setCookie(name, value) {
   const date = new Date();
-  date.setTime(date.getTime() + (24 * 60 * 60 * 1000)); // set the expiration time to 1 day
-  const expires = "expires=" + date.toUTCString();
+  date.setTime(date.getTime() + 24 * 60 * 60 * 1000); // set the expiration time to 1 day
+  const expires = 'expires=' + date.toUTCString();
   const myObjStr = JSON.stringify(value);
-  document.cookie = name + "=" + myObjStr + ";" + expires + ";path=/";
+  document.cookie = name + '=' + myObjStr + ';' + expires + ';path=/';
 }
 
 export default Profile;
