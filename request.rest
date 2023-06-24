@@ -779,7 +779,7 @@ DELETE https://6483eb0aee799e3216262887.mockapi.io/kelas/1
 # DELETE https://6483eb0aee799e3216262887.mockapi.io/user/13
 
 ###
-GET https://6483eb0aee799e3216262887.mockapi.io/kelas/
+GET https://6483eb0aee799e3216262887.mockapi.io/user/2
 
 ###
 PUT https://6483eb0aee799e3216262887.mockapi.io/kelas/7
@@ -867,3 +867,13 @@ Content-Type: application/json
     "password": "arya7831"
   }
     
+###
+PUT https://6483eb0aee799e3216262887.mockapi.io/user/2
+Content-Type: application/json
+
+{
+  "avatar": "https://res.cloudinary.com/dqzc2i588/image/upload/v1687611841/ixdr8u7eisryrbnwjnie.jpg"
+}
+
+###
+GET https://6483eb0aee799e3216262887.mockapi.io/user/2
