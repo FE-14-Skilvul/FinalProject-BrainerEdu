@@ -2,15 +2,45 @@ import React, { useRef, useState } from 'react';
 import Home from '../layout/home';
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import axios, { Axios } from 'axios';
 import swal from 'sweetalert';
 import Toast from './toast';
+import { Image } from 'cloudinary-react';
+import { useEffect } from 'react';
 
 const Profile = () => {
   const API = import.meta.env.VITE_BASE_URL;
 
+  //fotoprofile
+  const [imageSelected, setImageSelected] = useState('');
+  const [imageURL, setImageURL] = useState('');
+  const uploadImage = () => {
+    const formData = new FormData();
+    formData.append('file', imageSelected);
+    formData.append('upload_preset', 'ueukx2xe');
+    formData.append('cloud_name', 'dqzc2i588');
+
+    fetch('https://api.cloudinary.com/v1_1/dqzc2i588/image/upload', {
+      method: 'post',
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        const imageURL = data.secure_url;
+        setImageURL(imageURL);
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  const handleImageSelect = (event) => {
+    setImageSelected(event.target.files[0]);
+  };
+
   const navigate = useNavigate();
   const cookies = JSON.parse(Cookies.get('userLogin'));
+  console.log(cookies.avatar);
   const [toast, setToast] = useState(false);
   const alamatRef = useRef(null);
   // alamatRef.target.innerHtml = 'dasdasads'
@@ -62,28 +92,47 @@ const Profile = () => {
                 <div className="card mb-4 mb-xl-0">
                   <div className="card-header">Foto Profile</div>
                   <div className="card-body text-center">
-                    <img
-                      className="img-account-profile rounded-circle mb-2"
-                      src="assets/img/slider/profile.png"
-                      width={250}
-                      height={250}
-                      alt=""
-                    />
-                    <div className="mb-3">
-                      <label
-                        htmlFor="inputFile"
-                        className="form-label"
+                    {imageURL && (
+                      <div
                         style={{
-                          fontSize: '16px',
+                          display: 'flex',
+                          justifyContent: 'center',
+                          alignItems: 'center',
+                          width: '250px',
+                          height: '250px',
+                          borderRadius: '50%',
+                          overflow: 'hidden',
+                          marginBottom: '20px',
+                          textAlign: 'center',
                         }}
                       >
-                        Ubah Foto Profile
-                      </label>
+                        <Image
+                          width={250}
+                          height={250}
+                          cloudName="dqzc2i588"
+                          publicId={imageURL}
+                          style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                          }}
+                        />
+                      </div>
+                    )}
+                    <div className="mb-3">
                       <input
                         className="form-control"
                         type="file"
                         id="inputFile"
+                        onChange={handleImageSelect}
                       />
+                      <button
+                        className="btn btn-primary"
+                        style={{ marginTop: '20px' }}
+                        onClick={uploadImage}
+                      >
+                        Unggah Gambar
+                      </button>
                     </div>
                   </div>
                 </div>
