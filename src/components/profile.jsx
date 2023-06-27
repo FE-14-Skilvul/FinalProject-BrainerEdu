@@ -10,10 +10,12 @@ import { useEffect } from 'react';
 
 const Profile = () => {
   const API = import.meta.env.VITE_BASE_URL;
-
   //fotoprofile
   const [imageSelected, setImageSelected] = useState('');
-  const [imageURL, setImageURL] = useState('');
+  const cookies = JSON.parse(Cookies.get('userLogin'));
+  const [imageURL, setImageURL] = useState(cookies.avatar);
+  console.log(imageURL);
+
   const uploadImage = () => {
     const formData = new FormData();
     formData.append('file', imageSelected);
@@ -25,10 +27,16 @@ const Profile = () => {
       body: formData,
     })
       .then((res) => res.json())
-      .then((data) => {
+      .then(async (data) => {
         const imageURL = data.secure_url;
-        setImageURL(imageURL);
-        console.log(data);
+        const res = await axios.put(`${API}/user/${cookies.id}`, { avatar: imageURL });
+
+        console.log(res);
+        console.log(cookies.avatar);
+        Cookies.remove('userLogin');
+        setCookie('userLogin', res.data);
+        setImageURL(res.data.avatar);
+        setToast(true)
       })
       .catch((err) => {
         console.log(err);
@@ -39,8 +47,7 @@ const Profile = () => {
   };
 
   const navigate = useNavigate();
-  const cookies = JSON.parse(Cookies.get('userLogin'));
-  console.log(cookies.avatar);
+
   const [toast, setToast] = useState(false);
   const alamatRef = useRef(null);
   // alamatRef.target.innerHtml = 'dasdasads'
@@ -83,8 +90,8 @@ const Profile = () => {
             <div className="row">
               <div className="d-flex justify-content-end mb-5">
                 <h4>
-                  {' '}
-                  Saldo Anda : Rp.{' '}
+
+                  Saldo Anda : Rp.
                   {parseInt(cookies.saldo).toLocaleString('id-ID')}
                 </h4>
               </div>
