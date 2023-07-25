@@ -33,7 +33,7 @@ const Login = () => {
         getDataUser();
     }, []);
 
-    console.log(users);
+    // console.log(users);
     if (isLoading) return <Loading />
 
     const saveAccount = async (e) => {
