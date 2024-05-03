@@ -14,14 +14,15 @@ const Profile = () => {
   const [imageSelected, setImageSelected] = useState('');
   const cookies = JSON.parse(Cookies.get('userLogin'));
   const [imageURL, setImageURL] = useState(cookies.avatar);
-  console.log(imageURL);
+  // console.log(imageSelected);
 
   const uploadImage = () => {
     const formData = new FormData();
     formData.append('file', imageSelected);
     formData.append('upload_preset', 'ueukx2xe');
     formData.append('cloud_name', 'dqzc2i588');
-
+    // console.log(formData);
+    // return
     fetch('https://api.cloudinary.com/v1_1/dqzc2i588/image/upload', {
       method: 'post',
       body: formData,
@@ -31,8 +32,6 @@ const Profile = () => {
         const imageURL = data.secure_url;
         const res = await axios.put(`${API}/user/${cookies.id}`, { avatar: imageURL });
 
-        console.log(res);
-        console.log(cookies.avatar);
         Cookies.remove('userLogin');
         setCookie('userLogin', res.data);
         setImageURL(res.data.avatar);
